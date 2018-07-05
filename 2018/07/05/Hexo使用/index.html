@@ -14,7 +14,7 @@
 <meta property="og:description" content="经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/Leebolg.png">
-<meta property="og:updated_time" content="2018-07-05T09:30:46.565Z">
+<meta property="og:updated_time" content="2018-07-05T09:36:55.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用">
 <meta name="twitter:description" content="经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。">
@@ -323,8 +323,34 @@
 <h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>在 Hexo 中插入图片，首先需要将图片放在 source/img/ 文件夹下，然后如下方式进行插入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![这是图片说明](/img/Leebolg.png)</span><br></pre></td></tr></table></figure></p>
 <p>效果图如下：<br><img src="/img/Leebolg.png" alt="这是图片说明"></p>
 
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br><span class="line">| zebra stripes | are neat      |    $1 |</span><br><span class="line"></span><br><span class="line">| 表头1|表头2|表头3|表头4</span><br><span class="line">|-| :- | :-: | -: |</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br></pre></td></tr></table></figure>
-<p>效果：<br>| Tables        | Are           | Cool  |<br>| ————- |:————-:| —–:|<br>| col 3 is      | right-aligned | $1600 |<br>| col 2 is      | centered      |   $12 |<br>| zebra stripes | are neat      |    $1 |</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">| Tables        | Are           | Cool  |</span><br><span class="line">| ------------- |:-------------:| -----:|</span><br><span class="line">| col 3 is      | right-aligned | $1600 |</span><br><span class="line">| col 2 is      | centered      |   $12 |</span><br><span class="line">| zebra stripes | are neat      |    $1 |</span><br><span class="line"></span><br><span class="line">| 表头1|表头2|表头3|表头4</span><br><span class="line">|-| :- | :-: | -: |</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line">|默认左对齐|左对齐|居中对其|右对齐|</span><br><span class="line"></span><br><span class="line">| 参数           | 说明                 |   默认值            |</span><br><span class="line">| ------------- |:-------------------:|:------------------:|</span><br><span class="line">| host          | 远程主机的地址         |                    |</span><br><span class="line">| user          | 使用者名称            |                    |</span><br><span class="line">| root          |  远程主机的根目录      |                    |</span><br><span class="line">| port          | 端口                 |       22           |</span><br><span class="line">| delete        | 删除远程主机上的旧文件   |  true              |</span><br><span class="line">| verbose       | 显示调试信息           |   true             |</span><br><span class="line">| ignore_errors | 忽略错误              |     false          |</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
@@ -352,6 +378,52 @@
 <td style="text-align:left">左对齐</td>
 <td style="text-align:center">居中对其</td>
 <td style="text-align:right">右对齐</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td style="text-align:center">远程主机的地址</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>user</td>
+<td style="text-align:center">使用者名称</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>root</td>
+<td style="text-align:center">远程主机的根目录</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>port</td>
+<td style="text-align:center">端口</td>
+<td style="text-align:center">22</td>
+</tr>
+<tr>
+<td>delete</td>
+<td style="text-align:center">删除远程主机上的旧文件</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td style="text-align:center">显示调试信息</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>ignore_errors</td>
+<td style="text-align:center">忽略错误</td>
+<td style="text-align:center">false</td>
 </tr>
 </tbody>
 </table>
@@ -414,7 +486,7 @@
         <p><span>本文标题:</span><a href="/2018/07/05/Hexo使用/">Hexo使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月05日 - 15时31分</p>
-        <p><span>最后更新:</span>2018年07月05日 - 17时30分</p>
+        <p><span>最后更新:</span>2018年07月05日 - 17时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/05/Hexo使用/" title="Hexo使用">http://Lee981265.github.io/2018/07/05/Hexo使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/05/Hexo使用/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
