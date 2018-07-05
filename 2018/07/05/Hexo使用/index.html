@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Lee">
 <meta property="og:description" content="经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-05T08:43:12.916Z">
+<meta property="og:updated_time" content="2018-07-05T08:48:02.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用">
 <meta name="twitter:description" content="经过一段时间的折腾终于用 Hexo + GitHub 搭建起了一个个人博客站点，第一时间边学边写，弄出了这第一篇博客，心里甚是欢喜。">
@@ -317,8 +317,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: /blog/:year/:month/:day/:title/</span><br></pre></td></tr></table></figure>
 <p>当在地址栏访问时，就会如下方式呈现出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000/blog/2017/01/13/hexo-blog/</span><br></pre></td></tr></table></figure></p>
 <h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><p>在命令行中用如下命令创建一篇新的文章<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
-<p>|布局（layout）    |存储路径|    说明|<br>|-|| :-：| -:|<br>|post|    source/_posts|    默认，可以直接发布|<br>|page|    source|    在source下新建一个文件夹|<br>|draft|    source/_drafts|    新建文件将保持到_drafts中|</p>
+<p>|布局（layout）    |存储路径|    说明|<br>|-| :-：| -:|<br>|post|    source/_posts|    默认，可以直接发布|<br>|page|    source|    在source下新建一个文件夹|<br>|draft|    source/_drafts|    新建文件将保持到_drafts中|</p>
 <p>可以用 publish 命令将草稿移动到 source/_posts 文件夹下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><p>经过上面上面一系列的准备工作，现在差不多就可以安心的写作了。打开 source/_posts 文件夹下刚创建的 Markdown 文件，你会发现有如下内容：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo-blog</span><br><span class="line">date: 2017-01-13 16:07:32</span><br><span class="line">tags: </span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>注意，这里的 title 是可以随便改的，当然了 date 也是可以改，不过没有改的必要；这里要说一下 tags 这个属性，如果需要配置多个有两种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [tag1, tag2, tag3]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">    - tag1</span><br><span class="line">    - tag2</span><br><span class="line">    - tag3</span><br></pre></td></tr></table></figure>
+<p>Hexo 是支持 Markdown 的所有功能的，所以，下面去学习一下 Markdown 的语法规范</p>
 
       
       
@@ -377,7 +381,7 @@
         <p><span>本文标题:</span><a href="/2018/07/05/Hexo使用/">Hexo使用</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月05日 - 15时31分</p>
-        <p><span>最后更新:</span>2018年07月05日 - 16时43分</p>
+        <p><span>最后更新:</span>2018年07月05日 - 16时48分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/05/Hexo使用/" title="Hexo使用">http://Lee981265.github.io/2018/07/05/Hexo使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/05/Hexo使用/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -406,7 +410,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文件命名规则和路由地址"><span class="toc-number">1.</span> <span class="toc-text">配置文件命名规则和路由地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文件命名规则和路由地址"><span class="toc-number">1.</span> <span class="toc-text">配置文件命名规则和路由地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建博客"><span class="toc-number">2.</span> <span class="toc-text">创建博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写作"><span class="toc-number">3.</span> <span class="toc-text">写作</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
