@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Git进阶]]></title>
+    <url>%2F2018%2F07%2F05%2FGit%E8%BF%9B%E9%98%B6%2F</url>
+    <content type="text"><![CDATA[首先我们来预览一下Git命令1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465&#123; mkdir： XX (创建一个空目录 XX指目录名) pwd： 显示当前目录的路径。 git init 把当前的目录变成可以管理的git仓库，生成隐藏.git文件。 git add XX 把xx文件添加到暂存区去。 git reset --mixed 把上次add文件撤销但修改保留。 git commit –m “XX” 提交文件 –m 后面的是注释。 git status 查看仓库状态 git diff XX 查看XX文件修改了那些内容 git log 查看历史记录 git reset –hard HEAD^ 或者 git reset –hard HEAD~ 回退到上一个版本 (如果想回退到100个版本，使用git reset –hard HEAD~100 ) cat XX 查看XX文件内容 git reflog 查看历史记录的版本号id git checkout — XX 把XX文件在工作区的修改全部撤销。 git rm XX 删除XX文件 git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库 git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库 git clone https://github.com/tugenhua0707/testgit 从远程库中克隆 git checkout –b dev 创建dev分支 并切换到dev分支上 git branch 查看当前所有的分支 git checkout master 切换回master分支 git merge dev 在当前的分支上合并dev分支 git branch –d dev 删除dev分支 git branch name 创建分支 git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作 git stash list 查看所有被隐藏的文件列表 git stash apply 恢复被隐藏的文件，但是内容不删除 git stash drop 删除文件 git stash pop 恢复文件的同时 也删除文件 git remote 查看远程库的信息 git remote –v 查看远程库的详细信息 git push origin master Git会把master分支推送到远程库对应的远程分支上&#125;]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的博客]]></title>
     <url>%2F2018%2F07%2F03%2F%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[这是我首次使用hexojs编写博客那么我就来试一试更多内容的相关功能吧！阿萨德法师法阿萨德法师法盛大发售的发生按时发大厦法定大沙发斯蒂芬暗示法大是大非啊是发达省份案发生的父亲文峰区而我父亲万购房全款价格开启阿斯顿发士大夫]]></content>
