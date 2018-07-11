@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: hhhh | Lee</title>
+  <title>Tag: Javascript | Lee</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
 <meta name="keywords" content="Javascript,DOM">
@@ -14,7 +14,7 @@
 <meta property="og:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/DOMTREE.gif">
-<meta property="og:updated_time" content="2018-07-11T06:57:20.468Z">
+<meta property="og:updated_time" content="2018-07-11T07:33:48.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
@@ -237,6 +237,75 @@
 <h2 id="HTML-DOM-节点树（DOM树）"><a href="#HTML-DOM-节点树（DOM树）" class="headerlink" title="HTML DOM 节点树（DOM树）"></a>HTML DOM 节点树（DOM树）</h2><p>HTML DOM 将 HTML 文档视作树结构。这种结构被称为节点树：</p>
 <p><img src="/img/DOMTREE.gif" alt="DOM Tree 事例"></p>
 <p>通过 HTML DOM，树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。</p>
+<h2 id="HTML-DOM-对象-方法和属性"><a href="#HTML-DOM-对象-方法和属性" class="headerlink" title="HTML DOM 对象 - 方法和属性"></a>HTML DOM 对象 - 方法和属性</h2><h3 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">* document.getElementById(&apos;list&apos;)  ---- 返回DOM节点 速度最快</span><br><span class="line">* document.getElementsByTagName(&apos;div)  ---- 返回类数组</span><br><span class="line">* document.getElementsByClassName(&apos;list&apos;) ---- 返回类数组 ie8 有兼容性问题</span><br><span class="line">* document.getElementsByName()   --- 返回类数组 如：获取表单name属性</span><br><span class="line">* ducument.body ---- 获取body</span><br><span class="line">* 通过id 获取不到返回null，其他几项返回 [].</span><br></pre></td></tr></table></figure>
+<h3 id="DOM对象方法预览"><a href="#DOM对象方法预览" class="headerlink" title="DOM对象方法预览"></a>DOM对象方法预览</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getElementById()</td>
+<td>返回带有指定 ID 的元素。</td>
+</tr>
+<tr>
+<td>getElementsByTagName()</td>
+<td>返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）。</td>
+</tr>
+<tr>
+<td>getElementsByClassName()</td>
+<td>返回包含带有指定类名的所有元素的节点列表。</td>
+</tr>
+<tr>
+<td>appendChild()</td>
+<td>把新的子节点添加到指定节点。</td>
+</tr>
+<tr>
+<td>removeChild()</td>
+<td>删除子节点。</td>
+</tr>
+<tr>
+<td>replaceChild()</td>
+<td>替换子节点</td>
+</tr>
+<tr>
+<td>insertBefore()</td>
+<td>在指定的子节点前面插入新的子节点。</td>
+</tr>
+<tr>
+<td>createAttribute()</td>
+<td>创建属性节点。</td>
+</tr>
+<tr>
+<td>createElement()</td>
+<td>创建元素节点。</td>
+</tr>
+<tr>
+<td>createTextNode()</td>
+<td>创建文本节点。</td>
+</tr>
+<tr>
+<td>getAttribute()</td>
+<td>返回指定的属性值。</td>
+</tr>
+<tr>
+<td>setAttribute()</td>
+<td>把指定属性设置或修改为指定的值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="节点的类型"><a href="#节点的类型" class="headerlink" title="节点的类型"></a>节点的类型</h3><p>nodetype 节点的属性<br>|节点类型|nodetype|<br>|–|–|<br>|元素节点|1|<br>|文本节点|3|<br>|属性节点|2|<br>|注释节点|8|<br>|文档节点|9|</p>
+<h3 id="节点的属性"><a href="#节点的属性" class="headerlink" title="节点的属性"></a>节点的属性</h3><ul>
+<li>nodetype 取值：1,2,3</li>
+<li>nodeName 取值元素的标签名 如DIV。 文本：#text</li>
+<li>nodeValue 获取节点的值<ol>
+<li>文本</li>
+<li>属性 </li>
+</ol>
+</li>
+</ul>
 
       
       
@@ -295,7 +364,7 @@
         <p><span>本文标题:</span><a href="/2018/07/11/DOM/">DOM</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月11日 - 14时43分</p>
-        <p><span>最后更新:</span>2018年07月11日 - 14时57分</p>
+        <p><span>最后更新:</span>2018年07月11日 - 15时33分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/11/DOM/" title="DOM">http://Lee981265.github.io/2018/07/11/DOM/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/11/DOM/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -324,7 +393,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-对象-方法和属性"><span class="toc-number">3.</span> <span class="toc-text">HTML DOM 对象 - 方法和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取页面元素"><span class="toc-number">3.1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM对象方法预览"><span class="toc-number">3.2.</span> <span class="toc-text">DOM对象方法预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的类型"><span class="toc-number">3.3.</span> <span class="toc-text">节点的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的属性"><span class="toc-number">3.4.</span> <span class="toc-text">节点的属性</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
