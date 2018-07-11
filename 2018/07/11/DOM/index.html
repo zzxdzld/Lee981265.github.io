@@ -14,7 +14,7 @@
 <meta property="og:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/DOMTREE.gif">
-<meta property="og:updated_time" content="2018-07-11T08:21:18.447Z">
+<meta property="og:updated_time" content="2018-07-11T08:23:35.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
@@ -349,16 +349,17 @@
 </ul>
 <p><strong><em>ps:已经存在页面上的元素，如果使用appendchild,insertBefore操作则会移动这个元素</em></strong></p>
 <ul>
-<li><p>复制节点</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ele.cloneNode(boolean);</span><br><span class="line">ele.cloneNode(boolean,<span class="literal">true</span>); <span class="comment">// true为深复制</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>删除节点 </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.removeChild(ele);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>判断是否存在节点</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.hasChildNode() <span class="comment">//返回布尔值</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>复制节点</li>
 </ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ele.cloneNode(boolean);</span><br><span class="line">ele.cloneNode(boolean,<span class="literal">true</span>); <span class="comment">// true为深复制</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除节点 </li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.removeChild(ele);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>判断是否存在节点</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.hasChildNode() <span class="comment">//返回布尔值</span></span><br></pre></td></tr></table></figure>
 <p><strong><em>ps</em></strong><br><strong><em>1.标准浏览器中：换行会解析为一个文本节点（即解析空格）。</em></strong><br><strong><em>2.在ie8中会忽略上述问题</em></strong></p>
 <h2 id="节点关系和元素关系"><a href="#节点关系和元素关系" class="headerlink" title="节点关系和元素关系"></a>节点关系和元素关系</h2><table>
 <thead>
@@ -485,7 +486,7 @@
         <p><span>本文标题:</span><a href="/2018/07/11/DOM/">DOM</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月11日 - 14时43分</p>
-        <p><span>最后更新:</span>2018年07月11日 - 16时21分</p>
+        <p><span>最后更新:</span>2018年07月11日 - 16时23分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/11/DOM/" title="DOM">http://Lee981265.github.io/2018/07/11/DOM/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/11/DOM/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
