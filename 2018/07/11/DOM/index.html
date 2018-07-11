@@ -14,7 +14,7 @@
 <meta property="og:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/DOMTREE.gif">
-<meta property="og:updated_time" content="2018-07-11T07:33:48.978Z">
+<meta property="og:updated_time" content="2018-07-11T08:12:55.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
@@ -306,6 +306,97 @@
 </ol>
 </li>
 </ul>
+<h3 id="DOM节点的增删查改"><a href="#DOM节点的增删查改" class="headerlink" title="DOM节点的增删查改"></a>DOM节点的增删查改</h3><ul>
+<li><p>创建元素节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建文本节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.creatTextNode(<span class="string">'你好'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>插入节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent=<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>); <span class="comment">//父元素 </span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> parent.appendChild()  <span class="comment">//往后面加</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> parent.insertBefoer(<span class="keyword">new</span>,node); <span class="comment">//通过父级在node节点前面添加新的节点</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><em>ps:已经存在页面上的元素，如果使用appendchild,insertBefore操作则会移动这个元素</em></strong></p>
+<ul>
+<li><p>复制节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ele.cloneNode(boolean);</span><br><span class="line">ele.cloneNode(boolean,<span class="literal">true</span>); <span class="comment">// true为深复制</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除节点 </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.removeChild(ele);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断是否存在节点</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.hasChildNode() <span class="comment">//返回布尔值</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><em>ps</em></strong><br><strong><em>1.标准浏览器中：换行会解析为一个文本节点（即解析空格）。</em></strong><br><strong><em>2.在ie8中会忽略上述问题</em></strong></p>
+<h2 id="节点关系和元素关系"><a href="#节点关系和元素关系" class="headerlink" title="节点关系和元素关系"></a>节点关系和元素关系</h2><table>
+<thead>
+<tr>
+<th>关系</th>
+<th>节点关系</th>
+<th>元素关系(存在兼容性问题 children无兼容性问题)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>父级</td>
+<td>parentNode</td>
+<td>parentElement</td>
+</tr>
+<tr>
+<td>子级</td>
+<td>childNode</td>
+<td>children</td>
+</tr>
+<tr>
+<td>第一个子级</td>
+<td>firstChild</td>
+<td>firstElementChild</td>
+</tr>
+<tr>
+<td>最后个子级</td>
+<td>lastChild</td>
+<td>lastElementChild</td>
+</tr>
+<tr>
+<td>前一个兄弟</td>
+<td>previousSibling</td>
+<td>previousElementSibling</td>
+</tr>
+<tr>
+<td>后一个兄弟</td>
+<td>nextSibling</td>
+<td>nextElementSibling</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>文本</th>
+<th>–</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文本</td>
+<td>ele.innerHTML(含标签)</td>
+</tr>
+<tr>
+<td>文本</td>
+<td>ele.innerText(单纯文字)</td>
+</tr>
+<tr>
+<td>文本</td>
+<td>ele.outerHTML</td>
+</tr>
+<tr>
+<td>文本</td>
+<td>ele.outerText</td>
+</tr>
+</tbody>
+</table>
 
       
       
@@ -364,7 +455,7 @@
         <p><span>本文标题:</span><a href="/2018/07/11/DOM/">DOM</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月11日 - 14时43分</p>
-        <p><span>最后更新:</span>2018年07月11日 - 15时33分</p>
+        <p><span>最后更新:</span>2018年07月11日 - 16时12分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/11/DOM/" title="DOM">http://Lee981265.github.io/2018/07/11/DOM/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/11/DOM/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -393,7 +484,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-对象-方法和属性"><span class="toc-number">3.</span> <span class="toc-text">HTML DOM 对象 - 方法和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取页面元素"><span class="toc-number">3.1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM对象方法预览"><span class="toc-number">3.2.</span> <span class="toc-text">DOM对象方法预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的类型"><span class="toc-number">3.3.</span> <span class="toc-text">节点的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的属性"><span class="toc-number">3.4.</span> <span class="toc-text">节点的属性</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-对象-方法和属性"><span class="toc-number">3.</span> <span class="toc-text">HTML DOM 对象 - 方法和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取页面元素"><span class="toc-number">3.1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM对象方法预览"><span class="toc-number">3.2.</span> <span class="toc-text">DOM对象方法预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的类型"><span class="toc-number">3.3.</span> <span class="toc-text">节点的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的属性"><span class="toc-number">3.4.</span> <span class="toc-text">节点的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM节点的增删查改"><span class="toc-number">3.5.</span> <span class="toc-text">DOM节点的增删查改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#节点关系和元素关系"><span class="toc-number">4.</span> <span class="toc-text">节点关系和元素关系</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
