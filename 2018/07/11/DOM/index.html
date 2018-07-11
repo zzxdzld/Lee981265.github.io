@@ -14,7 +14,7 @@
 <meta property="og:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/DOMTREE.gif">
-<meta property="og:updated_time" content="2018-07-11T08:25:30.461Z">
+<meta property="og:updated_time" content="2018-07-11T08:44:15.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM">
 <meta name="twitter:description" content="DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：  核心 DOM - 针对任何结构化文档的标准模型 XML DOM - 针对 XML 文档的标准模型 HTML DOM -">
@@ -429,6 +429,33 @@
 </tr>
 </tbody>
 </table>
+<h2 id="属性节点"><a href="#属性节点" class="headerlink" title="属性节点"></a>属性节点</h2><p><strong><em>注意：只有html的标准属性才能直接获取</em></strong><br>例如：id ,className,title等</p>
+<ul>
+<li>设置非标准属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setAttribute(attr,val)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取非标准属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ele.getAttribute(<span class="string">'name'</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>判断是否存在某费标准属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ele.hasAttribute(attr) <span class="comment">//返回布尔值</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除属性</li>
+</ul>
+<p><code>js
+ele.removeAttribute(attr)</code></p>
+<h2 id="CSS-style属性"><a href="#CSS-style属性" class="headerlink" title="CSS:style属性"></a>CSS:style属性</h2><p><strong><em>ps:ele.style设置或改变的是内联样式</em></strong></p>
+<ul>
+<li>获取非内联样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getComputedStyle(ele); <span class="comment">//计算过后</span></span><br><span class="line">getComputedStyle(ele).fontSize;</span><br><span class="line">getComputedStyle(ele).[font-size];<span class="comment">//[attr]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取伪元素样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getCompuyedStyle(ele,<span class="string">"::before"</span>).color;</span><br><span class="line">getCompuyedStyle(ele,<span class="string">"::before"</span>).fontSize;</span><br><span class="line">getCompuyedStyle(ele,<span class="string">"::before"</span>).[font-size];<span class="comment">//兼容ie8-</span></span><br></pre></td></tr></table></figure>
 
       
       
@@ -487,7 +514,7 @@
         <p><span>本文标题:</span><a href="/2018/07/11/DOM/">DOM</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月11日 - 14时43分</p>
-        <p><span>最后更新:</span>2018年07月11日 - 16时25分</p>
+        <p><span>最后更新:</span>2018年07月11日 - 16时44分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/11/DOM/" title="DOM">http://Lee981265.github.io/2018/07/11/DOM/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/11/DOM/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -516,7 +543,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-对象-方法和属性"><span class="toc-number">3.</span> <span class="toc-text">HTML DOM 对象 - 方法和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取页面元素"><span class="toc-number">3.1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM对象方法预览"><span class="toc-number">3.2.</span> <span class="toc-text">DOM对象方法预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的类型"><span class="toc-number">3.3.</span> <span class="toc-text">节点的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的属性"><span class="toc-number">3.4.</span> <span class="toc-text">节点的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM节点的增删查改"><span class="toc-number">3.5.</span> <span class="toc-text">DOM节点的增删查改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#节点关系和元素关系"><span class="toc-number">4.</span> <span class="toc-text">节点关系和元素关系</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM节点"><span class="toc-number">1.</span> <span class="toc-text">DOM节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-节点树（DOM树）"><span class="toc-number">2.</span> <span class="toc-text">HTML DOM 节点树（DOM树）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML-DOM-对象-方法和属性"><span class="toc-number">3.</span> <span class="toc-text">HTML DOM 对象 - 方法和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取页面元素"><span class="toc-number">3.1.</span> <span class="toc-text">获取页面元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM对象方法预览"><span class="toc-number">3.2.</span> <span class="toc-text">DOM对象方法预览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的类型"><span class="toc-number">3.3.</span> <span class="toc-text">节点的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点的属性"><span class="toc-number">3.4.</span> <span class="toc-text">节点的属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM节点的增删查改"><span class="toc-number">3.5.</span> <span class="toc-text">DOM节点的增删查改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#节点关系和元素关系"><span class="toc-number">4.</span> <span class="toc-text">节点关系和元素关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性节点"><span class="toc-number">5.</span> <span class="toc-text">属性节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-style属性"><span class="toc-number">6.</span> <span class="toc-text">CSS:style属性</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
