@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Echarts简单应用]]></title>
+    <url>%2F2018%2F07%2F12%2FEcharts%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[敬请期待！]]></content>
+      <tags>
+        <tag>Echarts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NodeJs]]></title>
+    <url>%2F2018%2F07%2F12%2FNodeJs%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Ajax]]></title>
+    <url>%2F2018%2F07%2F12%2FAjax%2F</url>
+    <content type="text"><![CDATA[敬请期待！]]></content>
+      <tags>
+        <tag>Ajax</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[初识PHP]]></title>
+    <url>%2F2018%2F07%2F12%2F%E5%88%9D%E8%AF%86PHP%2F</url>
+    <content type="text"><![CDATA[PHP（外文名:PHP: Hypertext Preprocessor）：超文本预处理器。是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。以前是没有前端这个职位的，随着计算机语言的发展Ajax的出现，有了前后端分离这一概念。]]></content>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx快速开端口]]></title>
     <url>%2F2018%2F07%2F12%2FNginx%2F</url>
     <content type="text"><![CDATA[对于一个前端来说，运行一些代码有些特殊情况需要开设端口。起初我使用静态服务器用sumlime,后面陆续使用wampserver,xampp;但是有一次换电脑了，需要重新下载，糟糕的的是突然下载不了，项目于是停止不前；庆幸的是以为Java同事告诉我用Nginx开设端口。我在这里把我这个方法分享给大家！ 第一步下载Nginx下载地址：http://nginx.org/ 第二步配置config进入conf/nignx.conf文件具体配置如下： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136 #user nobody; worker_processes 1; #error_log logs/error.log; #error_log logs/error.log notice; #error_log logs/error.log info; #pid logs/nginx.pid; events &#123; worker_connections 1024; &#125; http &#123; include mime.types; default_type application/octet-stream; #log_format main &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos; # &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos; # &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;; #access_log logs/access.log main; sendfile on; #tcp_nopush on; #keepalive_timeout 0; keepalive_timeout 65; #gzip on; server &#123; listen 80; #端口 server_name localhost; #charset koi8-r; #access_log logs/host.access.log main; location / &#123; root F:\GitMap1\echarts3-chinese-map-drill-down; #真实路径 index index.html index.htm; #可识别的目标文件 &#125; #error_page 404 /404.html; # redirect server error pages to the static page /50x.html # error_page 500 502 503 504 /50x.html; location = /50x.html &#123; root html; &#125; # proxy the PHP scripts to Apache listening on 127.0.0.1:80 # #location ~ \.php$ &#123; # proxy_pass http://127.0.0.1; #&#125; # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000 # #location ~ \.php$ &#123; # root html; # fastcgi_pass 127.0.0.1:9000; # fastcgi_index index.php; # fastcgi_param SCRIPT_FILENAME /scripts$fastcgi_script_name; # include fastcgi_params; #&#125; # deny access to .htaccess files, if Apache&apos;s document root # concurs with nginx&apos;s one # #location ~ /\.ht &#123; # deny all; #&#125; &#125; server &#123; listen 8000; #端口 server_name localhost; location / &#123; root F:\GitMap1\echarts3-chinese-map-drill-down; #真实路径 index index.html index.htm; &#125; &#125; server &#123; listen 8080; server_name localhost; location / &#123; root F:\NewRequest\jingqingan_ganzhou; index index.html index.htm; &#125; &#125; # another virtual host using mix of IP-, name-, and port-based configuration # #server &#123; # listen 8000; # listen somename:8080; # server_name somename alias another.alias; # location / &#123; # root html; # index index.html index.htm; # &#125; #&#125; # HTTPS server # #server &#123; # listen 443 ssl; # server_name localhost; # ssl_certificate cert.pem; # ssl_certificate_key cert.key; # ssl_session_cache shared:SSL:1m; # ssl_session_timeout 5m; # ssl_ciphers HIGH:!aNULL:!MD5; # ssl_prefer_server_ciphers on; # location / &#123; # root html; # index index.html index.htm; # &#125; #&#125;&#125;]]></content>
