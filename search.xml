@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[从零开始小程序]]></title>
     <url>%2F2018%2F07%2F13%2F%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
-    <content type="text"><![CDATA[随着技术的发展着2年微信小程序犹如一匹黑马迅速崛起，新的技术出现，我们为了不与时代脱轨学习小程序很有必要！ 开始学习准备工作 IDE搭建 知识准备 从零开始 app.js app.json app.wxml app.wxss Hello World 创建程序实例 美化ActionBar 美化页面 配置首页 超级Hello World 事件绑定函数 更新界面数据 准备工作]]></content>
+    <content type="text"><![CDATA[随着技术的发展着2年微信小程序犹如一匹黑马迅速崛起，新的技术出现，我们为了不与时代脱轨学习小程序很有必要！ 开始学习准备工作 IDE搭建 知识准备 从零开始 app.js app.json app.wxml app.wxss Hello World 创建程序实例 美化ActionBar 美化页面 配置首页 超级Hello World 事件绑定函数 更新界面数据 测试 测试1 测试1 测试 测试1 测试1 准备工作]]></content>
       <tags>
         <tag>Mini-apps</tag>
       </tags>
