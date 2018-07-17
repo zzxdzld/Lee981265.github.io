@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://lee981265.github.io/img/05.png">
 <meta property="og:image" content="http://lee981265.github.io/img/06.png">
 <meta property="og:image" content="http://lee981265.github.io/img/07.gif">
-<meta property="og:updated_time" content="2018-07-17T01:24:42.373Z">
+<meta property="og:updated_time" content="2018-07-17T01:31:02.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始小程序">
 <meta name="twitter:description" content="随着技术的发展着2年微信小程序犹如一匹黑马迅速崛起，新的技术出现，我们为了不与时代脱轨学习小程序很有必要！">
@@ -333,7 +333,7 @@
 <p>,添加完后代码长这样 红框中就是 添加的这个代码</p>
 <p><img src="/img/04.png" alt="tap"></p>
 <p>所以其实点击事件的回调函数 就是 catchtap=”click” 中的 click 后面加上 :function() 构成的现在我们来运行程序试试 然后点击文字</p>
-<p><img src="/img/05.png" alt="tap"> 看是不是调用了click:function 并打印 点击了文字</p>
+<p><img src="/img/05.png" alt="tap"><br>看是不是调用了click:function 并打印 点击了文字</p>
 <p>好接下来我们写点击一下变色的逻辑那如何让一个文字变色呢，当然是css所以我们需要再index.wxss 中添加一个样式</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.window-red</span>&#123; <span class="attribute">color</span>:<span class="number">#D23933</span>;&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.window</span>&#123;<span class="attribute">color</span>:<span class="number">#49bb16</span>;&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.window-red</span>&#123;<span class="attribute">color</span>:<span class="number">#D23933</span>;&#125;</span><br></pre></td></tr></table></figure>
 <p>然后我们进入index.js文件你会发现代码里面有个 data:{} 它不是page生命周期函数其实他是个变量的数组，这个里面申请的变量都可以在 wxml中使用<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data:&#123;</span><br><span class="line">  color:<span class="string">"window"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -403,7 +403,7 @@
         <p><span>本文标题:</span><a href="/2018/07/13/从零开始小程序/">从零开始小程序</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月13日 - 09时16分</p>
-        <p><span>最后更新:</span>2018年07月17日 - 09时24分</p>
+        <p><span>最后更新:</span>2018年07月17日 - 09时31分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/13/从零开始小程序/" title="从零开始小程序">http://Lee981265.github.io/2018/07/13/从零开始小程序/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/13/从零开始小程序/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
