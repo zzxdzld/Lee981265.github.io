@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Lee">
 <meta property="og:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-19T06:38:43.140Z">
+<meta property="og:updated_time" content="2018-09-19T06:41:31.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法简介">
 <meta name="twitter:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
@@ -260,26 +260,11 @@
 </ol>
 </li>
 </ul>
-<ol>
-<li><p>列出所有元素：</p>
 <ul>
-<li>无序列表元素 A<ol>
-<li>元素 A 的有序子列表</li>
-</ol>
-</li>
-<li>前面加四个空格</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li><p>const:常量声明</p>
-<ol>
-<li><p>声明后无法修改值</p>
-</li>
-<li><p>块级作用域</p>
-</li>
-<li><p>const不允许相同作用域内多次声明同一变量</p>
-</li>
+<li>const:常量声明<ol>
+<li>声明后无法修改值</li>
+<li>块级作用域</li>
+<li>const不允许相同作用域内多次声明同一变量</li>
 </ol>
 </li>
 </ul>
@@ -289,10 +274,12 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">var</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">//a=1,b=2,c=3</span></span><br><span class="line"><span class="number">2.</span> <span class="keyword">var</span> [a,[[b],c]] = [<span class="number">10</span>,[[<span class="number">20</span>],<span class="number">30</span>]] <span class="comment">//a=10,b=20,c=30</span></span><br><span class="line"><span class="number">3.</span> <span class="keyword">var</span> [a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] <span class="comment">//a=1,b=[2,3,4];...表示剩余参数</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>对象：</p>
-<pre><code>1. var {a,b}={a:’html’,b:’css’}
-2. 变量必须与对象属性名相同，否则为undefined
-3. 如果变量名与属性名不相同，则必须写成以下格式才能取到值
-</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123;<span class="attr">a</span>:test&#125; =&#123;<span class="attr">a</span>:<span class="string">'html'</span>,<span class="attr">b</span>:<span class="string">'css'</span>&#125; <span class="comment">//test=&gt;html</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>var {a,b}={a:’html’,b:’css’}</li>
+<li>变量必须与对象属性名相同，否则为undefined</li>
+<li>如果变量名与属性名不相同，则必须写成以下格式才能取到值<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123;<span class="attr">a</span>:test&#125; =&#123;<span class="attr">a</span>:<span class="string">'html'</span>,<span class="attr">b</span>:<span class="string">'css'</span>&#125; <span class="comment">//test=&gt;html</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 </li>
 <li><p>解构失败：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [a]=[],[b]=<span class="number">1</span>,[c]=<span class="string">'jiegou'</span>,[d]=<span class="literal">false</span> <span class="comment">//a,b,c,d都得到undefined</span></span><br></pre></td></tr></table></figure>
@@ -304,6 +291,8 @@
 <p>解构同样适用于let和const<br>PS:解构只能用于数组和对象，如果解构不成功，变量会返回undefined，但如果对undefined和null解构则会报错</p>
 </blockquote>
 <h3 id="解构用途"><a href="#解构用途" class="headerlink" title="解构用途"></a>解构用途</h3></li>
+</ul>
+<ul>
 <li><p>交换变量值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [x,y] = [y,x];</span><br></pre></td></tr></table></figure>
 </li>
@@ -494,7 +483,7 @@
         <p><span>本文标题:</span><a href="/2018/09/19/ES6语法简介/">ES6语法简介</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年09月19日 - 11时29分</p>
-        <p><span>最后更新:</span>2018年09月19日 - 14时38分</p>
+        <p><span>最后更新:</span>2018年09月19日 - 14时41分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/19/ES6语法简介/" title="ES6语法简介">http://Lee981265.github.io/2018/09/19/ES6语法简介/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/09/19/ES6语法简介/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
