@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Lee">
 <meta property="og:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-19T03:55:54.118Z">
+<meta property="og:updated_time" content="2018-09-19T06:05:51.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法简介">
 <meta name="twitter:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
@@ -252,48 +252,8 @@
       
           
         <p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。<a id="more"></a></p>
-<ul>
-<li><p><a href="#es6">ES6</a></p>
-<pre><code>*   [变量声明](#_1)
-</code></pre><ul>
-<li><p><a href="#_2">解构赋值</a></p>
-<pre><code>*   [解构用途](#_3)
-</code></pre><ul>
-<li><p><a href="#_4">字符串扩展</a></p>
-<pre><code>*   [字符串方法](#_5)
-</code></pre></li>
-<li><p><a href="#_6">字符串模板, 使用反引号`表示(重点)</a></p>
-</li>
-<li><p><a href="#_7">数组扩展</a></p>
-<pre><code>*   [遍历](#_8)
-</code></pre></li>
-<li><p><a href="#_9">对象扩展</a></p>
-</li>
-</ul>
-</li>
-<li><p><a href="#_10">箭头函数=&gt;（重点）</a></p>
-<pre><code>*   [参数与返回值](#_11)
-</code></pre><ul>
-<li><p><a href="#this">箭头函数中的this值</a></p>
-</li>
-<li><p><a href="#symbol">Symbol数据类型</a></p>
-<pre><code>*   [用途](#_12)
-</code></pre></li>
-<li><p><a href="#_13">常用方法</a></p>
-</li>
-<li><p><a href="#map">Map集合</a></p>
-<pre><code>*   [方法](#_14)
-</code></pre></li>
-<li><p><a href="#set">Set集合</a></p>
-</li>
-</ul>
-</li>
-<li><a href="#generators">生成器 Generators</a><br></li>
-</ul>
-</li>
-</ul>
-<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a><a href="#es6"><span class="headeranchor"></span></a>ES6</h1><h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a><a href="#_1"><span class="headeranchor"></span></a>变量声明</h2><ul>
-<li><p>let: 代码块内的变量声明</p>
+<h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><ul>
+<li><p>let:代码块内的变量声明</p>
 <pre><code>1）变量声明不会提升
 
 2）块级作用域
@@ -308,81 +268,71 @@
 3）const不允许相同作用域内多次声明同一变量
 </code></pre></li>
 </ul>
-<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a><a href="#_2"><span class="headeranchor"></span></a>解构赋值</h2><p>ES6允许我们对数组和对象中提取值，对变量进行赋值，这被叫做“解构”</p>
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><p>ES6允许我们对数组和对象中提取值，对变量进行赋值，这被叫做“解构”</p>
 <ul>
 <li><p>数组：</p>
-<pre><code>    1）var [a,b,c] = [1,2,3] //a=1,b=2,c=3
-2）var [a,[[b],c]] = [10,[[20],30]] //a=10,b=20,c=30
-3）var [a,...b] = [1,2,3,4] //a=1,b=[2,3,4];...表示剩余参数
-</code></pre><p>`</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>）<span class="keyword">var</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">//a=1,b=2,c=3</span></span><br><span class="line"><span class="number">2</span>）<span class="keyword">var</span> [a,[[b],c]] = [<span class="number">10</span>,[[<span class="number">20</span>],<span class="number">30</span>]] <span class="comment">//a=10,b=20,c=30</span></span><br><span class="line"><span class="number">3</span>）<span class="keyword">var</span> [a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] <span class="comment">//a=1,b=[2,3,4];...表示剩余参数</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>对象：<pre><code>1）var {a,b}={a:’html’,b:’css’}
+<li><p>对象：</p>
+<pre><code>1）var {a,b}={a:’html’,b:’css’}
 2）变量必须与对象属性名相同，否则为undefined
 3）如果变量名与属性名不相同，则必须写成以下格式才能取到值
-</code></pre><code>var {a:test} ={a:&#39;html&#39;,b:&#39;css&#39;} //test=&gt;html</code></li>
-<li>解构失败：<br><code>var [a]=[],[b]=1,[c]=&#39;jiegou&#39;,[d]=false //a,b,c,d都得到undefined</code></li>
-<li><p>指定默认值：</p>
-<pre><code>&lt;pre&gt;`var [a=true]=[]
-</code></pre><p>var {a=10} = {}<br>`&gt; 解构同样适用于let和const</p>
-<blockquote>
-<p>PS:解构只能用于数组和对象，如果解构不成功，变量会返回undefined，但如果对undefined和null解构则会报错</p>
-</blockquote>
-<h3 id="解构用途"><a href="#解构用途" class="headerlink" title="解构用途"></a><a href="#_3"><span class="headeranchor"></span></a>解构用途</h3></li>
-<li><p>交换变量值<br><code>var [x,y] = [y,x];</code></p>
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> &#123;<span class="attr">a</span>:test&#125; =&#123;<span class="attr">a</span>:<span class="string">'html'</span>,<span class="attr">b</span>:<span class="string">'css'</span>&#125; <span class="comment">//test=&gt;html</span></span><br></pre></td></tr></table></figure>
 </li>
-<li>函数返回多个值<pre>`function example(){
-     return [1,2,3]
-}
-//接收
-var [x,y,z] = example();
-`</pre></li>
-<li><p>定义函数形参（重点）<br>函数的参数定义方式, 不用再考虑参数的顺序    <pre><code>function test({x,y,z}){}
-//传参
-test({x:10,y:20,z:30})
-//参数可以设置默认值
-fuction test({x=10,y=20,z}){}</code></pre></p>
-<h2 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a><a href="#_4"><span class="headeranchor"></span></a>字符串扩展</h2><h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a><a href="#_5"><span class="headeranchor"></span></a>字符串方法</h3></li>
-<li><p>includes<br>判断是否包含某个字符，返回布尔值</p>
-<pre>`'html5'.includes('html');//true
-`</pre></li>
-<li>startsWith/endsWith<br>是否以某一字符开头/结尾<pre>`let str='google';
-str.startsWith('g');  //true
-str.endsWith('le');    //true
-`</pre></li>
-<li><p>repeat(n)<br>得到字符串重复n次后的结果，n可以为小数，但不能为负数</p>
-<pre>`'laoxie'.repeat(2);//laoxielaoxie
-`</pre>
-
-<h3 id="字符串模板-使用反引号-表示-重点"><a href="#字符串模板-使用反引号-表示-重点" class="headerlink" title="字符串模板, 使用反引号`表示(重点)"></a><a href="#_6"><span class="headeranchor"></span></a>字符串模板, 使用反引号`表示(重点)</h3><p>你可以通过一种更加美观、更加方便的方式向字符串中插入变量</p>
-<p>格式：${变量|函数}，</p>
-<pre>` `你好，我的名字叫${username},接下来是我的自我介绍：${introduce()}`
-`</pre>
-
+<li><p>解构失败：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [a]=[],[b]=<span class="number">1</span>,[c]=<span class="string">'jiegou'</span>,[d]=<span class="literal">false</span> <span class="comment">//a,b,c,d都得到undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定默认值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [a=<span class="literal">true</span>]=[]</span><br></pre></td></tr></table></figure>
+<p>var {a=10} = {}</p>
 <blockquote>
-<p>模板字符串中所有的空格、新行、缩进，都会原样输出在生成的字符串中。</p>
+<p>解构同样适用于let和const<br>PS:解构只能用于数组和对象，如果解构不成功，变量会返回undefined，但如果对undefined和null解构则会报错</p>
 </blockquote>
-<h2 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a><a href="#_7"><span class="headeranchor"></span></a>数组扩展</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a><a href="#_8"><span class="headeranchor"></span></a>遍历</h3></li>
-<li><p>for..of</p>
-<pre>`var arr = [10,12,18,30]
-for (var value of arr) {
-  console.log(value);
-}
-`</pre>
-
-<pre><code>*   这是最简洁、最直接的遍历数组元素的语法
-</code></pre><ul>
+<h3 id="解构用途"><a href="#解构用途" class="headerlink" title="解构用途"></a>解构用途</h3></li>
+<li><p>交换变量值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> [x,y] = [y,x];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数返回多个值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="keyword">return</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//接收</span></span><br><span class="line"><span class="keyword">var</span> [x,y,z] = example();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>定义函数形参（重点）<br>函数的参数定义方式, 不用再考虑参数的顺序   </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">&#123;x,y,z&#125;</span>)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>//传参</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test(&#123;<span class="attr">x</span>:<span class="number">10</span>,<span class="attr">y</span>:<span class="number">20</span>,<span class="attr">z</span>:<span class="number">30</span>&#125;)</span><br><span class="line"><span class="comment">//参数可以设置默认值</span></span><br><span class="line">fuction test(&#123;x=<span class="number">10</span>,y=<span class="number">20</span>,z&#125;)&#123;&#125;</span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="字符串扩展"><a href="#字符串扩展" class="headerlink" title="字符串扩展"></a>字符串扩展</h2><h3 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h3><ul>
+<li><p>includes<br>判断是否包含某个字符，返回布尔值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>startsWith/endsWith<br>是否以某一字符开头/结尾</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str=<span class="string">'google'</span>;</span><br><span class="line">str.startsWith(<span class="string">'g'</span>);  <span class="comment">//true</span></span><br><span class="line">str.endsWith(<span class="string">'le'</span>);    <span class="comment">//true</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>repeat(n)<br>得到字符串重复n次后的结果，n可以为小数，但不能为负数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'laoxie'</span>.repeat(<span class="number">2</span>);<span class="comment">//laoxielaoxie</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="字符串模板-使用反引号-表示-重点"><a href="#字符串模板-使用反引号-表示-重点" class="headerlink" title="字符串模板, 使用反引号`表示(重点)"></a>字符串模板, 使用反引号`表示(重点)</h3><p>你可以通过一种更加美观、更加方便的方式向字符串中插入变量</p>
+<p>格式：${变量|函数}，</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你好，我的名字叫$&#123;username&#125;,接下来是我的自我介绍：$&#123;introduce()&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>&gt; 模板字符串中所有的空格、新行、缩进，都会原样输出在生成的字符串中。
+</code></pre><h2 id="数组扩展"><a href="#数组扩展" class="headerlink" title="数组扩展"></a>数组扩展</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ul>
+<li>for..of<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">10</span>,<span class="number">12</span>,<span class="number">18</span>,<span class="number">30</span>]</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> value <span class="keyword">of</span> arr) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>这是最简洁、最直接的遍历数组元素的语法</li>
 <li>这个方法避开了for-in循环的所有缺陷&gt; for…of跟for-in的区别很明显，就是直接取值，而不再取下标了</li>
 <li>与forEach()不同的是，它可以正确响应break、continue和return语句</li>
 <li>for-of循环不支持普通对象</li>
-<li><p>for-of循环也可以遍历其它的集合</p>
-<pre><code>*   DOM节点
-</code></pre><ul>
+<li>for-of循环也可以遍历其它的集合</li>
+<li>DOM节点</li>
 <li>字符串</li>
 <li>Set/Map集合</li>
 </ul>
-</li>
-</ul>
-<h2 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a><a href="#_9"><span class="headeranchor"></span></a>对象扩展</h2></li>
+<h2 id="对象扩展"><a href="#对象扩展" class="headerlink" title="对象扩展"></a>对象扩展</h2><ul>
 <li><p>Object.assign(obj1,obj2,…objN);<br>合并对象</p>
 <pre>`Object.assign({a:1},{b:2},{b:4,c:3}); //{a:1,b:4,c:3}
 `</pre>
@@ -392,165 +342,77 @@ for (var value of arr) {
 <li>忽略不可枚举属性</li>
 </ul>
 </li>
-<li><p>简写</p>
-<blockquote>
+<li>简写<blockquote>
 <p>ES6允许在对象之中直接写变量，如</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@属性简写</span></span><br><span class="line"><span class="keyword">var</span> myName = <span class="string">'laoxie'</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;myName&#125;;<span class="comment">//属性名为变量名, 属性值为变量的值</span></span><br><span class="line"><span class="comment">//等效于</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">myName</span>:<span class="string">'laoxie'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//使用变量值作为属性名</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    [myName]:<span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//等效于</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">laoxie</span>:<span class="number">18</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//@方法简写</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    coding()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//等效于</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    coding:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<pre>`
-    //@属性简写
-    var myName = 'laoxie';
-    var obj = {myName};//属性名为变量名, 属性值为变量的值
-    //等效于
-    var obj = {myName:'laoxie'}
+</li>
+</ul>
+<h2 id="箭头函数-gt-（重点）"><a href="#箭头函数-gt-（重点）" class="headerlink" title="箭头函数=&gt;（重点）"></a>箭头函数=&gt;（重点）</h2><pre><code>格式：标识符=&gt;表达式
 
-    //使用变量值作为属性名
-    var obj = {
-        [myName]:18
-    }
-    //等效于
-    var obj = {laoxie:18}
-
-    //@方法简写
-    var obj = {
-        coding(){
-
-        }
-    }
-    //等效于
-    var obj = {
-        coding:function(){
-
-        }
-    }
-`</pre>
-
-<h2 id="箭头函数-gt-（重点）"><a href="#箭头函数-gt-（重点）" class="headerlink" title="箭头函数=&gt;（重点）"></a><a href="#_10"><span class="headeranchor"></span></a>箭头函数=&gt;（重点）</h2><p>格式：标识符=&gt;表达式</p>
-<p>省略了function、return关键字和大括号。</p>
-<h3 id="参数与返回值"><a href="#参数与返回值" class="headerlink" title="参数与返回值"></a><a href="#_11"><span class="headeranchor"></span></a>参数与返回值</h3></li>
+省略了function、return关键字和大括号。
+</code></pre><h3 id="参数与返回值"><a href="#参数与返回值" class="headerlink" title="参数与返回值"></a>参数与返回值</h3><ul>
 <li><p>零个参数用 () 表示</p>
-<pre>`//传统写法
-var sum = function(){
-    return 10 + 10;
-}
-//es6箭头函数
-var sum = () => 10+10;
-`</pre></li>
-<li>函数只有一个参数（可省略括号）<pre>`//传统函数写法
-var test = function(x){
-    return x+2;
-}    //使用箭头函数
-var test = x=>x+2;
-`</pre></li>
-<li>多个参数<pre>`// ES5
-var total = values.reduce(function (a, b) {
-  return a + b;
-}, 0);
-// ES6
-var total = values.reduce((a, b) => a + b, 0);
-`</pre></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">//传统写法</span></span><br><span class="line">    <span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">10</span> + <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//es6箭头函数</span></span><br><span class="line">    <span class="keyword">var</span> sum = <span class="function"><span class="params">()</span> =&gt;</span> <span class="number">10</span>+<span class="number">10</span>;</span><br><span class="line">    <span class="string">`&lt;/pre&gt;</span></span><br><span class="line"><span class="string">*   函数只有一个参数（可省略括号）</span></span><br><span class="line"><span class="string">    &lt;pre&gt;`</span><span class="comment">//传统函数写法</span></span><br><span class="line">    <span class="keyword">var</span> test = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+<span class="number">2</span>;</span><br><span class="line">    &#125;    <span class="comment">//使用箭头函数</span></span><br><span class="line">    <span class="keyword">var</span> test = <span class="function"><span class="params">x</span>=&gt;</span>x+<span class="number">2</span>;</span><br><span class="line">    <span class="string">`&lt;/pre&gt;</span></span><br><span class="line"><span class="string">*   多个参数</span></span><br><span class="line"><span class="string">    &lt;pre&gt;`</span><span class="comment">// ES5</span></span><br><span class="line">    <span class="keyword">var</span> total = values.reduce(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">    <span class="comment">// ES6</span></span><br><span class="line">    <span class="keyword">var</span> total = values.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>函数中包含多行代码时用代码块括起来</p>
 <blockquote>
 <p>ES6中的规则是，紧随箭头的{被解析为块的开始，而不是对象的开始</p>
-<pre><code>&lt;pre&gt;` // ES5
-$(&quot;#confetti-btn&quot;).click(function (event) {
-  playTrumpet();
-  fireConfettiCannon();
-});
-// ES6
-$(&quot;#confetti-btn&quot;).click(event =&gt; {
-  playTrumpet();
-  fireConfettiCannon();
-});
-`&lt;/pre&gt;
-</code></pre></blockquote>
-<pre><code>*   使用了块语句的箭头函数不会自动返回值，你需要使用return语句将所需值返回
-</code></pre><ul>
-<li>当使用箭头函数返回一个普通对象时，需要将对象包裹在小括号里<pre>`//传统写法
-var createPerson = function(){
-return {name:'laoxie',age:18}
-}
-// ES6
-var createPerson = ()=>{name:'laoxie',age:18};   // 这样写会报Bug！
-var createPerson = ()=>({name:'laoxie',age:18});
-`</pre></li>
-</ul>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// ES5</span></span><br><span class="line">&gt;     $(<span class="string">"#confetti-btn"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">&gt;       playTrumpet();</span><br><span class="line">&gt;       fireConfettiCannon();</span><br><span class="line">&gt;     &#125;);</span><br><span class="line">&gt;     <span class="comment">// ES6</span></span><br><span class="line">&gt;     $(<span class="string">"#confetti-btn"</span>).click(<span class="function"><span class="params">event</span> =&gt;</span> &#123;</span><br><span class="line">&gt;       playTrumpet();</span><br><span class="line">&gt;       fireConfettiCannon();</span><br><span class="line">&gt;     &#125;);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
-<li>默认参数。<pre>`var func1 = (x = 1, y = 2) => x + y;
-func1(); // 得到 3
-`</pre></li>
+<li><p>使用了块语句的箭头函数不会自动返回值，你需要使用return语句将所需值返回</p>
+</li>
+<li><p>当使用箭头函数返回一个普通对象时，需要将对象包裹在小括号里</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//传统写法</span></span><br><span class="line">    <span class="keyword">var</span> createPerson = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="attr">name</span>:<span class="string">'laoxie'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ES6</span></span><br><span class="line">    <span class="keyword">var</span> createPerson = <span class="function"><span class="params">()</span>=&gt;</span>&#123;<span class="attr">name</span>:<span class="string">'laoxie'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;;   <span class="comment">// 这样写会报Bug！</span></span><br><span class="line">    <span class="keyword">var</span> createPerson = <span class="function"><span class="params">()</span>=&gt;</span>(&#123;<span class="attr">name</span>:<span class="string">'laoxie'</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>默认参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func1 = <span class="function">(<span class="params">x = <span class="number">1</span>, y = <span class="number">2</span></span>) =&gt;</span> x + y;</span><br><span class="line">  func1(); <span class="comment">// 得到 3</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>剩余参数</p>
-<pre>`var func2 = (x, ...args) => { console.log(args) };
-func2(1,2,3); // 输出 [2, 3]
-`</pre>
-
-<h3 id="箭头函数中的this值"><a href="#箭头函数中的this值" class="headerlink" title="箭头函数中的this值"></a><a href="#this"><span class="headeranchor"></span></a>箭头函数中的this值</h3><p>箭头函数没有它自己的this值，箭头函数内的this值继承自外围作用域</p>
-<h2 id="Symbol数据类型"><a href="#Symbol数据类型" class="headerlink" title="Symbol数据类型"></a><a href="#symbol"><span class="headeranchor"></span></a>Symbol数据类型</h2><p>ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，一旦创建后就不可更改。</p>
-<pre>`// 没有参数的情况
-var s1 = Symbol();
-var s2 = Symbol();
-
-s1 === s2 // false
-`</pre>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func2 = <span class="function">(<span class="params">x, ...args</span>) =&gt;</span> &#123; <span class="built_in">console</span>.log(args) &#125;;</span><br><span class="line">  func2(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">// 输出 [2, 3]</span></span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<h3 id="箭头函数中的this值"><a href="#箭头函数中的this值" class="headerlink" title="箭头函数中的this值"></a>箭头函数中的this值</h3><pre><code>箭头函数没有它自己的this值，箭头函数内的this值继承自外围作用域
+</code></pre><h2 id="Symbol数据类型"><a href="#Symbol数据类型" class="headerlink" title="Symbol数据类型"></a>Symbol数据类型</h2><pre><code>ES6引入了一种新的原始数据类型Symbol，表示独一无二的值，一旦创建后就不可更改。
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有参数的情况</span></span><br><span class="line">    <span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>();</span><br><span class="line">    <span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line">    s1 === s2 <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了标识和区分，对调式非常有用</p>
-<pre>`// 有参数的情况
-var s1 = Symbol("foo");
-var s2 = Symbol("foo");
-s1 === s2 // false
-`</pre></li>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line">s1 === s2 <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>Symbol值不能与其他类型的值进行运算</p>
-<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a><a href="#_12"><span class="headeranchor"></span></a>用途</h3></li>
-<li><p>给对象创建私有属性</p>
-<pre>`var mySymbol = Symbol();
-// 第一种写法
-var a = {};
-a[mySymbol] = 'Nani';
-// 第二种写法（注意加方括号，否则回被当作普通属性）
-var a = {
-  [mySymbol]: 'Nani'
-};
-// 以上写法都得到同样结果
-a[mySymbol] // "Nani"
-`</pre>
-
-<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a><a href="#_13"><span class="headeranchor"></span></a>常用方法</h3></li>
+</li>
+</ul>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>给对象创建私有属性<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySymbol = <span class="built_in">Symbol</span>();</span><br><span class="line">  <span class="comment">// 第一种写法</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line">  a[mySymbol] = <span class="string">'Nani'</span>;</span><br><span class="line">  <span class="comment">// 第二种写法（注意加方括号，否则回被当作普通属性）</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;</span><br><span class="line">    [mySymbol]: <span class="string">'Nani'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// 以上写法都得到同样结果</span></span><br><span class="line">  a[mySymbol] <span class="comment">// "Nani"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
 <li><p>Symbol.for()<br>有时我们希望重新使用同一个Symbol值，Symbol.for方法可以做到这一点，首先在全局中搜索<strong>已登记</strong>的Symbol值，如果有，就返回这个Symbol值，否则就新建并返回一个以该字符串为名称的Symbol值&gt; 直接用Symbol()方法创建的Symbol值不会被登记</p>
-<blockquote>
-<pre><code>&lt;pre&gt;`let one = Symbol(&quot;laoxie&quot;);
-let two = Symbol.for(&quot;laoxie&quot;);
-//由于创建了两个Symbol值，所以他们不相等
-console.log(one===two);//false
-`&lt;/pre&gt;
-</code></pre></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> one = <span class="built_in">Symbol</span>(<span class="string">"laoxie"</span>);</span><br><span class="line"><span class="keyword">let</span> two = <span class="built_in">Symbol</span>.for(<span class="string">"laoxie"</span>);</span><br><span class="line"><span class="comment">//由于创建了两个Symbol值，所以他们不相等</span></span><br><span class="line"> <span class="built_in">console</span>.log(one===two);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Symbol.keyFor()<br>获取被登记的Symbol值&gt; 直接使用Symbo()创建的Symbol值的键不会被登记，所以也就获取不到</p>
-<h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a><a href="#map"><span class="headeranchor"></span></a>Map集合</h2><p>Map集合,即映射</p>
 </li>
-<li><p>设置</p>
-<pre>`let map = new Map();    map.set("S0", "张三");    map.set("S1", "李四");    map.set("S2", "王五");
-`</pre></li>
-<li>获取<pre>`map.get("s2"); //王五
-`</pre></li>
-<li><p>循环遍历，配合解构赋值    <pre>`for(let [key,value] of map){</pre></p>
-<pre><code>console.log(key,value);
-</code></pre><p>}<br>`</p>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a><a href="#_14"><span class="headeranchor"></span></a>方法</h3></li>
-<li><p>keys() 获取所有键</p>
-</li>
-<li>values() 获取所有值</li>
-<li><p>entries() 获取所有键值对，返回类数组</p>
-<h2 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a><a href="#set"><span class="headeranchor"></span></a>Set集合</h2><p>Set集合，类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
-<p><pre>`    let imgs = new Set();</pre></p>
-<pre><code>imgs.add(1）;
-imgs.add(1);
-imgs.add(5);
-imgs.add(&quot;5&quot;);
-imgs.add(new String(&quot;abc&quot;)）;
-imgs.add(new String(&quot;abc&quot;)）;
-
-//打印的结果： 1  5  &apos;5&apos;  &apos;abc&apos;  &apos;abc&apos;
-</code></pre></li>
 </ul>
+<h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h2><pre><code>Map集合,即映射
+</code></pre><ul>
+<li><p>设置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">    map.set(<span class="string">"S0"</span>, <span class="string">"张三"</span>);   </span><br><span class="line">    map.set(<span class="string">"S1"</span>, <span class="string">"李四"</span>);    </span><br><span class="line">    map.set(<span class="string">"S2"</span>, <span class="string">"王五"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">map.get(<span class="string">"s2"</span>); <span class="comment">//王五</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>循环遍历，配合解构赋值    </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [key,value] <span class="keyword">of</span> map)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(key,value);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
+<li>keys() 获取所有键</li>
+<li>values() 获取所有值</li>
+<li>entries() 获取所有键值对，返回类数组</li>
+</ul>
+<h2 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h2><p>Set集合，类似于数组，但是成员的值都是唯一的，没有重复的值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> imgs = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line">    imgs.add(<span class="number">1</span>）;</span><br><span class="line">    imgs.add(<span class="number">1</span>);</span><br><span class="line">    imgs.add(<span class="number">5</span>);</span><br><span class="line">    imgs.add(<span class="string">"5"</span>);</span><br><span class="line">    imgs.add(<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>)）;</span><br><span class="line">    imgs.add(<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"abc"</span>)）;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//打印的结果： 1  5  '5'  'abc'  'abc'</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Set集合是默认去重复的，但前提是两个添加的元素严格相等，所以5和”5”不相等，两个new出来的字符串不相等</p>
 </blockquote>
@@ -558,10 +420,7 @@ imgs.add(new String(&quot;abc&quot;)）;
 <li>[案例] 去重数组</li>
 </ul>
 <p>SET集合没有提供下标方式的访问，因此只能使用for…of来遍历。由于Set集合本质上还是一个map，因此会有以下几种遍历方法</p>
-<p><pre><code>var imgs = new Set([‘a’,’b’,’c’]); //根据KEY遍历<br>for(let item of imgs.keys()){<br>     console.log(item);<br>}<br>//a<br>//b<br>//c</code></pre></p>
-<p>//根据VALUE遍历<br>for(let item of imgs.values()){<br>    console.log(item);<br>}<br>//a<br>//b<br>//c</p>
-<p>//根据KEY-VALUE遍历<br>for(let item of imgs.entries()){<br>    console.log(item);<br>}<br>//[‘a’,’a’]<br>//[‘b’,’b’]<br>//[‘c’,’c’]</p>
-<p>//普通for…of循环<br>for(let item of imgs){<br>    console.log(item);<br>}<br>//a<br>//b<br>//c</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> imgs = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]); <span class="comment">//根据KEY遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.keys())&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//根据VALUE遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.values())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//根据KEY-VALUE遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.entries())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//['a','a']</span></span><br><span class="line"><span class="comment">//['b','b']</span></span><br><span class="line"><span class="comment">//['c','c']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//普通for...of循环</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br></pre></td></tr></table></figure>
 
       
       
@@ -620,7 +479,7 @@ imgs.add(new String(&quot;abc&quot;)）;
         <p><span>本文标题:</span><a href="/2018/09/19/ES6语法简介/">ES6语法简介</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年09月19日 - 11时29分</p>
-        <p><span>最后更新:</span>2018年09月19日 - 11时55分</p>
+        <p><span>最后更新:</span>2018年09月19日 - 14时05分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/19/ES6语法简介/" title="ES6语法简介">http://Lee981265.github.io/2018/09/19/ES6语法简介/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/09/19/ES6语法简介/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
