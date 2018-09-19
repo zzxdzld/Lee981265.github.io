@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Lee">
 <meta property="og:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-19T06:57:51.557Z">
+<meta property="og:updated_time" content="2018-09-19T07:05:35.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法简介">
 <meta name="twitter:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
@@ -274,8 +274,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">var</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">//a=1,b=2,c=3</span></span><br><span class="line"><span class="number">2.</span> <span class="keyword">var</span> [a,[[b],c]] = [<span class="number">10</span>,[[<span class="number">20</span>],<span class="number">30</span>]] <span class="comment">//a=10,b=20,c=30</span></span><br><span class="line"><span class="number">3.</span> <span class="keyword">var</span> [a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] <span class="comment">//a=1,b=[2,3,4];...表示剩余参数</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>对象：</p>
-<ol>
+<li>对象：<ol>
 <li>var {a,b}={a:’html’,b:’css’}</li>
 <li>变量必须与对象属性名相同，否则为undefined</li>
 <li>如果变量名与属性名不相同，则必须写成以下格式才能取到值</li>
@@ -386,20 +385,21 @@
 </code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有参数的情况</span></span><br><span class="line">    <span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>();</span><br><span class="line">    <span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>();</span><br><span class="line"></span><br><span class="line">    s1 === s2 <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述，主要是为了标识和区分，对调式非常有用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line">s1 === s2 <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line">s1 === s2 <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Symbol值不能与其他类型的值进行运算</p>
 </li>
 </ul>
 <h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
-<li>给对象创建私有属性<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySymbol = <span class="built_in">Symbol</span>();</span><br><span class="line">  <span class="comment">// 第一种写法</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line">  a[mySymbol] = <span class="string">'Nani'</span>;</span><br><span class="line">  <span class="comment">// 第二种写法（注意加方括号，否则回被当作普通属性）</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;</span><br><span class="line">    [mySymbol]: <span class="string">'Nani'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// 以上写法都得到同样结果</span></span><br><span class="line">  a[mySymbol] <span class="comment">// "Nani"</span></span><br></pre></td></tr></table></figure>
+<li><p>给对象创建私有属性</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySymbol = <span class="built_in">Symbol</span>();</span><br><span class="line">  <span class="comment">// 第一种写法</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line">  a[mySymbol] = <span class="string">'Nani'</span>;</span><br><span class="line">  <span class="comment">// 第二种写法（注意加方括号，否则回被当作普通属性）</span></span><br><span class="line">  <span class="keyword">var</span> a = &#123;</span><br><span class="line">    [mySymbol]: <span class="string">'Nani'</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="comment">// 以上写法都得到同样结果</span></span><br><span class="line">  a[mySymbol] <span class="comment">// "Nani"</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><ul>
-<li><p>Symbol.for()<br>有时我们希望重新使用同一个Symbol值，Symbol.for方法可以做到这一点，首先在全局中搜索<strong>已登记</strong>的Symbol值，如果有，就返回这个Symbol值，否则就新建并返回一个以该字符串为名称的Symbol值&gt; 直接用Symbol()方法创建的Symbol值不会被登记</p>
+<li><p>Symbol.for()<br>  有时我们希望重新使用同一个Symbol值，Symbol.for方法可以做到这一点，首先在全局中搜索<strong>已登记</strong>的Symbol值，如果有，就返回这个Symbol值，否则就新建并返回一个以该字符串为名称的Symbol值&gt; 直接用Symbol()方法创建的Symbol值不会被登记</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> one = <span class="built_in">Symbol</span>(<span class="string">"laoxie"</span>);</span><br><span class="line"><span class="keyword">let</span> two = <span class="built_in">Symbol</span>.for(<span class="string">"laoxie"</span>);</span><br><span class="line"><span class="comment">//由于创建了两个Symbol值，所以他们不相等</span></span><br><span class="line"> <span class="built_in">console</span>.log(one===two);<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Symbol.keyFor()<br>获取被登记的Symbol值&gt; 直接使用Symbo()创建的Symbol值的键不会被登记，所以也就获取不到</p>
+<li><p>Symbol.keyFor()<br>  获取被登记的Symbol值&gt; 直接使用Symbo()创建的Symbol值的键不会被登记，所以也就获取不到</p>
 </li>
 </ul>
 <h2 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h2><pre><code>Map集合,即映射
@@ -488,7 +488,7 @@
         <p><span>本文标题:</span><a href="/2018/09/19/ES6语法简介/">ES6语法简介</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年09月19日 - 11时29分</p>
-        <p><span>最后更新:</span>2018年09月19日 - 14时57分</p>
+        <p><span>最后更新:</span>2018年09月19日 - 15时05分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/09/19/ES6语法简介/" title="ES6语法简介">http://Lee981265.github.io/2018/09/19/ES6语法简介/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/09/19/ES6语法简介/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -561,23 +561,6 @@
 
 
 
-
-    
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'Lee',
-      repo: 'lee981265.github.io',
-      oauth: {
-        client_id: '',
-        client_secret: '',
-      },
-    })
-    gitment.render('gitments')
-</script>
-    
 
 
 
