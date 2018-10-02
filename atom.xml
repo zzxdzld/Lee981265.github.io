@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Lee981265.github.io/"/>
-  <updated>2018-09-27T01:59:03.224Z</updated>
+  <updated>2018-10-02T18:22:57.436Z</updated>
   <id>http://Lee981265.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python3随笔(1)</title>
+    <link href="http://Lee981265.github.io/2018/10/03/Python3%E9%9A%8F%E7%AC%94/"/>
+    <id>http://Lee981265.github.io/2018/10/03/Python3随笔/</id>
+    <published>2018-10-02T18:15:41.000Z</published>
+    <updated>2018-10-02T18:22:57.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>前端萌新学习Python之旅，跟随廖雪峰大神的步伐，一天一天的进步！<br><a id="more"></a></p><h2 id="git-bash-构建python-环境"><a href="#git-bash-构建python-环境" class="headerlink" title="git bash 构建python 环境"></a>git bash 构建python 环境</h2><table><thead><tr><th style="text-align:left">python</th><th style="text-align:center">git bush开启python</th></tr></thead><tbody><tr><td style="text-align:left">winpty python</td><td style="text-align:center">-</td></tr><tr><td style="text-align:left">python -i</td><td style="text-align:center">-</td></tr><tr><td style="text-align:left">python</td><td style="text-align:center">bash.bashrc追加 alias python=’winpty python ‘</td></tr></tbody></table><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name = input(<span class="string">'please your name:'</span>)</span><br><span class="line">print(<span class="string">'hello'</span>,name)</span><br></pre></td></tr></table></figure><h2 id="条件语句-惯例缩进四个空格"><a href="#条件语句-惯例缩进四个空格" class="headerlink" title="条件语句(惯例缩进四个空格)"></a>条件语句(惯例缩进四个空格)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#缩进4个空格</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line"><span class="keyword">if</span> a&gt;=<span class="number">0</span>:</span><br><span class="line">    print(a)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(-a)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#不缩进也可</span></span><br><span class="line">b = <span class="number">200</span></span><br><span class="line"><span class="keyword">if</span> b&gt;=<span class="number">0</span>:print(b)</span><br><span class="line"><span class="keyword">else</span>:print(-b)</span><br></pre></td></tr></table></figure><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><table><thead><tr><th>类型</th><th>表现形式</th><th>注意</th></tr></thead><tbody><tr><td>整数</td><td>100</td><td></td></tr><tr><td>浮点数</td><td>3,14</td><td></td></tr><tr><td>字符串</td><td>‘abc’，”xyz”</td><td>I’m ok</td></tr></tbody></table><h3 id="字符串转义"><a href="#字符串转义" class="headerlink" title="字符串转义"></a>字符串转义</h3><p><strong><em>注意：对于字符串中含有特殊字符的这一点和正则有点像这时候我们要用到转译字符 ‘\‘或者使用双引号在外=&gt;”I’m OK”</em></strong></p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'I\'m \"OK\"!'</span></span><br><span class="line"><span class="comment">#I'm "OK"</span></span><br></pre></td></tr></table></figure><blockquote><p>转义字符\可以转义很多字符，比如\n表示换行，\t表示制表符，字符\本身也要转义，所以\表示的字符就是\</p></blockquote><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'I\'m ok.'</span>)</span><br><span class="line"><span class="comment">#I'm ok.</span></span><br><span class="line">print(<span class="string">'I\'m learning\nPython.'</span>)</span><br><span class="line"><span class="comment">#I'm learning</span></span><br><span class="line"><span class="comment">#Python.</span></span><br><span class="line">print(<span class="string">'\\\n\\'</span>)</span><br><span class="line"><span class="comment">#\</span></span><br><span class="line"><span class="comment">#\</span></span><br></pre></td></tr></table></figure><blockquote><p>如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r’’表示’’内部的字符串默认不转义</p></blockquote><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">r'\\有一个姑娘，\她有些任性\\'</span>)</span><br><span class="line"><span class="comment">#这里需要注意无论在哪里使用转译符号‘\’,在字符串开头可以随便用；在字符串末尾不能出现一个单独的‘\’,否则会报错</span></span><br><span class="line"></span><br><span class="line">&gt;SyntaxError: EOL <span class="keyword">while</span> scanning string literal</span><br><span class="line">print(<span class="string">r'\\有一个姑娘，\她有些任性\')</span></span><br></pre></td></tr></table></figure><blockquote><p>如果字符串内部有很多换行，用\n写在一行里不好阅读，为了简化，Python允许用’’’…’’’的格式表示多行内容</p></blockquote><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'''</span></span><br><span class="line"><span class="string">line1</span></span><br><span class="line"><span class="string">line2</span></span><br><span class="line"><span class="string">line3</span></span><br><span class="line"><span class="string">'''</span>)</span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#line1</span></span><br><span class="line"><span class="comment">#line2</span></span><br><span class="line"><span class="comment">#line3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'''123 123</span></span><br><span class="line"><span class="string">123</span></span><br><span class="line"><span class="string">'''</span>)</span><br><span class="line"><span class="comment">#123 123</span></span><br><span class="line"><span class="comment">#123</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">r'''hello,\n</span></span><br><span class="line"><span class="string">world'''</span>)</span><br><span class="line"><span class="comment">#hello,\n</span></span><br><span class="line"><span class="comment">#world</span></span><br></pre></td></tr></table></figure><h4 id="归纳"><a href="#归纳" class="headerlink" title="归纳"></a>归纳</h4><table><thead><tr><th>符号</th><th>作用</th><th>注意</th></tr></thead><tbody><tr><td>\</td><td>转义特殊字符</td><td>字符串末尾至少加2个</td></tr><tr><td>\n</td><td>表示换行</td><td>在r’’或r’’’ ‘’’内无效</td></tr><tr><td>\t</td><td>表示制表符</td><td>在r’’或r’’’ ‘’’内无效</td></tr><tr><td>r’’</td><td>不转义引号里面的内容</td><td></td></tr><tr><td>‘’’ ‘’’</td><td>多次换行</td><td>书写时多敲几次换行</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前端萌新学习Python之旅，跟随廖雪峰大神的步伐，一天一天的进步！&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://Lee981265.github.io/tags/Python/"/>
+    
+      <category term="Python3" scheme="http://Lee981265.github.io/tags/Python3/"/>
+    
+  </entry>
   
   <entry>
     <title>ES5</title>
@@ -175,7 +197,7 @@
     <link href="http://Lee981265.github.io/2018/07/12/Echarts%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/"/>
     <id>http://Lee981265.github.io/2018/07/12/Echarts简单应用/</id>
     <published>2018-07-12T09:53:47.000Z</published>
-    <updated>2018-09-19T03:32:05.332Z</updated>
+    <updated>2018-09-30T06:26:31.936Z</updated>
     
     <content type="html"><![CDATA[<p>敬请期待！</p>]]></content>
     

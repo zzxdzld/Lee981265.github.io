@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Python3随笔(1)]]></title>
+    <url>%2F2018%2F10%2F03%2FPython3%E9%9A%8F%E7%AC%94%2F</url>
+    <content type="text"><![CDATA[前端萌新学习Python之旅，跟随廖雪峰大神的步伐，一天一天的进步！ git bash 构建python 环境 python git bush开启python winpty python - python -i - python bash.bashrc追加 alias python=’winpty python ‘ 输出12name = input('please your name:')print('hello',name) 条件语句(惯例缩进四个空格)123456789101112#缩进4个空格a = 100if a&gt;=0: print(a)else: print(-a)#不缩进也可b = 200if b&gt;=0:print(b)else:print(-b) 数据类型类型 类型 表现形式 注意 整数 100 浮点数 3,14 字符串 ‘abc’，”xyz” I’m ok 字符串转义注意：对于字符串中含有特殊字符的这一点和正则有点像这时候我们要用到转译字符 ‘\‘或者使用双引号在外=&gt;”I’m OK” 12'I\'m \"OK\"!'#I'm "OK" 转义字符\可以转义很多字符，比如\n表示换行，\t表示制表符，字符\本身也要转义，所以\表示的字符就是\ 12345678print('I\'m ok.')#I'm ok.print('I\'m learning\nPython.')#I'm learning#Python.print('\\\n\\')#\#\ 如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r’’表示’’内部的字符串默认不转义 12345print(r'\\有一个姑娘，\她有些任性\\')#这里需要注意无论在哪里使用转译符号‘\’,在字符串开头可以随便用；在字符串末尾不能出现一个单独的‘\’,否则会报错&gt;SyntaxError: EOL while scanning string literalprint(r'\\有一个姑娘，\她有些任性\') 如果字符串内部有很多换行，用\n写在一行里不好阅读，为了简化，Python允许用’’’…’’’的格式表示多行内容 12345678910111213141516171819202122print('''line1line2line3''')##line1#line2#line3#print('''123 123123''')#123 123#123#print(r'''hello,\nworld''')#hello,\n#world 归纳 符号 作用 注意 \ 转义特殊字符 字符串末尾至少加2个 \n 表示换行 在r’’或r’’’ ‘’’内无效 \t 表示制表符 在r’’或r’’’ ‘’’内无效 r’’ 不转义引号里面的内容 ‘’’ ‘’’ 多次换行 书写时多敲几次换行]]></content>
+      <tags>
+        <tag>Python</tag>
+        <tag>Python3</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[ES5]]></title>
     <url>%2F2018%2F09%2F27%2FES5%2F</url>
     <content type="text"><![CDATA[未完待续]]></content>
