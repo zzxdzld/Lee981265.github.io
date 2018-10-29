@@ -503,20 +503,32 @@
 
 
     
-        <div id="gitments"></div>
-<script src="/js/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      owner: 'Lee',
-      repo: 'lee981265.github.io',
-      oauth: {
-        client_id: '',
-        client_secret: '',
-      },
-    })
-    gitment.render('gitments')
-</script>
+          <section id="comments" style="background-color:#fff;">
+    <div id="valine_thread" style="margin: 30px;"></div>
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+          <script>
+              var GUEST_INFO = ['nick','mail','link'];
+              var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                  return GUEST_INFO.indexOf(item) > -1
+              });
+              var notify = 'false' == true;
+              var verify = 'false' == true;
+              var valine = new Valine();
+              valine.init({
+                  el: '#valine_thread',
+                  notify: notify,
+                  verify: verify,
+                  appId: "gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz",
+                  appKey: "PlSGU0BVUIgyuS6bQ15rXq3i",
+                  placeholder: "Just go go(text or md)",
+                  pageSize:'10',
+                  avatar:'wavatar',
+                  lang:'zh-cn'
+              })
+          </script>
+  </section> 
+          <!--  -->
     
 
 
