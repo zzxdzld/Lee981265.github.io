@@ -14,7 +14,7 @@
 <meta property="og:description" content="最近在做一个混合开发的项目，需求里面要求使用拖拽，然而这不是jq的拖拽；我向很多大佬求助过，有一位大佬建议我去使用hammer.js;由于时间紧迫我不得不放弃这一方法。还有大佬向我推荐vue封装的插件，然而我试了一下有局限性，position:absolute==&amp;gt;我想要是的fixed；还有通过指令的方法等等我都试了不好用；求人不如求己下面我将为大家介绍一种简单的方法（适用于vue）">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lee981265.github.io/img/touch04.gif">
-<meta property="og:updated_time" content="2018-08-03T09:06:05.860Z">
+<meta property="og:updated_time" content="2018-10-29T03:16:46.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端拖拽">
 <meta name="twitter:description" content="最近在做一个混合开发的项目，需求里面要求使用拖拽，然而这不是jq的拖拽；我向很多大佬求助过，有一位大佬建议我去使用hammer.js;由于时间紧迫我不得不放弃这一方法。还有大佬向我推荐vue封装的插件，然而我试了一下有局限性，position:absolute==&amp;gt;我想要是的fixed；还有通过指令的方法等等我都试了不好用；求人不如求己下面我将为大家介绍一种简单的方法（适用于vue）">
@@ -333,7 +333,7 @@
         <p><span>本文标题:</span><a href="/2018/07/23/移动端拖拽/">移动端拖拽</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
         <p><span>发布时间:</span>2018年07月23日 - 17时56分</p>
-        <p><span>最后更新:</span>2018年08月03日 - 17时06分</p>
+        <p><span>最后更新:</span>2018年10月29日 - 11时16分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/23/移动端拖拽/" title="移动端拖拽">http://Lee981265.github.io/2018/07/23/移动端拖拽/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Lee981265.github.io/2018/07/23/移动端拖拽/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -417,6 +417,35 @@
 
 
 
+
+    
+          <section id="comments" style="background-color:#fff;">
+    <div id="valine_thread" style="margin: 30px;"></div>
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+          <script>
+              var GUEST_INFO = ['nick','mail','link'];
+              var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                  return GUEST_INFO.indexOf(item) > -1
+              });
+              var notify = 'fasle' == true;
+              var verify = 'false' == true;
+              var valine = new Valine();
+              valine.init({
+                  el: '#valine_thread',
+                  notify: notify,
+                  verify: verify,
+                  appId: "gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz",
+                  appKey: "PlSGU0BVUIgyuS6bQ15rXq3i",
+                  placeholder: "Just go go",
+                  pageSize:'10',
+                  avatar:'wavatar',
+                  lang:'zh-cn'
+              })
+          </script>
+  </section> 
+          <!--  -->
+    
 
 
 

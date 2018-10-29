@@ -539,7 +539,7 @@
 
 
     
-          <section id="comments">
+          <section id="comments" style="background-color:#fff;">
     <div id="valine_thread" style="margin: 30px;"></div>
           <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
           <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
@@ -548,8 +548,8 @@
               var guest_info = 'nick,mail,link'.split(',').filter(function(item){
                   return GUEST_INFO.indexOf(item) > -1
               });
-              var notify = 'true' == true;
-              var verify = 'true' == true;
+              var notify = 'fasle' == true;
+              var verify = 'false' == true;
               var valine = new Valine();
               valine.init({
                   el: '#valine_thread',
