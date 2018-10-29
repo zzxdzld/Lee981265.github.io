@@ -855,8 +855,8 @@
               var guest_info = 'nick,mail,link'.split(',').filter(function(item){
                   return GUEST_INFO.indexOf(item) > -1
               });
-              var notify = 'false' == true;
-              var verify = 'false' == true;
+              var notify = 'true' == true;
+              var verify = 'true' == true;
               var valine = new Valine();
               valine.init({
                   el: '#valine_thread',
@@ -866,7 +866,7 @@
                   appKey: "PlSGU0BVUIgyuS6bQ15rXq3i",
                   placeholder: "Just go go",
                   pageSize:'10',
-                  avatar:'img/head.jpg',
+                  avatar:'wavatar',
                   lang:'zh-cn'
               })
           </script>
