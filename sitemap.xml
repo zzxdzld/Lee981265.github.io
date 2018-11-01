@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://Lee981265.github.io/aboutme/index.html</loc>
+    
+    <lastmod>2018-11-01T01:24:44.151Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://Lee981265.github.io/2018/07/12/%E7%AE%80%E6%98%93Python/</loc>
     
     <lastmod>2018-10-29T03:16:56.044Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>http://Lee981265.github.io/2018/10/16/Sql%E8%AF%AD%E5%8F%A5/</loc>
     
     <lastmod>2018-10-29T02:15:11.418Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Lee981265.github.io/aboutme/index.html</loc>
-    
-    <lastmod>2018-07-09T03:59:31.948Z</lastmod>
     
   </url>
   
