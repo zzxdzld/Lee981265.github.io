@@ -259,26 +259,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Vue路由传参的三种基本方式"><a href="#Vue路由传参的三种基本方式" class="headerlink" title="Vue路由传参的三种基本方式"></a>Vue路由传参的三种基本方式</h1><p>现有如下场景，点击父组件的li元素跳转到子组件中，并携带参数，便于子组件获取数据。<br>父组件中：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;li v-<span class="keyword">for</span>=<span class="string">"article in articles"</span> @click=<span class="string">"getDescribe(article.id)"</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>methods：</p>
-<h2 id="case1"><a href="#case1" class="headerlink" title="case1"></a>case1</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">getDescribe(id) &#123;</span><br><span class="line"><span class="comment">//直接调用$router.push 实现携带参数的跳转</span></span><br><span class="line">  <span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">    path: <span class="string">`/describe/<span class="subst">$&#123;id&#125;</span>`</span>,</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
-<p>case1需要对应路由配置如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> path: <span class="string">'/describe/:id'</span>,</span><br><span class="line"> name: <span class="string">'Describe'</span>,</span><br><span class="line"> component: Describe</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>很显然，需要在path中添加/:id来对应 $router.push 中path携带的参数。在子组件中可以使用来获取传递的参数值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.params.id</span><br></pre></td></tr></table></figure></p>
-<h2 id="case2"><a href="#case2" class="headerlink" title="case2"></a>case2</h2><p>父组件中：通过路由属性中的name来确定匹配的路由，通过params来传递参数。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">   name: <span class="string">'Describe'</span>,</span><br><span class="line">   params: &#123;</span><br><span class="line">     id: id</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
-<p> 对应路由配置: 注意这里不能使用:/id来传递参数了，因为父组件中，已经使用params来携带参数了。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    path: <span class="string">'/describe'</span>,</span><br><span class="line">    name: <span class="string">'Describe'</span>,</span><br><span class="line">    component: Describe</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>子组件中: 这样来获取参数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.params.id</span><br></pre></td></tr></table></figure>
-<h2 id="case3"><a href="#case3" class="headerlink" title="case3"></a>case3</h2><p>父组件：使用path来匹配路由，然后通过query来传递参数<br>这种情况下 query传递的参数会显示在url后面?id=？</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$router.push(&#123;</span><br><span class="line">      path: <span class="string">'/describe'</span>,</span><br><span class="line">      query: &#123;</span><br><span class="line">        id: id</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
-<p>对应路由配置：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">     path: <span class="string">'/describe'</span>,</span><br><span class="line">     name: <span class="string">'Describe'</span>,</span><br><span class="line">     component: Describe</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对应子组件: 这样来获取参数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$route.query.id</span><br></pre></td></tr></table></figure>
-
+              <p>Vue路由传参的三种基本方式<br>
+          
       
       
     </div>
@@ -296,6 +278,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-router/">vue-router</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a  href="/2018/12/11/Vue路由传参三种基本方式/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
