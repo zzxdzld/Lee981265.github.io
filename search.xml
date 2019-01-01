@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[12131.md]]></title>
+    <url>%2F2019%2F01%2F01%2F12131-md%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Vue路由传参三种基本方式]]></title>
     <url>%2F2018%2F12%2F11%2FVue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%96%B9%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[Vue路由传参的三种基本方式 现有如下场景，点击父组件的li元素跳转到子组件中，并携带参数，便于子组件获取数据。父组件中： 1&lt;li v-for="article in articles" @click="getDescribe(article.id)"&gt; methods： case112345getDescribe(id) &#123;//直接调用$router.push 实现携带参数的跳转 this.$router.push(&#123; path: `/describe/$&#123;id&#125;`, &#125;) case1需要对应路由配置如下： 12345&#123; path: '/describe/:id', name: 'Describe', component: Describe&#125; 很显然，需要在path中添加/:id来对应 $router.push 中path携带的参数。在子组件中可以使用来获取传递的参数值。1$route.params.id case2父组件中：通过路由属性中的name来确定匹配的路由，通过params来传递参数。 123456this.$router.push(&#123; name: 'Describe', params: &#123; id: id &#125; &#125;) 对应路由配置: 注意这里不能使用:/id来传递参数了，因为父组件中，已经使用params来携带参数了。 12345&#123; path: '/describe', name: 'Describe', component: Describe&#125; 子组件中: 这样来获取参数 1$route.params.id case3父组件：使用path来匹配路由，然后通过query来传递参数这种情况下 query传递的参数会显示在url后面?id=？ 123456this.$router.push(&#123; path: '/describe', query: &#123; id: id &#125; &#125;) 对应路由配置： 12345&#123; path: '/describe', name: 'Describe', component: Describe&#125; 对应子组件: 这样来获取参数 1$route.query.id]]></content>
