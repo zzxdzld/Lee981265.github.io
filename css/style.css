@@ -7,6 +7,10 @@
     MIXINS FOR THEME
 ====================================================*/
 /* _mixins.less */
+/*
+font-style: italic!important;
+font-family: Playfair Display,Georgia,Times New Roman,serif;
+*/
 @-webkit-keyframes masked-animation {
   0% {
     background-position: 0 0;
@@ -268,8 +272,10 @@ pre {
   padding-top: 15px;
 }
 .main-header .main-header-box .branding h2 {
-  font-family: "STXingkai", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif;
-  width: 320px;
+  /* font-family: "STXingkai", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif; */
+  /* width: 320px; */
+  font-style: italic!important;
+  font-family: Playfair Display,Georgia,Times New Roman,serif;
   margin: 0 auto;
   letter-spacing: 3px;
   color: #e67e22;
@@ -329,6 +335,8 @@ pre {
   line-height: 4em;
   display: block;
   padding: 0 21px;
+  font-style: italic!important;
+  font-family: Playfair Display,Georgia,Times New Roman,serif;
 }
 .main-navigation .menu li:hover > a {
   color: #e67e22;
@@ -896,6 +904,8 @@ pre {
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 21px;
   position: relative;
+  font-style: italic!important;
+  font-family: Playfair Display,Georgia,Times New Roman,serif;
 }
 .widget .title:after {
   content: "";
