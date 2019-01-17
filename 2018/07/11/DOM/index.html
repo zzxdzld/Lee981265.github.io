@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>Tag: Javascript | Lee</title>
+<title>DOM | Lee</title>
 
 
     <link rel="alternate" href="/atom.xml" title="Lee" type="application/atom+xml">
@@ -119,11 +119,23 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                                <a href="/categories/Frontend/"><i class="fa "></i>Frontend</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/aboutme/"><i class="fa "></i>关于我</a>
+                                <a href="/categories/Backend/"><i class="fa "></i>Backend</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Note/"><i class="fa "></i>Note</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>Archives</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/aboutme/"><i class="fa "></i>Aboutme</a>
                             </li>
                         
                     </ul>
@@ -149,12 +161,29 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/ ">
-             
+        <a href="/categories/Frontend">
+            Frontend
         </a>
     </span>
     
 
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Javascript" title='Javascript'>
+                        Javascript
+                    </a>
+                
+                    <a href="/tags/DOM" title='DOM'>
+                        DOM
+                    </a>
+                
+            
+        </span>
+    </span>
     
 
     
@@ -289,7 +318,7 @@
 <li>nodeName 取值元素的标签名 如DIV。 文本：#text</li>
 <li>nodeValue 获取节点的值<ol>
 <li>文本</li>
-<li>属性 </li>
+<li>属性</li>
 </ol>
 </li>
 </ul>
@@ -304,14 +333,14 @@
 <ul>
 <li>插入节点</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent=<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>); <span class="comment">//父元素 </span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> parent.appendChild()  <span class="comment">//往后面加</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> parent.insertBefoer(<span class="keyword">new</span>,node); <span class="comment">//通过父级在node节点前面添加新的节点</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent=<span class="built_in">document</span>.getElementById(<span class="string">"div1"</span>); <span class="comment">//父元素</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> parent.appendChild()  <span class="comment">//往后面加</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> parent.insertBefoer(<span class="keyword">new</span>,node); <span class="comment">//通过父级在node节点前面添加新的节点</span></span><br></pre></td></tr></table></figure>
 <p><strong><em>ps:已经存在页面上的元素，如果使用appendchild,insertBefore操作则会移动这个元素</em></strong></p>
 <ul>
 <li>复制节点</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ele.cloneNode(boolean);</span><br><span class="line">ele.cloneNode(boolean,<span class="literal">true</span>); <span class="comment">// true为深复制</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>删除节点 </li>
+<li>删除节点</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent.removeChild(ele);</span><br></pre></td></tr></table></figure>
 <ul>
