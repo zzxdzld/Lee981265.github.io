@@ -8,7 +8,7 @@ window.onload = function() {
 
   var r = "color:#495A80;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 1px 0 #bbb;font-size:20px";
 
-  console.info(e + "你好，朋友，欢迎你的来访！", n);
+  console.info(e + "你好，李俊，欢迎你的来访！", n);
 
   console.info(e + "前端交流群：635678224 期待你的加入。:-)\r\n", r);
 
