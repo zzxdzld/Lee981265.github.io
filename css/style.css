@@ -1083,7 +1083,7 @@ pre {
   list-style: none;
 }
 #article-toc .toc {
-  padding-left: 2em;
+  padding-left: 0;
 }
 #article-toc .toc .toc-item .toc-link {
   display: block;
@@ -1574,6 +1574,14 @@ pre .javascript .function {
     left: -25px;
     width: 100%;
   }
+}
+.fixed{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .nav-toggle-button {
