@@ -273,11 +273,11 @@ pre {
 }
 .main-header .main-header-box .branding h2 {
   /* font-family: "STXingkai", "KaiTi", "Microsoft YaHei", "SimSun", sans-serif; */
-  /* width: 320px; */
+  width: 100%;
   font-style: italic!important;
   font-family: Playfair Display,Georgia,Times New Roman,serif;
   margin: 0 auto;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   color: #e67e22;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -960,6 +960,7 @@ pre {
 }
 .widget .social a i {
   font-size: 20px;
+  margin-top: 10px;
 }
 .widget .friends-link a {
   margin-right: 15px;
@@ -1560,7 +1561,7 @@ pre .javascript .function {
   .post .post-media {
     float: none;
     width: 100%;
-    height: auto;
+    /* height: auto; */
     margin: 0 0 1em 0;
   }
   .post-footer,
@@ -1586,6 +1587,12 @@ pre .javascript .function {
 @media screen and (min-width: 768px) {
   .nav-toggle-button {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+
+  .main-header .main-header-box .branding h2{
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -1615,4 +1622,5 @@ pre .javascript .function {
     content: "";
     margin-bottom: 10px;
   }
+
 }
