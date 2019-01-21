@@ -13,7 +13,23 @@ function createCopyBtns() {
       });
     }
     initCopyCode();
+
+
+    //添加代码说明
+    var $codeArea = $("figure");
+    if ($codeArea.length>0){
+      for(var i= 0; i<$codeArea.length; i++){
+        //获取文本类型
+        var type = $codeArea[i].className.split(/\s+/)[1].toUpperCase();
+        var html = '<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="'+type+'"></div>'
+
+      }
+      $codeArea.wrap(html);
+    }
 }
+
+
+
 $(document).ready(function() {
   createCopyBtns();
 });
