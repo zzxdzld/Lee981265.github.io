@@ -21,7 +21,7 @@ function createCopyBtns() {
       for(var i= 0; i<$codeArea.length; i++){
         //获取文本类型
         var type = $codeArea[i].className.split(/\s+/)[1].toUpperCase();
-        var html = '<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="'+type+'"></div>'
+        var html = '<div class="highlight-wrap" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="false" data-rel="'+type+'"></div>'
 
       }
       $codeArea.wrap(html);
