@@ -1517,6 +1517,7 @@ pre .javascript .function {
 .header-music{
   position:absolute;
   left:6px;
+  top:-10px;
 }
 /*====================================================
     scrollbar
