@@ -1515,7 +1515,7 @@ pre .javascript .function {
 }
 /* -------------------网易云------------------------------ */
 .header-music{
-  position:absolute;
+  /* position:absolute; */
   left:6px;
   top:-10px;
 }
