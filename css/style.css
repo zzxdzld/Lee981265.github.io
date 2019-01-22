@@ -775,7 +775,7 @@ pre {
 }
 .windows .post-content {
   font-size: 16px;
-  font-family: "Georgia", "SimSun", sans-serif;
+  /* font-family: "Georgia", "SimSun", sans-serif; */
 }
 /*====================================================
     pagination
