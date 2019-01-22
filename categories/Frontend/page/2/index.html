@@ -366,46 +366,80 @@ HTML DOM - 针对 HTML 文档的标准模型…
         <div class="row">
         </div>
     </div>
+
+
 </footer>
 
 <a id="back-to-top" class="icon-btn hide">
 	<i class="fa fa-chevron-up"></i>
   <!-- <img src="backtop.jpg" alt=""> -->
-  
+
 </a>
 
-    <div class="copyright">
+    <div class="times">
     <div class="container">
         <div class="row">
+
+            <div class="col-sm-12">
+              <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+              <script>
+              var now = new Date();
+              function createtime() {
+                  var grt= new Date("07/3/2018 8:00:00");//此处修改你的建站时间或者网站上线时间
+                  now.setTime(now.getTime()+250);
+                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+              }
+              setInterval("createtime()",250);
+              </script>
+            </div>
             <div class="col-sm-12">
                 <div class="busuanzi">
     
-        Total:
-        <strong id="busuanzi_value_site_pv">
+        很荣幸您成为本站的第
+        <strong id="busuanzi_value_site_uv">
             <i class="fa fa-spinner fa-spin"></i>
         </strong>
+        位访客
         &nbsp; | &nbsp;
-        Visitors:
-        <strong id="busuanzi_value_site_uv">
+        本站总浏览次数:
+
+        <strong id="busuanzi_value_site_pv">
             <i class="fa fa-spinner fa-spin"></i>
         </strong>
     
 </div>
 
             </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="container">
+        <div class="row">
             <div class="col-sm-12">
                 <span>Copyright &copy; 2018-2019
                 </span> |
-                <span>
+                <!-- <span>
                     Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> |
+                </span> | -->
                 <span>
-                    Made by <a href="//wpa.qq.com/msgrd?uin=2037343920" class="copyright-links" target="_blank" rel="nofollow">Lee</a>
+                    Made by <a href="//wpa.qq.com/msgrd?uin=2037343920" class="copyright-links" target="_blank" rel="nofollow">Lee</a> with ❤️ and Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
                 </span>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
 
 
 	<script src="/js/search.js?rev=@@hash"></script>

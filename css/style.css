@@ -1133,14 +1133,14 @@ pre {
 /*====================================================
    copyright
 ====================================================*/
-.copyright {
-  background: #111;
+.copyright,.times {
+  background: #ebebeb;
   font-size: 13px;
   text-align: center;
   color: #666666;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid #303030;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  /* border-top: 1px solid #303030; */
 }
 .copyright span {
   margin: 0 .5em;
