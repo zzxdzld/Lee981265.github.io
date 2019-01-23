@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java特性]]></title>
+    <url>%2F2019%2F01%2F23%2FJava%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Essay</category>
+        <category>Backend</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Markdown教程]]></title>
     <url>%2F2019%2F01%2F15%2FMarkdown%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[想写博客记录自己学习的点点滴滴吗？点开这里 =&gt;传送门 Guide这是一篇讲解如何正确使用 Markdown 的排版示例，学会这个很有必要，能让你的文章有更佳清晰的排版。 引用文本：Markdown is a text formatting syntax inspired 语法指导普通内容这段内容展示了在内容里面一些小的格式，比如： 加粗 - **加粗** 倾斜 - *倾斜* 删除线 - ~~删除线~~ Code 标记 - Code 标记 超级链接 - [超级链接](https://github.com) username@gmail.com - [username@gmail.com](mailto:username@gmail.com) 表情符号 Emoji支持大部分标准的表情符号，可使用输入法直接输入 一些表情例子:smile: :laughing: :dizzy_face: :sob: :cold_sweat: :sweat_smile: :cry: :triumph: :heart_eyes: :relaxed::+1: :-1: :100: :clap: :bell: :gift: :question: :bomb: :heart: :coffee: :cyclone: :bow: :kiss: :pray: :anger: 效果如图所示： 大标题 - Heading 3你可以选择使用 H1 至 H6，使用 ##(N) 打头。 NOTE: 别忘了 # 后面需要有空格！ Heading 4Heading 5Heading 6图片12![alt 文本](https://lee981265.github.io/img/Leebolg.png)![alt 文本](https://lee981265.github.io/img/Leebolg.png &quot;图片 Title 值&quot;) 效果如图所示： 支持复制粘贴直接上传。 代码块普通123*emphasize* **strong**_emphasize_ __strong__var a = 1 语法高亮支持如果在 1234567891011##### 演示 Go 代码高亮```gopackage mainimport &quot;fmt&quot;func main() &#123; fmt.Println(&quot;Hello, 世界&quot;)&#125; 演示 Java 高亮1234567public class HelloWorld &#123; public static void main(String[] args) &#123; System.out.println("Hello World!"); &#125;&#125; 效果如图所示： Tip: 语言名称支持下面这些: ruby, python, js, html, erb, css, coffee, bash, json, yml, xml … 有序、无序列表无序列表 Java Spring IoC AOP Go gofmt Wide Node.js Koa Express 有序列表 Node.js1.1. Express1.2. Koa1.3. Sails Go2.1. gofmt2.2. Wide Java3.1. Latke3.2. IDEA 表格如果需要展示数据什么的，可以选择使用表格。 header 1 header 3 cell 1 cell 2 cell 3 cell 4 cell 5 cell 6 隐藏细节SummaryDetails 段落留空白的换行，将会被自动转换成一个段落，会有一定的段落间距，便于阅读。 请注意后面 Markdown 源代码的换行留空情况。 数学公式$$a^2 + b^2 = \color{red}c^2$$ 效果如图所示： 复选框command line initiate participate redeem refund doc ReadMe ReadMe_CN 流程图12345678st=&gt;start: Startop=&gt;operation: Your Operationcond=&gt;condition: Yes or No?e=&gt;endst-&gt;op-&gt;condcond(yes)-&gt;econd(no)-&gt;op 效果如图所示： 时序图123张三-&gt;李四: 嘿，小四儿, 写博客了没?Note right of 李四: 李四愣了一下，说：李四--&gt;张三: 忙得吐血，哪有时间写。 效果如图所示： 2019弹指间2018悄然溜走，我也在昨天渡过22岁生日。新的一年祝大家好运常来，在2019我决定开始学习python和java，也会在这里和大家分享一下我踩过的坑和笔记。2019加油！ :smirk_cat:）]]></content>
