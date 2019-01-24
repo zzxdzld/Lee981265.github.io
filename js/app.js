@@ -3,15 +3,22 @@
  * ======================================================================== */
 window.onload = function() {
   function cons(){
-    var e = "%c";
+    // var e = "%c";
+    //
+    // var n = "color:red;text-shadow:5px 5px 2px #fff, 5px 5px 2px #373E40, 5px 5px 5px #A2B4BA, 5px 5px 10px #82ABBA;font-weight:bolder;font-size:55px";
+    //
+    // n = "color:#52BAF5; text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em", "font-size:12px;color:#5db8f8";
+    //
+    // var r = "color:#495A80;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 1px 0 #bbb;font-size:20px";
 
-    var n = "color:red;text-shadow:5px 5px 2px #fff, 5px 5px 2px #373E40, 5px 5px 5px #A2B4BA, 5px 5px 10px #82ABBA;font-weight:bolder;font-size:55px"
+    // console.info(e + "Lee's Blog", n, "Version:2.2.1 Copyright © 2018-"+(new Date).getFullYear());
 
-    var r = "color:#495A80;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 1px 0 #bbb;font-size:20px";
 
-    console.info(e + "你好，朋友，欢迎你的来访！", n);
+    window.console && window.console.log("%cLee's Blog%c Version:" + "2.2.1" + " Copyright \u00a9 2018-%s", "color:#52BAF5; text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:5em", "font-size:12px;color:#5db8f8;", (new Date).getFullYear());
+    console.info( "%c前端交流群：635678224 期待你的加入。:-)", "color:#495A80;text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 1px 0 #bbb;font-size:20px","http://qm.qq.com/cgi-bin/qm/qr?k=XJxe3cw9kPNLcDjJQ4dnkDAeiv5Ag_RD");
+    console.log("%c \u6e29\u99a8\u63d0\u793a\uff1a\u53d1\u73b0Bug\u8bf7\u53ca\u65f6\u8ddf\u6211\u53cd\u9988(\u30fb\u03c9\u30fb)", "font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;color:#F87D53;");
+    console.log("%c \u8fd9\u91cc\u6709\u6211\u7684\u8054\u7cfb\u65b9\u5f0f(o^.^o) https://wpa.qq.com/msgrd?uin=2037343920", "color:#00cc00");
 
-    console.info(e + "前端交流群：635678224 期待你的加入。:-)\r\n", r);
   }
 
   cons();

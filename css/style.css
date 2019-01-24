@@ -11,6 +11,12 @@
 font-style: italic!important;
 font-family: Playfair Display,Georgia,Times New Roman,serif;
 */
+body{
+  cursor: url(https://www.0dayhack.com/content/templates/FLY/css/default.cur),default;
+}
+a, a:hover, a:link, a:visited {
+    cursor: url(https://www.0dayhack.com/content/templates/FLY/css/link.cur),pointer;
+}
 @-webkit-keyframes masked-animation {
   0% {
     background-position: 0 0;
