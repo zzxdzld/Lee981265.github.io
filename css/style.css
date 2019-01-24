@@ -232,9 +232,17 @@ pre {
 }
 .carousel {
   margin-bottom: 20px;
+
 }
 .carousel img {
   width: 100%;
+  border-radius: 5px;
+}
+.highlight-wrap,img{
+  opacity: .8;
+}
+.carousel:hover img,.post:hover img,.post:hover .highlight-wrap{
+  opacity: 1;
 }
 /*====================================================
     header
@@ -840,9 +848,16 @@ pre {
     other: about and comment
 ====================================================*/
 #comments {
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.8);
+}
+#comments:hover{
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.8);
 }
 #comments .v .vheader .vinput {
   border: none;
@@ -1122,10 +1137,17 @@ pre {
 ====================================================*/
 #article-toc {
   padding-top: 1em;
-  background-color: #fff;
+  /* background-color: #fff; */
   top: 0;
   bottom: 70px;
   overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 1px rgba(0,0,0,.2);
+  background-color: rgba(255,255,255,.8);
+}
+#article-toc:hover{
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.8);
 }
 #article-toc ol {
   list-style: none;
@@ -1164,6 +1186,12 @@ pre {
   /* padding-top: 20px;
   padding-bottom: 20px; */
   /* border-top: 1px solid #303030; */
+}
+.copyright:hover,.times:hover{
+  color:#e67e22;
+}
+.copyright:hover a,.times:hover a{
+  color:red;
 }
 .copyright span {
   margin: 0 .5em;
