@@ -1,357 +1,279 @@
-<script src="/assets/jq.min.js"></script>
-<script src="/assets/clipboard.min.js"></script>
-<script src="/js/custom.js"></script>
-<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-<!-- <script type="text/javascript" src="assets/clipboard.min.js"></script>
-<script type="text/javascript" src="js/src/custom.js"></script> -->
-
-<!DOCTYPE HTML>
-<html lang="">
+<!DOCTYPE html>
+<html>
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="apple-mobile-web-app-capable" content="Lee">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no,adress=no">
-    <meta name="browsermode" content="application">
-    <meta name="baidu-site-verification" content="cZKtPkWm2R" />
-    <meta name="screen-orientation" content="portrait">
-    <link rel="dns-prefetch" href="https://Lee981265.github.io">
-    <!--SEO-->
-
-<meta name="description" content="Lee hexo"/>
-
-
-
-
-
-<meta name="robots" content="all" />
-<meta name="google" content="all" />
-<meta name="googlebot" content="all" />
-<meta name="verify" content="all" />
-
-    <!--Title-->
-
-
-<title>ES6语法简介 | Lee</title>
-
-
-    <link rel="alternate" href="/atom.xml" title="Lee" type="application/atom+xml">
-
-
-    <link rel="icon" href="/favicon.ico">
-
-    
-
-
-
-<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
-<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
-<link rel="stylesheet" href="/css/style.css?rev=@@hash">
-
-
-
-
-    
-	<div class="hide">
-		<script type="text/javascript">
-			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-	</div>
-
-
-
-
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?64ec872394d355ebe8bfd31c2dae6ff2";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
-
-	<script>
-		(function(i, s, o, g, r, a, m) {
-		    i['GoogleAnalyticsObject'] = r;
-		    i[r] = i[r] || function() {
-		        (i[r].q = i[r].q || []).push(arguments)
-		    }, i[r].l = 1 * new Date();
-		    a = s.createElement(o),
-		    m = s.getElementsByTagName(o)[0];
-		    a.async = 1;
-		    a.src = g;
-		    m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'pFW527fHrjfI0si2w4NQ0w3cTw12AvvuohAu1PUfqKA', 'auto');
-		ga('send', 'pageview');
-	</script>
-
-
-
-    
-
-    <script>
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    </script>
-
-    <!-- <div class="bg"></div>
-    <div class="bg bg--1"></div>
-    <div class="bg bg--2"></div>
-    <div class="bg bg--3"></div>
-    <div class="bg bg--4"></div>
-    <div class="bg bg--5"></div> -->
-
-    <style media="screen">
-    .bg {
-      height: 100%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgv7d0w8wj31oo11xgrb.jpg); */
-      background-image: url(https://luuman.github.io/background/bg-2.jpg);
-      background-size: cover;
-      background-position: center center;
-      z-index: 0;
-      animation: imageAnimation 36s linear infinite 0s;
-      opacity: 0;
-
-    }
-    .bg--1 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvae03wnj31hc0vhqv6.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-4.jpg);
-        animation-delay: 6s;
-    }
-    .bg--2 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvbuwo0uj31hc0vgu0y.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-8.jpg);
-        animation-delay: 12s;
-    }
-    .bg--3 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvcltrqaj31z4140b2a.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-16.jpg);
-        animation-delay: 18s;
-    }
-    .bg--4 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdbkyxgj31hc0xchdt.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-19.jpg);
-        animation-delay: 24s;
-    }
-    .bg--5 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdwo51oj31hc0u0u0z.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-19.jpg);
-        animation-delay: 30s;
-    }
-    @-webkit-keyframes imageAnimation{
-      0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
+  <meta charset="utf-8">
+  
+  <title>ES6语法简介 | Lee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
+<meta name="keywords" content="ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6语法简介">
+<meta property="og:url" content="https://Lee981265.github.io/2018/09/19/ES6语法简介/index.html">
+<meta property="og:site_name" content="Lee">
+<meta property="og:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-17T05:30:14.821Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6语法简介">
+<meta name="twitter:description" content="ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。">
+  
+    <link rel="alternative" href="/atom.xml" title="Lee" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
       }
-      8% {
-          opacity: 1;
-          transform: scale(1.05);
-          animation-timing-function: ease-out;
-      }
-      17% {
-          opacity: 1;
-          transform: scale(1.1) rotate(0);
-      }
-      25% {
-          opacity: 0;
-          transform: scale(1.1) rotate(0);
-      }
-      100% {
-          opacity: 0;
-      }
-    }
-    @keyframes imageAnimation{
-      0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
-      }
-      8% {
-          opacity: 1;
-          transform: scale(1.05);
-          animation-timing-function: ease-out;
-      }
-      17% {
-          opacity: 1;
-          transform: scale(1.1) rotate(0);
-      }
-      25% {
-          opacity: 0;
-          transform: scale(1.1) rotate(0);
-      }
-      100% {
-          opacity: 0;
-      }
-    }
-
-    /* body {
-        cursor: url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),auto;
-    } */
-    </style>
+  </script>
 </head>
-
-<!--[if lte IE 8]>
-<style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
-<![endif]-->
-
 <body>
-    <!-- 头部 -->
-<header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
-    <div class="main-header-box">
-        <a class="header-avatar" href="/" title='Lee'>
-            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
         </a>
-        <div class="branding">
-        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
-            
-                <h2> Just open your eyes , you got everything in the world </h2>
-            
-    	</div>
-    </div>
-</header>
 
-    <!-- 导航栏 -->
-<nav class="main-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                    <span class="sr-only"></span>
-                        <i class="fa fa-bars"></i>
-                    </span>
-                    <a class="navbar-brand" href="https://Lee981265.github.io">Lee</a>
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Lee</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+
                 </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/"><i class="fa "></i>Home</a>
-                            </li>
+                        <li>友情链接</li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Frontend/"><i class="fa "></i>Frontend</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Backend/"><i class="fa "></i>Backend</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Essay/"><i class="fa "></i>Essay</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/archives/"><i class="fa "></i>Archives</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/aboutme/"><i class="fa "></i>Aboutme</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="http://pipe.b3log.org/blogs/Lee981265/"><i class="fa "></i>Pipe</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="https://github.com/Lee981265"><i class="fa "></i>Github</a>
-                            </li>
                         
                     </ul>
                 </div>
             </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">首页</a></li>
+                        
+                            <li><a href="/archives">归档</a></li>
+                        
+                            <li><a href="https://lee981265.coding.me/">随笔</a></li>
+                        
+                            <li><a href="/aboutme">关于我</a></li>
+                        
+                            <li><a href="/Lee981265.com/">Lee981265.com</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
+                            
+                                <a class="fl QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CBA/" style="font-size: 10px;">CBA</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Drag/" style="font-size: 10px;">Drag</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Echarts/" style="font-size: 15px;">Echarts</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mini-apps/" style="font-size: 15px;">Mini-apps</a> <a href="/tags/Mobileterminal/" style="font-size: 15px;">Mobileterminal</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/NodeJs/" style="font-size: 10px;">NodeJs</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sql/" style="font-size: 10px;">Sql</a> <a href="/tags/Vue/" style="font-size: 20px;">Vue</a> <a href="/tags/absolute/" style="font-size: 10px;">absolute</a> <a href="/tags/resize/" style="font-size: 10px;">resize</a> <a href="/tags/vue-router/" style="font-size: 10px;">vue-router</a>
+                    </div>
+                </section>
+                
+
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/Lee981265">Lee</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://w3more.cn/">杉木</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://codemx.cn/">墨香</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolcode.org">CoolCode</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://bertliu.com/">室内设计</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://lee981265.github.io/Lee981265.com/">Lee981265.com</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
         </div>
-    </div>
-</nav>
-
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="ES6语法简介">
-            
-	            ES6语法简介
-            
-        </h1>
-        <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/ES6/">ES6</a>
-                
-            </span>
-        </span>
-    
-
-    
-        
-        <span class="fa-wrap">
-            <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2018/09/19</span>
-        </span>
-        
-            <span class="fa-wrap">
-                <i class="fa fa-eye"></i>
-                <span id="busuanzi_value_page_pv"></span>
-            </span>
-        
-    
+    </header>
 </div>
 
-            
-            
     </div>
-    <!-- 画廊 -->
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Lee</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Lee</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">首页</a></li>
+                
+                    <li><a href="/archives">归档</a></li>
+                
+                    <li><a href="https://lee981265.coding.me/">随笔</a></li>
+                
+                    <li><a href="/aboutme">关于我</a></li>
+                
+                    <li><a href="/Lee981265.com/">Lee981265.com</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
+                    
+                        <a class="QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-ES6语法简介" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/19/ES6语法简介/" class="article-date">
+      <time datetime="2018-09-19T03:29:46.000Z" itemprop="datePublished">2018-09-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6语法简介
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
+    </div>
 
 
-    <div class="post-body post-content">
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
         <p>ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言。这种语言在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展。<a id="more"></a></p>
 <h1 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h1><h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><ul>
 <li>let:代码块内的变量声明<ol>
@@ -532,171 +454,317 @@
 <p>SET集合没有提供下标方式的访问，因此只能使用for…of来遍历。由于Set集合本质上还是一个map，因此会有以下几种遍历方法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> imgs = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>]); <span class="comment">//根据KEY遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.keys())&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//根据VALUE遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.values())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//根据KEY-VALUE遍历</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs.entries())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//['a','a']</span></span><br><span class="line"><span class="comment">//['b','b']</span></span><br><span class="line"><span class="comment">//['c','c']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//普通for...of循环</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> imgs)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(item);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//a</span></span><br><span class="line"><span class="comment">//b</span></span><br><span class="line"><span class="comment">//c</span></span><br></pre></td></tr></table></figure>
 
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <!-- <script type="text/javascript" src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
+        <!--  -->
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
     </div>
     
-    <div class="post-footer">
-        <div>
-            
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wpa.qq.com/msgrd?uin=2037343920" target="_blank">Lee</a>
-            
-        </div>
-        <div>
-            
-        </div>
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/19/ES6语法简介/">ES6语法简介</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
+        <p><span>发布时间:</span>2018年09月19日 - 11时29分</p>
+        <p><span>最后更新:</span>2019年01月17日 - 13时30分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/19/ES6语法简介/" title="ES6语法简介">https://Lee981265.github.io/2018/09/19/ES6语法简介/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://Lee981265.github.io/2018/09/19/ES6语法简介/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/09/27/ES5&字符串/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ES5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/22/vue与echarts显示隐藏/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue与echarts显示隐藏</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-<div class="article-nav prev-next-wrap clearfix">
-    
-        <a href="/2018/09/27/ES5&字符串/" class="pre-post btn btn-default" title='ES5'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">ES5</span>
-        </a>
-    
-    
-        <a href="/2018/08/22/vue与echarts显示隐藏/" class="next-post btn btn-default" title='vue与echarts显示隐藏'>
-            <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">vue与echarts显示隐藏</span><i class="fa fa-angle-right fa-fw"></i>
-        </a>
-    
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ES6"><span class="toc-number">1.</span> <span class="toc-text">ES6</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量声明"><span class="toc-number">1.1.</span> <span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解构赋值"><span class="toc-number">1.2.</span> <span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解构用途"><span class="toc-number">1.2.1.</span> <span class="toc-text">解构用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串扩展"><span class="toc-number">1.3.</span> <span class="toc-text">字符串扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串方法"><span class="toc-number">1.3.1.</span> <span class="toc-text">字符串方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串模板-使用反引号-表示-重点"><span class="toc-number">1.3.2.</span> <span class="toc-text">字符串模板, 使用反引号`表示(重点)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组扩展"><span class="toc-number">1.4.</span> <span class="toc-text">数组扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-number">1.4.1.</span> <span class="toc-text">遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象扩展"><span class="toc-number">1.5.</span> <span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#箭头函数-gt-（重点）"><span class="toc-number">1.6.</span> <span class="toc-text">箭头函数=&gt;（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数与返回值"><span class="toc-number">1.6.1.</span> <span class="toc-text">参数与返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数中的this值"><span class="toc-number">1.6.2.</span> <span class="toc-text">箭头函数中的this值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Symbol数据类型"><span class="toc-number">1.7.</span> <span class="toc-text">Symbol数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-number">1.7.1.</span> <span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用方法"><span class="toc-number">1.7.2.</span> <span class="toc-text">常用方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map集合"><span class="toc-number">1.8.</span> <span class="toc-text">Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-number">1.8.1.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set集合"><span class="toc-number">1.9.</span> <span class="toc-text">Set集合</span></a></li></ol></li></ol>
 </div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<!-- <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script> -->
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!--  -->
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
-    <div id="comments">
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+          <section id="comments" style="background-color:#fff;">
+    <div id="valine_thread" style="margin: 30px;"></div>
+          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+          <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+          <script>
+              var GUEST_INFO = ['nick','mail','link'];
+              var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+                  return GUEST_INFO.indexOf(item) > -1
+              });
+              var notify = 'false' == true;
+              var verify = 'false' == true;
+              var valine = new Valine();
+              valine.init({
+                  el: '#valine_thread',
+                  notify: notify,
+                  verify: verify,
+                  appId: "gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz",
+                  appKey: "PlSGU0BVUIgyuS6bQ15rXq3i",
+                  placeholder: "Just go go(text or md)",
+                  pageSize:'10',
+                  avatar:'wavatar',
+                  lang:'zh-cn'
+              })
+          </script>
+  </section> 
+          <!--  -->
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-	
-    <div id="vcomments" class="valine"></div>
-    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="/assets/valine.min.js"></script>
-
+            <a href="/2018/09/27/ES5&字符串/" title="上一篇: ES5">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/08/22/vue与echarts显示隐藏/" title="下一篇: vue与echarts显示隐藏">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/23/Java特性/">Java特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/Markdown教程/">Markdown教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/11/Vue路由传参三种基本方式/">Vue路由传参三种基本方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/Sql语句/">Sql语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/Python3基础/">Python3基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/27/ES5&字符串/">ES5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/19/ES6语法简介/">ES6语法简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/vue与echarts显示隐藏/">vue与echarts显示隐藏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/Vue-小程序表达式/">Vue 小程序表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/23/移动端拖拽/">移动端拖拽</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/17/Vue键盘弹起/">移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/13/从零开始小程序/">从零开始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Echarts属性设置/">Echarts属性设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/NodeJs/">NodeJs</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Ajax/">Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/初识PHP/">初识PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Nginx/">Nginx快速开端口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/简易Python/">简易Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/初识Linux/">初识Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/11/DOM/">DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/Hexo使用/">Hexo使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/Git进阶/">Git进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/03/preface /">前言</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
-        new Valine({
-            av: AV,
-            el: '#vcomments',
-            appId: 'gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz',
-            appKey: 'PlSGU0BVUIgyuS6bQ15rXq3i',
-            placeholder: 'Just go go(text or md)',
-            notify: false,
-            verify: false,
-            avatar: 'wavatar',
-            meta: 'nick,mail,link'.split(','),
-            pageSize: '10',
-            path: window.location.pathname,
-            lang: ''.toLowerCase()
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
         })
     </script>
 
 
-    </div>
 
-
-                </main>
-                
-                    <!-- 文字内部结构 -->
-<aside id="article-toc" role="navigation" class="col-md-4">
-    <div class="widget">
-        <h3 class="title">Table of Contents</h3>
+    <script>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ES6"><span class="toc-text">ES6</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量声明"><span class="toc-text">变量声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解构用途"><span class="toc-text">解构用途</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串扩展"><span class="toc-text">字符串扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串方法"><span class="toc-text">字符串方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串模板-使用反引号-表示-重点"><span class="toc-text">字符串模板, 使用反引号`表示(重点)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组扩展"><span class="toc-text">数组扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#遍历"><span class="toc-text">遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象扩展"><span class="toc-text">对象扩展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#箭头函数-gt-（重点）"><span class="toc-text">箭头函数=&gt;（重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数与返回值"><span class="toc-text">参数与返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#箭头函数中的this值"><span class="toc-text">箭头函数中的this值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Symbol数据类型"><span class="toc-text">Symbol数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用途"><span class="toc-text">用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用方法"><span class="toc-text">常用方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map集合"><span class="toc-text">Map集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Set集合"><span class="toc-text">Set集合</span></a></li></ol></li></ol>
-        
-    </div>
-</aside>
-
-                
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 Lee
+            </div>
+            <div class="footer-right">
+                由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动
             </div>
         </div>
-    </section>
-    <footer class="main-footer">
-    <div class="container">
-        <div class="row">
-        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >访客:
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量:
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-
-
 </footer>
 
-<a id="back-to-top" class="icon-btn hide">
-	<i class="fa fa-chevron-up"></i>
-  <!-- <img src="backtop.jpg" alt=""> -->
-
-</a>
-
-    <div class="times">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-sm-12">
-              <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-              <script>
-              var now = new Date();
-              function createtime() {
-                  var grt= new Date("07/3/2018 8:00:00");//此处修改你的建站时间或者网站上线时间
-                  now.setTime(now.getTime()+250);
-                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-                  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-              }
-              setInterval("createtime()",250);
-              </script>
-            </div>
-            <div class="col-sm-12">
-                <div class="busuanzi">
-    
-        很荣幸您成为本站的第
-        <strong id="busuanzi_value_site_uv">
-            <i class="fa fa-spinner fa-spin"></i>
-        </strong>
-        位访客
-        &nbsp; | &nbsp;
-        本站总浏览次数:
-
-        <strong id="busuanzi_value_site_pv">
-            <i class="fa fa-spinner fa-spin"></i>
-        </strong>
-    
-</div>
-
-            </div>
-        </div>
     </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!--  -->
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
 </div>
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Copyright &copy; 2018-2019
-                </span> |
-                <!-- <span>
-                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | -->
-                <span>
-                    Made by <a href="//wpa.qq.com/msgrd?uin=2037343920" class="copyright-links" target="_blank" rel="nofollow">Lee</a> with ❤️ and Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
 
 
 
-
-
-
-
-
-
-
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script src="/js/app.js?rev=@@hash"></script>
-
-
+  </div>
 </body>
 </html>

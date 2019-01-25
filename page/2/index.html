@@ -1,1265 +1,1017 @@
-<script src="/assets/jq.min.js"></script>
-<script src="/assets/clipboard.min.js"></script>
-<script src="/js/custom.js"></script>
-<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-<!-- <script type="text/javascript" src="assets/clipboard.min.js"></script>
-<script type="text/javascript" src="js/src/custom.js"></script> -->
-
-<!DOCTYPE HTML>
-<html lang="">
+<!DOCTYPE html>
+<html>
 <head>
-    <!--Setting-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta http-equiv="Cache-Control" content="no-transform">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta name="apple-mobile-web-app-capable" content="Lee">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no,email=no,adress=no">
-    <meta name="browsermode" content="application">
-    <meta name="baidu-site-verification" content="cZKtPkWm2R" />
-    <meta name="screen-orientation" content="portrait">
-    <link rel="dns-prefetch" href="https://Lee981265.github.io">
-    <!--SEO-->
-
-<meta name="description" content="Lee hexo"/>
-
-
-
-
-
-<meta name="robots" content="all" />
-<meta name="google" content="all" />
-<meta name="googlebot" content="all" />
-<meta name="verify" content="all" />
-
-    <!--Title-->
-
-
-<title>Lee</title>
-
-
-    <link rel="alternate" href="/atom.xml" title="Lee" type="application/atom+xml">
-
-
-    <link rel="icon" href="/favicon.ico">
-
+  <meta charset="utf-8">
+  
+  <title>Lee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Lee hexo">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lee">
+<meta property="og:url" content="https://Lee981265.github.io/page/2/index.html">
+<meta property="og:site_name" content="Lee">
+<meta property="og:description" content="Lee hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lee">
+<meta name="twitter:description" content="Lee hexo">
+  
+    <link rel="alternative" href="/atom.xml" title="Lee" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+     
+      <meta name="baidu-site-verification" content="c167b9feb4f0b208b712c79629c188e4" />
     
-
-
-
-<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
-<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
-<link rel="stylesheet" href="/css/style.css?rev=@@hash">
-
-
-
-
+     
+      <meta name="google-site-verification" content="pFW527fHrjfI0si2w4NQ0w3cTw12AvvuohAu1PUfqKA" />
     
-	<div class="hide">
-		<script type="text/javascript">
-			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
-		</script>
-	</div>
-
-
-
-
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?64ec872394d355ebe8bfd31c2dae6ff2";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
-
-	<script>
-		(function(i, s, o, g, r, a, m) {
-		    i['GoogleAnalyticsObject'] = r;
-		    i[r] = i[r] || function() {
-		        (i[r].q = i[r].q || []).push(arguments)
-		    }, i[r].l = 1 * new Date();
-		    a = s.createElement(o),
-		    m = s.getElementsByTagName(o)[0];
-		    a.async = 1;
-		    a.src = g;
-		    m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'pFW527fHrjfI0si2w4NQ0w3cTw12AvvuohAu1PUfqKA', 'auto');
-		ga('send', 'pageview');
-	</script>
-
-
-
-    
-
-    <script>
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    </script>
-
-    <!-- <div class="bg"></div>
-    <div class="bg bg--1"></div>
-    <div class="bg bg--2"></div>
-    <div class="bg bg--3"></div>
-    <div class="bg bg--4"></div>
-    <div class="bg bg--5"></div> -->
-
-    <style media="screen">
-    .bg {
-      height: 100%;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgv7d0w8wj31oo11xgrb.jpg); */
-      background-image: url(https://luuman.github.io/background/bg-2.jpg);
-      background-size: cover;
-      background-position: center center;
-      z-index: 0;
-      animation: imageAnimation 36s linear infinite 0s;
-      opacity: 0;
-
-    }
-    .bg--1 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvae03wnj31hc0vhqv6.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-4.jpg);
-        animation-delay: 6s;
-    }
-    .bg--2 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvbuwo0uj31hc0vgu0y.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-8.jpg);
-        animation-delay: 12s;
-    }
-    .bg--3 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvcltrqaj31z4140b2a.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-16.jpg);
-        animation-delay: 18s;
-    }
-    .bg--4 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdbkyxgj31hc0xchdt.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-19.jpg);
-        animation-delay: 24s;
-    }
-    .bg--5 {
-        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdwo51oj31hc0u0u0z.jpg); */
-        background-image: url(https://luuman.github.io/background/bg-19.jpg);
-        animation-delay: 30s;
-    }
-    @-webkit-keyframes imageAnimation{
-      0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
       }
-      8% {
-          opacity: 1;
-          transform: scale(1.05);
-          animation-timing-function: ease-out;
-      }
-      17% {
-          opacity: 1;
-          transform: scale(1.1) rotate(0);
-      }
-      25% {
-          opacity: 0;
-          transform: scale(1.1) rotate(0);
-      }
-      100% {
-          opacity: 0;
-      }
-    }
-    @keyframes imageAnimation{
-      0% {
-        opacity: 0;
-        animation-timing-function: ease-in;
-      }
-      8% {
-          opacity: 1;
-          transform: scale(1.05);
-          animation-timing-function: ease-out;
-      }
-      17% {
-          opacity: 1;
-          transform: scale(1.1) rotate(0);
-      }
-      25% {
-          opacity: 0;
-          transform: scale(1.1) rotate(0);
-      }
-      100% {
-          opacity: 0;
-      }
-    }
-
-    /* body {
-        cursor: url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),auto;
-    } */
-    </style>
+  </script>
 </head>
-
-<!--[if lte IE 8]>
-<style>
-    html{ font-size: 1em }
-</style>
-<![endif]-->
-<!--[if lte IE 9]>
-<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
-<![endif]-->
-
 <body>
-    <!-- 头部 -->
-<header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
-    <div class="main-header-box">
-        <a class="header-avatar" href="/" title='Lee'>
-            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
         </a>
-        <div class="branding">
-        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
-            
-                <h2> Just open your eyes , you got everything in the world </h2>
-            
-    	</div>
-    </div>
-</header>
 
-    <!-- 导航栏 -->
-<nav class="main-navigation">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                    <span class="sr-only"></span>
-                        <i class="fa fa-bars"></i>
-                    </span>
-                    <a class="navbar-brand" href="https://Lee981265.github.io">Lee</a>
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">Lee</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+
                 </div>
-                <div class="collapse navbar-collapse" id="main-menu">
-                    <ul class="menu">
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/"><i class="fa "></i>Home</a>
-                            </li>
+                        <li>友情链接</li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Frontend/"><i class="fa "></i>Frontend</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Backend/"><i class="fa "></i>Backend</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/Essay/"><i class="fa "></i>Essay</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/archives/"><i class="fa "></i>Archives</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="/aboutme/"><i class="fa "></i>Aboutme</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="http://pipe.b3log.org/blogs/Lee981265/"><i class="fa "></i>Pipe</a>
-                            </li>
-                        
-                            <li role="presentation" class="text-center">
-                                <a href="https://github.com/Lee981265"><i class="fa "></i>Github</a>
-                            </li>
                         
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-</nav>
-
-    <section class="content-wrap">
-        <div class="container">
-            <div class="row">
-                <main class="col-md-8 main-content ">
-                    
-
-    <div class="carousel">
-        <a href="javascript:" target="_blank">
-            <img src="/./img/head-img.jpg" alt="">
-        </a>
-    </div>
-
-
-
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/17/Vue键盘弹起/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Vue.jpg"   alt="移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/17/Vue键盘弹起/">移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月17日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                当我们写一个页面有键盘弹起且底部按钮fixed时你会发现点击输入框是底部按钮会弹起，网上很多方法但是只适用于对应的场景,今天我们来学习一种Vue 页面的键盘弹起。…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Mobileterminal/">Mobileterminal</a> <a class="tag-link" href="/tags/Vue/">Vue</a> <a class="tag-link" href="/tags/absolute/">absolute</a> <a class="tag-link" href="/tags/resize/">resize</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/17/Vue键盘弹起/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/13/从零开始小程序/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/miniapp.jpg"   alt="从零开始小程序">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/13/从零开始小程序/">从零开始小程序</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月13日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                随着技术的发展着2年微信小程序犹如一匹黑马迅速崛起，新的技术出现，我们为了不与时代脱轨学习小程序很有必要！…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Mini-apps/">Mini-apps</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/13/从零开始小程序/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/Echarts属性设置/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Echarts.png"   alt="Echarts属性设置">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/Echarts属性设置/">Echarts属性设置</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                Echarts:
-
-千万级数据可视化渲染能力
-SVG + Canvas 双引擎动力更佳
-数据样式分离及扁平配置让开发更便捷
-首创无障碍访问支持
-微信小程序、PPT，哪里都能用…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Echarts/">Echarts</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/Echarts属性设置/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/NodeJs/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Node.jpg"   alt="NodeJs">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/NodeJs/">NodeJs</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                尽请期待！
-
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Nodejs/">Nodejs</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/NodeJs/">NodeJs</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/NodeJs/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/Ajax/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Ajax.jpg"   alt="Ajax">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/Ajax/">Ajax</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                敬请期待！
-
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Ajax/">Ajax</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/Ajax/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/初识PHP/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/PHP.jpg"   alt="初识PHP">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/初识PHP/">初识PHP</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                PHP（外文名:PHP: Hypertext Preprocessor）：超文本预处理器。是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标...
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Backend/">Backend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/PHP/">PHP</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/初识PHP/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/Nginx/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Nginx.jpg"   alt="Nginx快速开端口">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/Nginx/">Nginx快速开端口</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                对于一个前端来说，运行一些代码有些特殊情况需要开设端口。起初我使用静态服务器用sumlime,后面陆续使用wampserver,xampp;但是有一次换电脑了，需要重新下载，糟糕的的是突然下载不了，项目于是停止不前；庆幸的是以为Java同事告诉我用Nginx开设端口。我在这里把我这个方法分享给大家！…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Backend/">Backend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Nginx/">Nginx</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/Nginx/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/简易Python/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Python.jpg"   alt="简易Python">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/简易Python/">简易Python</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。
-注意：这篇教程是用Python3写的。
-下面一起来学习吧！…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Backend/">Backend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Python/">Python</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/简易Python/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/12/初识Linux/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/Linux.jpg"   alt="初识Linux">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/12/初识Linux/">初识Linux</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月12日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                初步认识Linux,我们一起来预览一下命令吧！…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Backend/">Backend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/Linux/">Linux</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/12/初识Linux/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-<article class="post hh">
-    
-        <div class="post-media">
-            <a href="/2018/07/11/DOM/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="/img/DOM.jpg"   alt="DOM">
-            </a>
-        </div>
-    
-    <div class="post-content">
-        <div class="post-head home-post-head">
-            <h1 class="post-title">
-                <a href="/2018/07/11/DOM/">DOM</a>
-            </h1>
-            <div class="post-meta">  &bull;
-                <time class="post-date" datetime="" title="">
-                    2018年07月11日
-                </time>
-            </div>
-        </div>
-        <p class="brief">
-            
-                DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”W3C DOM 标准被分为 3 个不同的部分：
-
-核心 DOM - 针对任何结构化文档的标准模型
-XML DOM - 针对 XML 文档的标准模型
-HTML DOM - 针对 HTML 文档的标准模型…
-            
-        </p>
-    </div>
-    
-        <footer class="post-footer clearfix">
-            <div class="pull-left tag-list">
-                <div class="post-meta">
-  <span class="fa-wrap">
-
-  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-
-  <a href="/aboutme/">
-      Lee
-  </a>
-</span>
-    
-        <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/Frontend/">Frontend</a>
-        </span>
-    
-
-    
-        <span class="fa-wrap">
-            <i class="fa fa-tags"></i>
-            <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/DOM/">DOM</a> <a class="tag-link" href="/tags/Javascript/">Javascript</a>
-                
-            </span>
-        </span>
-    
-
-    
-</div>
-
-            </div>
-
-            <div class="post-permalink">
-                <a href="/2018/07/11/DOM/" class="btn btn-default">Read</a>
-            </div>
-        </footer>
-    
-</article>
-
-
-
-<!-- 分页 -->
-
-    <nav class="pagination" role="navigation">
-        <div id="page-nav">
-            <a class="extend prev" rel="prev" href="/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class='fa fa-angle-right'></i></a>
-        </div>
-    </nav>
-
-
-
-                </main>
-                
-                    <!--  -->
-
-    <aside class="col-md-4 sidebar">
         
-        
-<nav class="widget" style="">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=270 src="https://music.163.com/outchain/player?type=0&id=2634729799&auto=0&height=430"></iframe>
-</nav>
-<!-- <div style ="clear: both;height:300px;">
 
-</div> -->
-<!--982936219-->
-<!--2634729799   mine-->
-<!--2511529870  -->
-<!-- padding:0;position:absolute;top:0;left:15px;width:100%; header-music -->
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">首页</a></li>
+                        
+                            <li><a href="/archives">归档</a></li>
+                        
+                            <li><a href="https://lee981265.coding.me/">随笔</a></li>
+                        
+                            <li><a href="/aboutme">关于我</a></li>
+                        
+                            <li><a href="/Lee981265.com/">Lee981265.com</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
+                            
+                                <a class="fl QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl google" target="_blank" href="#" title="google">google</a>
+                            
+                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
+                            
+                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
 
-        
-        
-    <div class="widget">
-        <h3 class="title">Search</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
                 
-                    <input id="search-key" type="search" autocomplete="off" placeholder="Search What？">
-                    <button type="button" class="search-form-submit" id="search-local">Search</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CBA/" style="font-size: 10px;">CBA</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Drag/" style="font-size: 10px;">Drag</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Echarts/" style="font-size: 15px;">Echarts</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mini-apps/" style="font-size: 15px;">Mini-apps</a> <a href="/tags/Mobileterminal/" style="font-size: 15px;">Mobileterminal</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/NodeJs/" style="font-size: 10px;">NodeJs</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sql/" style="font-size: 10px;">Sql</a> <a href="/tags/Vue/" style="font-size: 20px;">Vue</a> <a href="/tags/absolute/" style="font-size: 10px;">absolute</a> <a href="/tags/resize/" style="font-size: 10px;">resize</a> <a href="/tags/vue-router/" style="font-size: 10px;">vue-router</a>
                     </div>
-                </template>
-            </div>
-        </div>
-    </div>
+                </section>
+                
 
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Notification</h3>
-        <div class="notification">
-            <p>
-    前端交流群:<a href="https://jq.qq.com/?_wv=1027&k=5jBFbgV" title="前端QQ交流群" target="_blank">635678224</a></br>
-</p>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">Social</h3> 
-        <div class="content social">
-            
-	            <a href="//github.com/Lee981265" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
-			    </a>
-            
-	            <a href="mailto:Lee981265@gmail.com" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="//wpa.qq.com/msgrd?uin=2037343920" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="" rel="external nofollow" title="微信" target="_blank">
-			    	<i class="weixin fa fa-weixin"></i>
-			    </a>
-            
-	            <a href="//jq.qq.com/?_wv=1027&k=5alnSTC" rel="external nofollow" title="QQ群" target="_blank">
-			    	<i class="users fa fa-users"></i>
-			    </a>
-            
-	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
-			    	<i class="feed fa fa-feed"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Categories</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Backend/"><i class="fa" aria-hidden="true">Backend</i></a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Essay/"><i class="fa" aria-hidden="true">Essay</i></a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Essay/Java/"><i class="fa" aria-hidden="true">Java</i></a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Frontend/"><i class="fa" aria-hidden="true">Frontend</i></a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nodejs/"><i class="fa" aria-hidden="true">Nodejs</i></a><span class="category-list-count">1</span></li></ul>
-    </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Archives</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/"><i class="fa" aria-hidden="true">2019年01月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/"><i class="fa" aria-hidden="true">2018年12月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/"><i class="fa" aria-hidden="true">2018年10月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/"><i class="fa" aria-hidden="true">2018年09月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/"><i class="fa" aria-hidden="true">2018年08月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/"><i class="fa" aria-hidden="true">2018年07月</i></a><span class="archive-list-count">14</span></li></ul>
-    </div>
-
-
-        
-        
-  <div class="widget">
-    <h3 class="title">Tag Cloud</h3>
-    <div class="content tag-cloud">
-        
-            <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CBA/" style="font-size: 10px;">CBA</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Drag/" style="font-size: 10px;">Drag</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Echarts/" style="font-size: 15px;">Echarts</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mini-apps/" style="font-size: 15px;">Mini-apps</a> <a href="/tags/Mobileterminal/" style="font-size: 15px;">Mobileterminal</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/NodeJs/" style="font-size: 10px;">NodeJs</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sql/" style="font-size: 10px;">Sql</a> <a href="/tags/Vue/" style="font-size: 20px;">Vue</a> <a href="/tags/absolute/" style="font-size: 10px;">absolute</a> <a href="/tags/resize/" style="font-size: 10px;">resize</a> <a href="/tags/vue-router/" style="font-size: 10px;">vue-router</a>
-        
-    </div>
-  </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">Friends</h3>
-        <div class="content friends-link">
-        
-            <a href="https://hacpai.com/" class="fa" target="_blank">Hacpai社区</a>
-        
-            <a href="http://lee981265.coding.me/" class="fa" target="_blank">Mine</a>
-        
-            <a href="https://github.com/Lee981265" class="fa" target="_blank">Lee</a>
-        
-            <a href="http://pipe.b3log.org/blogs/Lee981265/" class="fa" target="_blank">Pipe</a>
-        
-            <a href="http://w3more.cn/" class="fa" target="_blank">杉木</a>
-        
-            <a href="http://codemx.cn/" class="fa" target="_blank">墨香</a>
-        
-            <a href="https://coolcode.org" class="fa" target="_blank">CoolCode</a>
-        
-            <a href="https://bertliu.com/" class="fa" target="_blank">室内设计</a>
-        
-        </div>
-    </div>
-
-
-        
-    </aside>
-
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/Lee981265">Lee</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://w3more.cn/">杉木</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://codemx.cn/">墨香</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolcode.org">CoolCode</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://bertliu.com/">室内设计</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://lee981265.github.io/Lee981265.com/">Lee981265.com</a>
+                    
+                    </div>
+                </section>
+                
 
                 
             </div>
         </div>
-    </section>
-    <footer class="main-footer">
-    <div class="container">
-        <div class="row">
-        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Lee</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">Lee</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">首页</a></li>
+                
+                    <li><a href="/archives">归档</a></li>
+                
+                    <li><a href="https://lee981265.coding.me/">随笔</a></li>
+                
+                    <li><a href="/aboutme">关于我</a></li>
+                
+                    <li><a href="/Lee981265.com/">Lee981265.com</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
+                    
+                        <a class="QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="google" target="_blank" href="#" title="google">google</a>
+                    
+                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
+                    
+                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-Vue键盘弹起" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/17/Vue键盘弹起/" class="article-date">
+      <time datetime="2018-07-17T07:12:43.000Z" itemprop="datePublished">2018-07-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/17/Vue键盘弹起/">移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>当我们写一个页面有键盘弹起且底部按钮fixed时你会发现点击输入框是底部按钮会弹起，网上很多方法但是只适用于对应的场景,今天我们来学习一种Vue 页面的键盘弹起。
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
     </div>
 
 
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mobileterminal/">Mobileterminal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/absolute/">absolute</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/resize/">resize</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/17/Vue键盘弹起/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-从零开始小程序" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/13/从零开始小程序/" class="article-date">
+      <time datetime="2018-07-13T01:16:24.000Z" itemprop="datePublished">2018-07-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/13/从零开始小程序/">从零开始小程序</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>随着技术的发展着2年微信小程序犹如一匹黑马迅速崛起，新的技术出现，我们为了不与时代脱轨学习小程序很有必要！
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mini-apps/">Mini-apps</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/13/从零开始小程序/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Echarts属性设置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/Echarts属性设置/" class="article-date">
+      <time datetime="2018-07-12T09:53:47.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/Echarts属性设置/">Echarts属性设置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>Echarts:</p>
+<ul>
+<li>千万级数据可视化渲染能力</li>
+<li>SVG + Canvas 双引擎动力更佳</li>
+<li>数据样式分离及扁平配置让开发更便捷</li>
+<li>首创无障碍访问支持</li>
+<li>微信小程序、PPT，哪里都能用
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Echarts/">Echarts</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/12/Echarts属性设置/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NodeJs" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/NodeJs/" class="article-date">
+      <time datetime="2018-07-12T09:52:24.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/NodeJs/">NodeJs</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>尽请期待！</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Nodejs/">Nodejs</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJs/">NodeJs</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/Ajax/" class="article-date">
+      <time datetime="2018-07-12T09:50:31.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/Ajax/">Ajax</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>敬请期待！</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-初识PHP" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/初识PHP/" class="article-date">
+      <time datetime="2018-07-12T09:46:28.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/初识PHP/">初识PHP</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>PHP（外文名:PHP: Hypertext Preprocessor）：超文本预处理器。是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域。PHP 独特的语法混合了C、Java、Perl以及PHP自创的语法。它可以比CGI或者Perl更快速地执行动态网页用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML（标准通用标记语言下的一个应用）文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。以前是没有前端这个职位的，随着计算机语言的发展Ajax的出现，有了前后端分离这一概念。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Backend/">Backend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Nginx" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/Nginx/" class="article-date">
+      <time datetime="2018-07-12T09:17:00.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/Nginx/">Nginx快速开端口</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>对于一个前端来说，运行一些代码有些特殊情况需要开设端口。起初我使用静态服务器用sumlime,后面陆续使用wampserver,xampp;但是有一次换电脑了，需要重新下载，糟糕的的是突然下载不了，项目于是停止不前；庆幸的是以为Java同事告诉我用Nginx开设端口。我在这里把我这个方法分享给大家！
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Backend/">Backend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/12/Nginx/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-简易Python" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/简易Python/" class="article-date">
+      <time datetime="2018-07-12T09:04:13.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/简易Python/">简易Python</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。</p>
+<p>注意：这篇教程是用Python3写的。</p>
+<p>下面一起来学习吧！
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Backend/">Backend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/12/简易Python/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-初识Linux" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/初识Linux/" class="article-date">
+      <time datetime="2018-07-12T08:27:26.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/12/初识Linux/">初识Linux</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>初步认识Linux,我们一起来预览一下命令吧！
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Backend/">Backend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/12/初识Linux/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-DOM" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/11/DOM/" class="article-date">
+      <time datetime="2018-07-11T06:43:11.000Z" itemprop="datePublished">2018-07-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/11/DOM/">DOM</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>DOM: Document Object Model（文档对象模型）,DOM 是 W3C（万维网联盟）的标准。“W3C 文档对象模型 （DOM） 是中立于平台和语言的接口，它允许程序和脚本动态地访问和更新文档的内容、结构和样式。”<br>W3C DOM 标准被分为 3 个不同的部分：</p>
+<ul>
+<li>核心 DOM - 针对任何结构化文档的标准模型</li>
+<li>XML DOM - 针对 XML 文档的标准模型</li>
+<li>HTML DOM - 针对 HTML 文档的标准模型
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Frontend/">Frontend</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM/">DOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2018/07/11/DOM/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    </nav>
+  
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2019 Lee
+            </div>
+            <div class="footer-right">
+                由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >访客:
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量:
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
 </footer>
 
-<a id="back-to-top" class="icon-btn hide">
-	<i class="fa fa-chevron-up"></i>
-  <!-- <img src="backtop.jpg" alt=""> -->
-
-</a>
-
-    <div class="times">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-sm-12">
-              <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-              <script>
-              var now = new Date();
-              function createtime() {
-                  var grt= new Date("07/3/2018 8:00:00");//此处修改你的建站时间或者网站上线时间
-                  now.setTime(now.getTime()+250);
-                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
-                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
-                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
-                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
-                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
-                  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
-                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
-              }
-              setInterval("createtime()",250);
-              </script>
-            </div>
-            <div class="col-sm-12">
-                <div class="busuanzi">
-    
-        很荣幸您成为本站的第
-        <strong id="busuanzi_value_site_uv">
-            <i class="fa fa-spinner fa-spin"></i>
-        </strong>
-        位访客
-        &nbsp; | &nbsp;
-        本站总浏览次数:
-
-        <strong id="busuanzi_value_site_pv">
-            <i class="fa fa-spinner fa-spin"></i>
-        </strong>
-    
-</div>
-
-            </div>
-        </div>
     </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<!--  -->
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
 </div>
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <span>Copyright &copy; 2018-2019
-                </span> |
-                <!-- <span>
-                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span> | -->
-                <span>
-                    Made by <a href="//wpa.qq.com/msgrd?uin=2037343920" class="copyright-links" target="_blank" rel="nofollow">Lee</a> with ❤️ and Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
 
 
 
-
-
-
-	<script src="/js/search.js?rev=@@hash"></script>
-
-
-
-
-
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-<script src="/js/app.js?rev=@@hash"></script>
-
-
+  </div>
 </body>
 </html>
