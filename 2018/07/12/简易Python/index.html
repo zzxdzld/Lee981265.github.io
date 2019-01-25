@@ -1,595 +1,527 @@
-<!DOCTYPE html>
-<html>
+<script src="/assets/jq.min.js"></script>
+<script src="/assets/clipboard.min.js"></script>
+<script src="/js/custom.js"></script>
+<!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<!-- <script type="text/javascript" src="assets/clipboard.min.js"></script>
+<script type="text/javascript" src="js/src/custom.js"></script> -->
+
+<!DOCTYPE HTML>
+<html lang="">
 <head>
-  <meta charset="utf-8">
-  
-  <title>简易Python | Lee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。 注意：这篇教程是用Python3写的。 下面一起来学习吧！">
-<meta name="keywords" content="Python">
-<meta property="og:type" content="article">
-<meta property="og:title" content="简易Python">
-<meta property="og:url" content="https://Lee981265.github.io/2018/07/12/简易Python/index.html">
-<meta property="og:site_name" content="Lee">
-<meta property="og:description" content="Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。 注意：这篇教程是用Python3写的。 下面一起来学习吧！">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-17T05:27:08.961Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简易Python">
-<meta name="twitter:description" content="Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。 注意：这篇教程是用Python3写的。 下面一起来学习吧！">
-  
-    <link rel="alternative" href="/atom.xml" title="Lee" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/favicon.ico">
-  
-  
-      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-  
-      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  
-  <!-- 加载特效 -->
-    <script src="/js/pace.js"></script>
-    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
-  <script>
-      var yiliaConfig = {
-          rootUrl: '/',
-          fancybox: true,
-          animate: true,
-          isHome: false,
-          isPost: true,
-          isArchive: false,
-          isTag: false,
-          isCategory: false,
-          open_in_new: false
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="Lee">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="baidu-site-verification" content="cZKtPkWm2R" />
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://Lee981265.github.io">
+    <!--SEO-->
+
+<meta name="description" content="Lee hexo"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+
+    <!--Title-->
+
+
+<title>简易Python | Lee</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="Lee" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?64ec872394d355ebe8bfd31c2dae6ff2";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+		    i['GoogleAnalyticsObject'] = r;
+		    i[r] = i[r] || function() {
+		        (i[r].q = i[r].q || []).push(arguments)
+		    }, i[r].l = 1 * new Date();
+		    a = s.createElement(o),
+		    m = s.getElementsByTagName(o)[0];
+		    a.async = 1;
+		    a.src = g;
+		    m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'pFW527fHrjfI0si2w4NQ0w3cTw12AvvuohAu1PUfqKA', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+
+    
+
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+    <!-- <div class="bg"></div>
+    <div class="bg bg--1"></div>
+    <div class="bg bg--2"></div>
+    <div class="bg bg--3"></div>
+    <div class="bg bg--4"></div>
+    <div class="bg bg--5"></div> -->
+
+    <style media="screen">
+    .bg {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgv7d0w8wj31oo11xgrb.jpg); */
+      background-image: url(https://luuman.github.io/background/bg-2.jpg);
+      background-size: cover;
+      background-position: center center;
+      z-index: 0;
+      animation: imageAnimation 36s linear infinite 0s;
+      opacity: 0;
+
+    }
+    .bg--1 {
+        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvae03wnj31hc0vhqv6.jpg); */
+        background-image: url(https://luuman.github.io/background/bg-4.jpg);
+        animation-delay: 6s;
+    }
+    .bg--2 {
+        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvbuwo0uj31hc0vgu0y.jpg); */
+        background-image: url(https://luuman.github.io/background/bg-8.jpg);
+        animation-delay: 12s;
+    }
+    .bg--3 {
+        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvcltrqaj31z4140b2a.jpg); */
+        background-image: url(https://luuman.github.io/background/bg-16.jpg);
+        animation-delay: 18s;
+    }
+    .bg--4 {
+        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdbkyxgj31hc0xchdt.jpg); */
+        background-image: url(https://luuman.github.io/background/bg-19.jpg);
+        animation-delay: 24s;
+    }
+    .bg--5 {
+        /* background-image: url(https://ws1.sinaimg.cn/large/005Em4nXly1fzgvdwo51oj31hc0u0u0z.jpg); */
+        background-image: url(https://luuman.github.io/background/bg-19.jpg);
+        animation-delay: 30s;
+    }
+    @-webkit-keyframes imageAnimation{
+      0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
       }
-  </script>
+      8% {
+          opacity: 1;
+          transform: scale(1.05);
+          animation-timing-function: ease-out;
+      }
+      17% {
+          opacity: 1;
+          transform: scale(1.1) rotate(0);
+      }
+      25% {
+          opacity: 0;
+          transform: scale(1.1) rotate(0);
+      }
+      100% {
+          opacity: 0;
+      }
+    }
+    @keyframes imageAnimation{
+      0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+      }
+      8% {
+          opacity: 1;
+          transform: scale(1.05);
+          animation-timing-function: ease-out;
+      }
+      17% {
+          opacity: 1;
+          transform: scale(1.1) rotate(0);
+      }
+      25% {
+          opacity: 0;
+          transform: scale(1.1) rotate(0);
+      }
+      100% {
+          opacity: 0;
+      }
+    }
+
+    /* body {
+        cursor: url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),url( https://orcl.cc/skins/nijigencopy/images/pointer.cur),auto;
+    } */
+    </style>
 </head>
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
 <body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            
-            <img lazy-src="/img/head.jpg" class="js-avatar">
-            
+    <!-- 头部 -->
+<header class="main-header"  style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Lee'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
         </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> Just open your eyes , you got everything in the world </h2>
+            
+    	</div>
+    </div>
+</header>
 
-        <hgroup>
-          <h1 class="header-author"><a href="/" title="Hi Mate">Lee</a></h1>
-        </hgroup>
-
-        
-        <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
-        
-        
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                    </div>
-
+    <!-- 导航栏 -->
+<nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://Lee981265.github.io">Lee</a>
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
                         
-                        <li>友情链接</li>
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>Home</a>
+                            </li>
                         
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Frontend/"><i class="fa "></i>Frontend</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Backend/"><i class="fa "></i>Backend</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Essay/"><i class="fa "></i>Essay</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>Archives</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/aboutme/"><i class="fa "></i>Aboutme</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="http://pipe.b3log.org/blogs/Lee981265/"><i class="fa "></i>Pipe</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="https://github.com/Lee981265"><i class="fa "></i>Github</a>
+                            </li>
                         
                     </ul>
                 </div>
             </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">首页</a></li>
-                        
-                            <li><a href="/archives">归档</a></li>
-                        
-                            <li><a href="https://lee981265.coding.me/">随笔</a></li>
-                        
-                            <li><a href="/aboutme">关于我</a></li>
-                        
-                            <li><a href="/Lee981265.com/">Lee981265.com</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fl github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
-                            
-                                <a class="fl QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
-                            
-                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-                            
-                                <a class="fl google" target="_blank" href="#" title="google">google</a>
-                            
-                                <a class="fl twitter" target="_blank" href="#" title="twitter">twitter</a>
-                            
-                                <a class="fl linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/ABC/" style="font-size: 10px;">ABC</a> <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/CBA/" style="font-size: 10px;">CBA</a> <a href="/tags/DOM/" style="font-size: 10px;">DOM</a> <a href="/tags/Drag/" style="font-size: 10px;">Drag</a> <a href="/tags/ES5/" style="font-size: 10px;">ES5</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/Echarts/" style="font-size: 15px;">Echarts</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Mini-apps/" style="font-size: 15px;">Mini-apps</a> <a href="/tags/Mobileterminal/" style="font-size: 15px;">Mobileterminal</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/NodeJs/" style="font-size: 10px;">NodeJs</a> <a href="/tags/Note/" style="font-size: 10px;">Note</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Python3/" style="font-size: 10px;">Python3</a> <a href="/tags/Sql/" style="font-size: 10px;">Sql</a> <a href="/tags/Vue/" style="font-size: 20px;">Vue</a> <a href="/tags/absolute/" style="font-size: 10px;">absolute</a> <a href="/tags/resize/" style="font-size: 10px;">resize</a> <a href="/tags/vue-router/" style="font-size: 10px;">vue-router</a>
-                    </div>
-                </section>
-                
-
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/Lee981265">Lee</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://w3more.cn/">杉木</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://codemx.cn/">墨香</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://coolcode.org">CoolCode</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://bertliu.com/">室内设计</a>
-                    
-                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://lee981265.github.io/Lee981265.com/">Lee981265.com</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-            </div>
         </div>
-    </header>
-</div>
-
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">Lee</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                
-                    <img lazy-src="/img/head.jpg" class="js-avatar">
-                
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="Me">Lee</a></h1>
-            </hgroup>
-            
-            <p class="header-subtitle">Just open your eyes , you got everything in the world</p>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">首页</a></li>
-                
-                    <li><a href="/archives">归档</a></li>
-                
-                    <li><a href="https://lee981265.coding.me/">随笔</a></li>
-                
-                    <li><a href="/aboutme">关于我</a></li>
-                
-                    <li><a href="/Lee981265.com/">Lee981265.com</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a class="github" target="_blank" href="https://github.com/Lee981265" title="github">github</a>
-                    
-                        <a class="QQ" target="_blank" href="//wpa.qq.com/msgrd?uin=2244057555" title="QQ">QQ</a>
-                    
-                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
-                    
-                        <a class="google" target="_blank" href="#" title="google">google</a>
-                    
-                        <a class="twitter" target="_blank" href="#" title="twitter">twitter</a>
-                    
-                        <a class="linkedin" target="_blank" href="#" title="linkedin">linkedin</a>
-                    
-                </div>
-            </nav>
-        </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-简易Python" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/12/简易Python/" class="article-date">
-      <time datetime="2018-07-12T09:04:13.000Z" itemprop="datePublished">2018-07-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="简易Python">
+            
+	            简易Python
+            
+        </h1>
+        <div class="post-meta">
+  <span class="fa-wrap">
+
+  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+
+  <a href="/aboutme/">
+      Lee
+  </a>
+</span>
     
-      <input type="hidden" class="isFancy" />
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/Backend/">Backend</a>
+        </span>
     
+
     
-      <header class="article-header">
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/Python/">Python</a>
+                
+            </span>
+        </span>
+    
+
+    
         
-  
-    <h1 class="article-title" itemprop="name">
-      简易Python
-    </h1>
-  
-
-      </header>
-      
-      <div class="article-info article-info-post">
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/12</span>
+        </span>
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Backend/">Backend</a>
-    </div>
-
-
+            <span class="fa-wrap">
+                <i class="fa fa-eye"></i>
+                <span id="busuanzi_value_page_pv"></span>
+            </span>
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
-    <div class="article-entry" itemprop="articleBody">
-      
-          
+</div>
+
+            
+            
+    </div>
+    <!-- 画廊 -->
+
+
+    <div class="post-body post-content">
         <p>Python是由吉多·范罗苏姆(Guido Van Rossum)在90年代早期设计。它是如今最常用的编程 语言之一。它的语法简洁且优美，几乎就是可执行的伪代码。</p>
 <p>注意：这篇教程是用Python3写的。</p>
 <p>下面一起来学习吧！<a id="more"></a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment"># 用井字符开头的是单行注释</span></span><br><span class="line"></span><br><span class="line">    <span class="string">""" 多行字符串用三个引号</span></span><br><span class="line"><span class="string">        包裹，也常被用来做多</span></span><br><span class="line"><span class="string">        行注释</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 1. 原始数据类型和运算符</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 整数</span></span><br><span class="line">    <span class="number">3</span>  <span class="comment"># =&gt; 3</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 算术运算没有什么出乎意料的</span></span><br><span class="line">    <span class="number">1</span> + <span class="number">1</span>  <span class="comment"># =&gt; 2</span></span><br><span class="line">    <span class="number">8</span> - <span class="number">1</span>  <span class="comment"># =&gt; 7</span></span><br><span class="line">    <span class="number">10</span> * <span class="number">2</span>  <span class="comment"># =&gt; 20</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 但是除法例外，会自动转换成浮点数</span></span><br><span class="line">    <span class="number">35</span> / <span class="number">5</span>  <span class="comment"># =&gt; 7.0</span></span><br><span class="line">    <span class="number">5</span> / <span class="number">3</span>  <span class="comment"># =&gt; 1.6666666666666667</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 整数除法的结果都是向下取整</span></span><br><span class="line">    <span class="number">5</span> // <span class="number">3</span>     <span class="comment"># =&gt; 1</span></span><br><span class="line">    <span class="number">5.0</span> // <span class="number">3.0</span> <span class="comment"># =&gt; 1.0 # 浮点数也可以</span></span><br><span class="line">    <span class="number">-5</span> // <span class="number">3</span>  <span class="comment"># =&gt; -2</span></span><br><span class="line">    <span class="number">-5.0</span> // <span class="number">3.0</span> <span class="comment"># =&gt; -2.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 浮点数的运算结果也是浮点数</span></span><br><span class="line">    <span class="number">3</span> * <span class="number">2.0</span> <span class="comment"># =&gt; 6.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 模除</span></span><br><span class="line">    <span class="number">7</span> % <span class="number">3</span> <span class="comment"># =&gt; 1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># x的y次方</span></span><br><span class="line">    <span class="number">2</span>**<span class="number">4</span> <span class="comment"># =&gt; 16</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用括号决定优先级</span></span><br><span class="line">    (<span class="number">1</span> + <span class="number">3</span>) * <span class="number">2</span>  <span class="comment"># =&gt; 8</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 布尔值</span></span><br><span class="line">    <span class="keyword">True</span></span><br><span class="line">    <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用not取非</span></span><br><span class="line">    <span class="keyword">not</span> <span class="keyword">True</span>  <span class="comment"># =&gt; False</span></span><br><span class="line">    <span class="keyword">not</span> <span class="keyword">False</span>  <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 逻辑运算符，注意and和or都是小写</span></span><br><span class="line">    <span class="keyword">True</span> <span class="keyword">and</span> <span class="keyword">False</span> <span class="comment">#=&gt; False</span></span><br><span class="line">    <span class="keyword">False</span> <span class="keyword">or</span> <span class="keyword">True</span> <span class="comment">#=&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 整数也可以当作布尔值</span></span><br><span class="line">    <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span> <span class="comment">#=&gt; 0</span></span><br><span class="line">    <span class="number">-5</span> <span class="keyword">or</span> <span class="number">0</span> <span class="comment">#=&gt; -5</span></span><br><span class="line">    <span class="number">0</span> == <span class="keyword">False</span> <span class="comment">#=&gt; True</span></span><br><span class="line">    <span class="number">2</span> == <span class="keyword">True</span> <span class="comment">#=&gt; False</span></span><br><span class="line">    <span class="number">1</span> == <span class="keyword">True</span> <span class="comment">#=&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用==判断相等</span></span><br><span class="line">    <span class="number">1</span> == <span class="number">1</span>  <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">2</span> == <span class="number">1</span>  <span class="comment"># =&gt; False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用!=判断不等</span></span><br><span class="line">    <span class="number">1</span> != <span class="number">1</span>  <span class="comment"># =&gt; False</span></span><br><span class="line">    <span class="number">2</span> != <span class="number">1</span>  <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 比较大小</span></span><br><span class="line">    <span class="number">1</span> &lt; <span class="number">10</span>  <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">1</span> &gt; <span class="number">10</span>  <span class="comment"># =&gt; False</span></span><br><span class="line">    <span class="number">2</span> &lt;= <span class="number">2</span>  <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">2</span> &gt;= <span class="number">2</span>  <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 大小比较可以连起来！</span></span><br><span class="line">    <span class="number">1</span> &lt; <span class="number">2</span> &lt; <span class="number">3</span>  <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">2</span> &lt; <span class="number">3</span> &lt; <span class="number">2</span>  <span class="comment"># =&gt; False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 字符串用单引双引都可以</span></span><br><span class="line">    <span class="string">"这是个字符串"</span></span><br><span class="line">    <span class="string">'这也是个字符串'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用加号连接字符串</span></span><br><span class="line">    <span class="string">"Hello "</span> + <span class="string">"world!"</span>  <span class="comment"># =&gt; "Hello world!"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 字符串可以被当作字符列表</span></span><br><span class="line">    <span class="string">"This is a string"</span>[<span class="number">0</span>]  <span class="comment"># =&gt; 'T'</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用.format来格式化字符串</span></span><br><span class="line">    <span class="string">"&#123;&#125; can be &#123;&#125;"</span>.format(<span class="string">"strings"</span>, <span class="string">"interpolated"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以重复参数以节省时间</span></span><br><span class="line">    <span class="string">"&#123;0&#125; be nimble, &#123;0&#125; be quick, &#123;0&#125; jump over the &#123;1&#125;"</span>.format(<span class="string">"Jack"</span>, <span class="string">"candle stick"</span>)</span><br><span class="line">    <span class="comment">#=&gt; "Jack be nimble, Jack be quick, Jack jump over the candle stick"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果不想数参数，可以用关键字</span></span><br><span class="line">    <span class="string">"&#123;name&#125; wants to eat &#123;food&#125;"</span>.format(name=<span class="string">"Bob"</span>, food=<span class="string">"lasagna"</span>) <span class="comment">#=&gt; "Bob wants to eat lasagna"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 如果你的Python3程序也要在Python2.5以下环境运行，也可以用老式的格式化语法</span></span><br><span class="line">    <span class="string">"%s can be %s the %s way"</span> % (<span class="string">"strings"</span>, <span class="string">"interpolated"</span>, <span class="string">"old"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># None是一个对象</span></span><br><span class="line">    <span class="keyword">None</span>  <span class="comment"># =&gt; None</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 当与None进行比较时不要用 ==，要用is。is是用来比较两个变量是否指向同一个对象。</span></span><br><span class="line">    <span class="string">"etc"</span> <span class="keyword">is</span> <span class="keyword">None</span>  <span class="comment"># =&gt; False</span></span><br><span class="line">    <span class="keyword">None</span> <span class="keyword">is</span> <span class="keyword">None</span>  <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># None，0，空字符串，空列表，空字典都算是False</span></span><br><span class="line">    <span class="comment"># 所有其他值都是True</span></span><br><span class="line">    bool(<span class="number">0</span>)  <span class="comment"># =&gt; False</span></span><br><span class="line">    bool(<span class="string">""</span>)  <span class="comment"># =&gt; False</span></span><br><span class="line">    bool([]) <span class="comment">#=&gt; False</span></span><br><span class="line">    bool(&#123;&#125;) <span class="comment">#=&gt; False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 2. 变量和集合</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># print是内置的打印函数</span></span><br><span class="line">    print(<span class="string">"I'm Python. Nice to meet you!"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 在给变量赋值前不用提前声明</span></span><br><span class="line">    <span class="comment"># 传统的变量命名是小写，用下划线分隔单词</span></span><br><span class="line">    some_var = <span class="number">5</span></span><br><span class="line">    some_var  <span class="comment"># =&gt; 5</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 访问未赋值的变量会抛出异常</span></span><br><span class="line">    <span class="comment"># 参考流程控制一段来学习异常处理</span></span><br><span class="line">    some_unknown_var  <span class="comment"># 抛出NameError</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用列表(list)储存序列</span></span><br><span class="line">    li = []</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建列表时也可以同时赋给元素</span></span><br><span class="line">    other_li = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用append在列表最后追加元素</span></span><br><span class="line">    li.append(<span class="number">1</span>)    <span class="comment"># li现在是[1]</span></span><br><span class="line">    li.append(<span class="number">2</span>)    <span class="comment"># li现在是[1, 2]</span></span><br><span class="line">    li.append(<span class="number">4</span>)    <span class="comment"># li现在是[1, 2, 4]</span></span><br><span class="line">    li.append(<span class="number">3</span>)    <span class="comment"># li现在是[1, 2, 4, 3]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用pop从列表尾部删除</span></span><br><span class="line">    li.pop()        <span class="comment"># =&gt; 3 且li现在是[1, 2, 4]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 把3再放回去</span></span><br><span class="line">    li.append(<span class="number">3</span>)    <span class="comment"># li变回[1, 2, 4, 3]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 列表存取跟数组一样</span></span><br><span class="line">    li[<span class="number">0</span>]  <span class="comment"># =&gt; 1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 取出最后一个元素</span></span><br><span class="line">    li[<span class="number">-1</span>]  <span class="comment"># =&gt; 3</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 越界存取会造成IndexError</span></span><br><span class="line">    li[<span class="number">4</span>]  <span class="comment"># 抛出IndexError</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 列表有切割语法</span></span><br><span class="line">    li[<span class="number">1</span>:<span class="number">3</span>]  <span class="comment"># =&gt; [2, 4]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 取尾</span></span><br><span class="line">    li[<span class="number">2</span>:]  <span class="comment"># =&gt; [4, 3]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 取头</span></span><br><span class="line">    li[:<span class="number">3</span>]  <span class="comment"># =&gt; [1, 2, 4]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 隔一个取一个</span></span><br><span class="line">    li[::<span class="number">2</span>]   <span class="comment"># =&gt;[1, 4]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 倒排列表</span></span><br><span class="line">    li[::<span class="number">-1</span>]   <span class="comment"># =&gt; [3, 4, 2, 1]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以用三个参数的任何组合来构建切割</span></span><br><span class="line">    <span class="comment"># li[始:终:步伐]</span></span><br><span class="line">    <span class="comment"># 用del删除任何一个元素</span></span><br><span class="line">    <span class="keyword">del</span> li[<span class="number">2</span>]   <span class="comment"># li is now [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 列表可以相加</span></span><br><span class="line">    <span class="comment"># 注意：li和other_li的值都不变</span></span><br><span class="line">    li + other_li   <span class="comment"># =&gt; [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用extend拼接列表</span></span><br><span class="line">    li.extend(other_li)   <span class="comment"># li现在是[1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用in测试列表是否包含值</span></span><br><span class="line">    <span class="number">1</span> <span class="keyword">in</span> li   <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用len取列表长度</span></span><br><span class="line">    len(li)   <span class="comment"># =&gt; 6</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 元组是不可改变的序列</span></span><br><span class="line">    tup = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    tup[<span class="number">0</span>]   <span class="comment"># =&gt; 1</span></span><br><span class="line">    tup[<span class="number">0</span>] = <span class="number">3</span>  <span class="comment"># 抛出TypeError</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 列表允许的操作元组大都可以</span></span><br><span class="line">    len(tup)   <span class="comment"># =&gt; 3</span></span><br><span class="line">    tup + (<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>)   <span class="comment"># =&gt; (1, 2, 3, 4, 5, 6)</span></span><br><span class="line">    tup[:<span class="number">2</span>]   <span class="comment"># =&gt; (1, 2)</span></span><br><span class="line">    <span class="number">2</span> <span class="keyword">in</span> tup   <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以把元组合列表解包，赋值给变量</span></span><br><span class="line">    a, b, c = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)     <span class="comment"># 现在a是1，b是2，c是3</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 元组周围的括号是可以省略的</span></span><br><span class="line">    d, e, f = <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 交换两个变量的值就这么简单</span></span><br><span class="line">    e, d = d, e     <span class="comment"># 现在d是5，e是4</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用字典表达映射关系</span></span><br><span class="line">    empty_dict = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化的字典</span></span><br><span class="line">    filled_dict = &#123;<span class="string">"one"</span>: <span class="number">1</span>, <span class="string">"two"</span>: <span class="number">2</span>, <span class="string">"three"</span>: <span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用[]取值</span></span><br><span class="line">    filled_dict[<span class="string">"one"</span>]   <span class="comment"># =&gt; 1</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用keys获得所有的键。因为keys返回一个可迭代对象，所以在这里把结果包在list里。我们下面会详细介绍可迭代。</span></span><br><span class="line">    <span class="comment"># 注意：字典键的顺序是不定的，你得到的结果可能和以下不同。</span></span><br><span class="line">    list(filled_dict.keys())   <span class="comment"># =&gt; ["three", "two", "one"]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用values获得所有的值。跟keys一样，要用list包起来，顺序也可能不同。</span></span><br><span class="line">    list(filled_dict.values())   <span class="comment"># =&gt; [3, 2, 1]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用in测试一个字典是否包含一个键</span></span><br><span class="line">    <span class="string">"one"</span> <span class="keyword">in</span> filled_dict   <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">1</span> <span class="keyword">in</span> filled_dict   <span class="comment"># =&gt; False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 访问不存在的键会导致KeyError</span></span><br><span class="line">    filled_dict[<span class="string">"four"</span>]   <span class="comment"># KeyError</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用get来避免KeyError</span></span><br><span class="line">    filled_dict.get(<span class="string">"one"</span>)   <span class="comment"># =&gt; 1</span></span><br><span class="line">    filled_dict.get(<span class="string">"four"</span>)   <span class="comment"># =&gt; None</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 当键不存在的时候get方法可以返回默认值</span></span><br><span class="line">    filled_dict.get(<span class="string">"one"</span>, <span class="number">4</span>)   <span class="comment"># =&gt; 1</span></span><br><span class="line">    filled_dict.get(<span class="string">"four"</span>, <span class="number">4</span>)   <span class="comment"># =&gt; 4</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># setdefault方法只有当键不存在的时候插入新值</span></span><br><span class="line">    filled_dict.setdefault(<span class="string">"five"</span>, <span class="number">5</span>)  <span class="comment"># filled_dict["five"]设为5</span></span><br><span class="line">    filled_dict.setdefault(<span class="string">"five"</span>, <span class="number">6</span>)  <span class="comment"># filled_dict["five"]还是5</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 字典赋值</span></span><br><span class="line">    filled_dict.update(&#123;<span class="string">"four"</span>:<span class="number">4</span>&#125;) <span class="comment">#=&gt; &#123;"one": 1, "two": 2, "three": 3, "four": 4&#125;</span></span><br><span class="line">    filled_dict[<span class="string">"four"</span>] = <span class="number">4</span>  <span class="comment"># 另一种赋值方法</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用del删除</span></span><br><span class="line">    <span class="keyword">del</span> filled_dict[<span class="string">"one"</span>]  <span class="comment"># 从filled_dict中把one删除</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用set表达集合</span></span><br><span class="line">    empty_set = set()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化一个集合，语法跟字典相似。</span></span><br><span class="line">    some_set = &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;   <span class="comment"># some_set现在是&#123;1, 2, 3, 4&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以把集合赋值于变量</span></span><br><span class="line">    filled_set = some_set</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 为集合添加元素</span></span><br><span class="line">    filled_set_add(<span class="number">5</span>)   <span class="comment"># filled_set现在是&#123;1, 2, 3, 4, 5&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># &amp; 取交集</span></span><br><span class="line">    other_set = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">    filled_set &amp; other_set   <span class="comment"># =&gt; &#123;3, 4, 5&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># | 取并集</span></span><br><span class="line">    filled_set | other_set   <span class="comment"># =&gt; &#123;1, 2, 3, 4, 5, 6&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># - 取补集</span></span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125; - &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>&#125;   <span class="comment"># =&gt; &#123;1, 4&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># in 测试集合是否包含元素</span></span><br><span class="line">    <span class="number">2</span> <span class="keyword">in</span> filled_set   <span class="comment"># =&gt; True</span></span><br><span class="line">    <span class="number">10</span> <span class="keyword">in</span> filled_set   <span class="comment"># =&gt; False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 3. 流程控制和迭代器</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment"># 先随便定义一个变量</span></span><br><span class="line">    some_var = <span class="number">5</span></span><br><span class="line">    <span class="comment"># 这是一个if语句。注意缩进在Python里是有意义的</span></span><br><span class="line">    <span class="comment"># 打印出"some_var比10小"</span></span><br><span class="line">    <span class="keyword">if</span> some_var &gt; <span class="number">10</span>:</span><br><span class="line">        print(<span class="string">"some_var比10大"</span>)</span><br><span class="line">    <span class="keyword">elif</span> some_var &lt; <span class="number">10</span>:    <span class="comment"># elif句是可选的</span></span><br><span class="line">        print(<span class="string">"some_var比10小"</span>)</span><br><span class="line">    <span class="keyword">else</span>:                  <span class="comment"># else也是可选的</span></span><br><span class="line">        print(<span class="string">"some_var就是10"</span>)</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    用for循环语句遍历列表</span></span><br><span class="line"><span class="string">    打印:</span></span><br><span class="line"><span class="string">        dog is a mammal</span></span><br><span class="line"><span class="string">        cat is a mammal</span></span><br><span class="line"><span class="string">        mouse is a mammal</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">for</span> animal <span class="keyword">in</span> [<span class="string">"dog"</span>, <span class="string">"cat"</span>, <span class="string">"moouse"</span>]:</span><br><span class="line">        print(<span class="string">"&#123;&#125; is a animal"</span>.format(animal))</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    "range(number)"返回数字列表从0到给的数字</span></span><br><span class="line"><span class="string">    打印:</span></span><br><span class="line"><span class="string">        0</span></span><br><span class="line"><span class="string">        1</span></span><br><span class="line"><span class="string">        2</span></span><br><span class="line"><span class="string">        3</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        print(i)</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    while循环直到条件不满足</span></span><br><span class="line"><span class="string">    打印:</span></span><br><span class="line"><span class="string">        0</span></span><br><span class="line"><span class="string">        1</span></span><br><span class="line"><span class="string">        2</span></span><br><span class="line"><span class="string">        3</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; <span class="number">4</span>:</span><br><span class="line">        print(x)</span><br><span class="line">        x += <span class="number">1</span>  <span class="comment"># x = x + 1 的简写</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 用try/except块处理异常状况</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 用raise抛弃异常</span></span><br><span class="line">        <span class="keyword">raise</span> IndexError(<span class="string">"This is an index error"</span>)</span><br><span class="line">    <span class="keyword">except</span> IndexError <span class="keyword">as</span> e:</span><br><span class="line">        <span class="keyword">pass</span>    <span class="comment"># pass是无操作，但是应该在这里处理错误</span></span><br><span class="line">    <span class="keyword">except</span> (TypeError, NameError):</span><br><span class="line">        <span class="keyword">pass</span>    <span class="comment"># 可以同时处理不同类的错误</span></span><br><span class="line">    <span class="keyword">else</span>:   <span class="comment"># else语句是可选的，必须在所有的except之后</span></span><br><span class="line">        print(<span class="string">"All good!"</span>)   <span class="comment"># 只有当try运行完没有错误的时候这句才会运行</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Python提供一个叫做可迭代(iterable)的基本抽象。一个可迭代对象是可以被当作序列</span></span><br><span class="line">    <span class="comment"># 的对象。比如说上面range返回的对象就是可迭代的。</span></span><br><span class="line">    filled_dict = &#123;<span class="string">"one"</span>: <span class="number">1</span>, <span class="string">"two"</span>: <span class="number">2</span>, <span class="string">"three"</span>: <span class="number">3</span>&#125;</span><br><span class="line">    our_iterable = filled_dic.keys()</span><br><span class="line">    print(our_iterable) <span class="comment"># =&gt; range(1,10) 是一个实现可迭代接口的对象</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可迭代对象可以遍历</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> our_iterable:</span><br><span class="line">        print(i)    <span class="comment"># 打印 one, two, three</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 但是不可以随机访问</span></span><br><span class="line">    our_iterable[<span class="number">1</span>]  <span class="comment"># 抛出TypeError</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可迭代对象知道怎么生成迭代器</span></span><br><span class="line">    our_iterable = iter(our_iterable)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 迭代器是一个可以记住遍历的位置的对象</span></span><br><span class="line">    <span class="comment"># 用__next__可以取得下一个元素</span></span><br><span class="line">    our_iterable.__next__()  <span class="comment">#=&gt; "one"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 再一次调用__next__时会记得位置</span></span><br><span class="line">    our_iterator.__next__()  <span class="comment">#=&gt; "two"</span></span><br><span class="line">    our_iterator.__next__()  <span class="comment">#=&gt; "three"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 当迭代器所有元素都取出后，会抛出StopIteration</span></span><br><span class="line">    our_iterator.__next__() <span class="comment"># 抛出StopIteration</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以用list一次取出迭代器所有元素</span></span><br><span class="line">    list(filled_dict.keys())  <span class="comment">#=&gt; Returns ["one", "two", "three"]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 4. 函数</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment"># 用def定义新函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        print(<span class="string">"x is &#123;&#125; and y is &#123;&#125;"</span>.formatm(x, y))</span><br><span class="line">        <span class="keyword">return</span> x + y    用<span class="keyword">return</span>语句返回</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用函数</span></span><br><span class="line">    add(<span class="number">5</span>, <span class="number">6</span>)   <span class="comment"># =&gt; 打印出"x is 5 and y is 6"并且返回11</span></span><br><span class="line">    <span class="comment"># 也可以用关键字参数来调用函数</span></span><br><span class="line">    add(y=<span class="number">6</span>, x=<span class="number">5</span>)   <span class="comment"># 关键字参数可以用任何顺序</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#我们可以定义一个可变参数函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">varargs</span><span class="params">(*args)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> args</span><br><span class="line">    varargs(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)    <span class="comment"># =&gt; (1, 2, 3)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 我们也可以定义一个关键字可变参数函数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">keyword_args</span><span class="params">(**kwargs)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> kwargs</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 看看结果是什么</span></span><br><span class="line">    keyword_args(big=<span class="string">"foot"</span>, loch=<span class="string">"ness"</span>)   <span class="comment"># =&gt; &#123;"big": "foot", "loch": "ness"&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 这两种可变参数可以混着用</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">all_the</span> <span class="title">args</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">        print(args)</span><br><span class="line">        print(kwargs)</span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    all_the_args(1, 2, a=3, b=4) prints:</span></span><br><span class="line"><span class="string">        (1, 2)</span></span><br><span class="line"><span class="string">        &#123;"a": 3, "b": 4&#125;</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 调用可变参数函数时可以做跟上面相反的，用*展开序列，用**展开字典。</span></span><br><span class="line">    args = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">    kwargs = &#123;<span class="string">"a"</span>: <span class="number">3</span>, <span class="string">"b"</span>: <span class="number">4</span>&#125;</span><br><span class="line">    all_the_args(*args)   <span class="comment"># 相当于 foo(1, 2, 3, 4)</span></span><br><span class="line">    all_the_args(**kwargs)   <span class="comment"># 相当于 foo(a=3, b=4)</span></span><br><span class="line">    all_the_args(*args, **kwargs)   <span class="comment"># 相当于 foo(1, 2, 3, 4, a=3, b=4)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 函数作用域</span></span><br><span class="line">    x = <span class="number">5</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setX</span><span class="params">(num)</span>:</span></span><br><span class="line">        <span class="comment"># 局部作用域的x和全局作用域的x是不同的</span></span><br><span class="line">        x = num <span class="comment"># =&gt; 43</span></span><br><span class="line">        <span class="keyword">print</span> (x) <span class="comment"># =&gt; 43</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setGlobalX</span><span class="params">(num)</span>:</span></span><br><span class="line">        <span class="keyword">global</span> x</span><br><span class="line">        <span class="keyword">print</span> (x) <span class="comment"># =&gt; 5</span></span><br><span class="line">        x = num <span class="comment">#现在全局作用域的x被赋值</span></span><br><span class="line">        <span class="keyword">print</span> (x) <span class="comment"># =&gt; 6</span></span><br><span class="line">    setX(<span class="number">43</span>)</span><br><span class="line">    setGlobalX(<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 函数在Python是一等公民</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">create_adder</span><span class="params">(x)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">adder</span><span class="params">(y)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> x + y</span><br><span class="line">        <span class="keyword">return</span> adder</span><br><span class="line">    add_10 = create_adder(<span class="number">10</span>)</span><br><span class="line">    add_10(<span class="number">3</span>)  <span class="comment"># =&gt; 13</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 也有匿名函数</span></span><br><span class="line">    (<span class="keyword">lambda</span> x: x &gt; <span class="number">2</span>)(<span class="number">3</span>)    <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 内置的高阶函数</span></span><br><span class="line">    map(add_10, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])  <span class="comment"># =&gt; [11, 12, 13]</span></span><br><span class="line">    filter(<span class="keyword">lambda</span> x: x &gt; <span class="number">5</span>, [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>])    <span class="comment"># =&gt; [6, 7]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#用列表推导式可以简化映射和过滤。列表推导式的返回值是另一个列表。</span></span><br><span class="line">    [add_10(i) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]]  <span class="comment"># =&gt; [11, 12, 13]</span></span><br><span class="line">    [x <span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>] <span class="keyword">if</span> x &gt; <span class="number">5</span>]   <span class="comment"># =&gt; [6, 7]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 5. 类</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment"># 定义一个继承object的类</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Human</span><span class="params">(object)</span>:</span></span><br><span class="line">        <span class="comment"># 类属性，被所有此类的实例共用。</span></span><br><span class="line">        species = <span class="string">"H. sapiens"</span></span><br><span class="line">        <span class="comment"># 构造方法，当实例被初始化时调用。注意名字前后的双下划线，这是表名这个属</span></span><br><span class="line">        <span class="comment"># 性或方法对Python有特殊意义，但是允许用户自定义。自己取名时不应该用这种格式</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">            <span class="comment"># Assign the argument to the instance's name attribute</span></span><br><span class="line">            self.name = name</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 实例方法，第一个参数总是self，就是这个实例对象</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self, msg)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">"&#123;name&#125;: &#123;message&#125;"</span>.format(name=self.name, message=msg)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 类方法，被所有此类的实例共用。第一个参数是这个类对象。</span></span><br><span class="line"><span class="meta">        @classmethod</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">get_species</span><span class="params">(cls)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> cls.species</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 静态方法。调用时没有实例或类的绑定。</span></span><br><span class="line"><span class="meta">        @staticmethod</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">grunt</span><span class="params">()</span>:</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">"*grunt*"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构造一个实例</span></span><br><span class="line">    i = Human(name=<span class="string">"Ian"</span>)</span><br><span class="line">    print(i.say(<span class="string">"hi"</span>))     <span class="comment"># 打印出 "Ian: hi"</span></span><br><span class="line">    j = Human(<span class="string">"Joel"</span>)</span><br><span class="line">    print(j.say(<span class="string">"hello"</span>))  <span class="comment"># 印出 "Joel: hello"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用一个类方法</span></span><br><span class="line">    i.get_species()   <span class="comment"># =&gt; "H. sapiens"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 改一个共用的类属性</span></span><br><span class="line">    Human.species = <span class="string">"H. neanderthalensis"</span></span><br><span class="line">    i.get_species()   <span class="comment"># =&gt; "H. neanderthalensis"</span></span><br><span class="line">    j.get_species()   <span class="comment"># =&gt; "H. neanderthalensis"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用静态方法</span></span><br><span class="line">    Human.grunt()   <span class="comment"># =&gt; "*grunt*"</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 6. 模块</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment"># 用import导入模块</span></span><br><span class="line">    <span class="keyword">import</span> math</span><br><span class="line">    print(math.sqrt(<span class="number">16</span>))  <span class="comment"># =&gt; 4.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 也可以从模块中导入个别值</span></span><br><span class="line">    <span class="keyword">from</span> math <span class="keyword">import</span> ceil,floor</span><br><span class="line">    print(ceil(<span class="number">3.7</span>))  <span class="comment"># =&gt; 4.0</span></span><br><span class="line">    print(floor(<span class="number">3.7</span>))   <span class="comment"># =&gt; 3.0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可以导入一个模块中所有值</span></span><br><span class="line">    <span class="comment"># 警告：不建议这么做</span></span><br><span class="line">    <span class="keyword">from</span> math <span class="keyword">import</span> *</span><br><span class="line">    <span class="comment"># 如此缩写模块名字</span></span><br><span class="line">    <span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line">    math.sqrt(<span class="number">16</span>) == m.sqrt(<span class="number">16</span>)   <span class="comment"># =&gt; True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Python模块其实就是普通的Python文件。</span></span><br><span class="line">    <span class="comment"># 你可以自己写，然后导入，模块的名字就是文件的名字。</span></span><br><span class="line">    <span class="comment"># 你可以这样列出一个模块里所有的值</span></span><br><span class="line">    <span class="keyword">import</span> math</span><br><span class="line">    dir(math)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment">## 7. 高级用法</span></span><br><span class="line">    <span class="comment">####################################################</span></span><br><span class="line">    <span class="comment"># 用生成器(generators)方便的写惰性计算</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">double_numbers</span><span class="params">(iterable)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> iterable:</span><br><span class="line">            <span class="keyword">yield</span> i + i</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 生成器只有在需要时才计算下一个值。它们每一次循环只生成一个值，而不是把所有的</span></span><br><span class="line">    <span class="comment"># 值全部计算好。这意味着double_numbers不会生成大于15的数字。</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># range的返回值也是一个生成器，不然一个1到900000000的列表会花很多时间和内存。</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># 如果你想用一个Python的关键字当作变量，可以加一个下划线来区分。</span></span><br><span class="line">    range_ = range(<span class="number">1</span>, <span class="number">900000000</span>)</span><br><span class="line">    <span class="comment"># 当找到一个 &gt;= 30 的结果就会停</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> double_numbers(range_):</span><br><span class="line">        print(i)</span><br><span class="line">        <span class="keyword">if</span> i &gt;= <span class="number">30</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 装饰器(decorators)</span></span><br><span class="line">    <span class="comment"># 这个例子中，beg装饰say</span></span><br><span class="line">    <span class="comment"># beg会先调用say。如果返回的say_please为真，beg会改变返回的字符串。</span></span><br><span class="line">    <span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">beg</span><span class="params">(target_function)</span>:</span></span><br><span class="line"><span class="meta">        @wraps(target_function)</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">(*args, **kwargs)</span>:</span></span><br><span class="line">            msg, say_please = target_function(*args, **kwargs)</span><br><span class="line">            <span class="keyword">if</span> say_please:</span><br><span class="line">                <span class="keyword">return</span> <span class="string">"&#123;&#125; &#123;&#125;"</span>.format(msg, <span class="string">"Please! I am poor :("</span>)</span><br><span class="line">            <span class="keyword">return</span> msg</span><br><span class="line">        <span class="keyword">return</span> wrapper</span><br><span class="line"><span class="meta">    @beg</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(say_please=False)</span>:</span></span><br><span class="line">        msg = <span class="string">"Can you buy me a beer?"</span></span><br><span class="line">        <span class="keyword">return</span> msg, say_please</span><br><span class="line">    print(say())  <span class="comment"># Can you buy me a beer?</span></span><br><span class="line">    print(say(say_please=<span class="keyword">True</span>))  <span class="comment"># Can you buy me a beer? Please! I am poor :(</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      
-      
-        <div class="page-reward">
-          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
-          <div class="hide_box"></div>
-          <div class="shang_box">
-            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
-            <div class="shang_tit">
-              <p>纯属好玩</p>
-            </div>
-            <div class="shang_payimg">
-              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
-            </div>
-              <div class="pay_explain">扫码打赏，你说多少就多少</div>
-            <div class="shang_payselect">
-              
-                <div class="pay_item checked" data-id="alipay">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
-                </div>
-              
-              
-                <div class="pay_item" data-id="wechat">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
-                </div>
-              
-            </div>
-            <div class="shang_info">
-              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-        <!-- <script type="text/javascript" src="//cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
-        <!--  -->
-        <script type="text/javascript">
-          $(".pay_item").click(function(){
-            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
-            var dataid=$(this).attr('data-id');
-            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
-            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
-          });
-          function dashangToggle(){
+    </div>
+    
+    <div class="post-footer">
+        <div>
             
-            $(".hide_box").fadeToggle();
-            $(".shang_box").fadeToggle();
-          }
-        </script>
-      
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wpa.qq.com/msgrd?uin=2037343920" target="_blank">Lee</a>
+            
+        </div>
+        <div>
+            
+        </div>
     </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/07/12/简易Python/">简易Python</a></p>
-        <p><span>文章作者:</span><a href="/" title="访问 Lee 的个人博客">Lee</a></p>
-        <p><span>发布时间:</span>2018年07月12日 - 17时04分</p>
-        <p><span>最后更新:</span>2019年01月17日 - 13时27分</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/07/12/简易Python/" title="简易Python">https://Lee981265.github.io/2018/07/12/简易Python/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://Lee981265.github.io/2018/07/12/简易Python/　　作者: Lee" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script src="/js/clipboard.min.js"></script>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-<nav id="article-nav">
-  
-    <a href="/2018/07/12/Nginx/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Nginx快速开端口
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/07/12/初识Linux/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">初识Linux</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
 
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2018/07/12/Nginx/" class="pre-post btn btn-default" title='Nginx快速开端口'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Nginx快速开端口</span>
+        </a>
+    
+    
+        <a href="/2018/07/12/初识Linux/" class="next-post btn btn-default" title='初识Linux'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">初识Linux</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-<!-- <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script> -->
-<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<!--  -->
-<script>
-    var valueHide = "隐藏目录";
-    var valueShow = "显示目录";
-
-    if ($(".left-col").is(":hidden")) {
-        $("#tocButton").attr("value", valueShow);
-    }
-    $("#tocButton").click(function() {
-        if ($("#toc").is(":hidden")) {
-            $("#tocButton").attr("value", valueHide);
-            $("#toc").slideDown(320);
-        }
-        else {
-            $("#tocButton").attr("value", valueShow);
-            $("#toc").slideUp(350);
-        }
-    })
-    if ($(".toc").length < 1) {
-        $("#toc, #tocButton").hide();
-    }
-</script>
 
 
-
-
-
-<div class="bdsharebuttonbox">
-	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
-	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-</div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-
-
-
-    
-          <section id="comments" style="background-color:#fff;">
-    <div id="valine_thread" style="margin: 30px;"></div>
-          <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-          <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-          <script>
-              var GUEST_INFO = ['nick','mail','link'];
-              var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-                  return GUEST_INFO.indexOf(item) > -1
-              });
-              var notify = 'false' == true;
-              var verify = 'false' == true;
-              var valine = new Valine();
-              valine.init({
-                  el: '#valine_thread',
-                  notify: notify,
-                  verify: verify,
-                  appId: "gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz",
-                  appKey: "PlSGU0BVUIgyuS6bQ15rXq3i",
-                  placeholder: "Just go go(text or md)",
-                  pageSize:'10',
-                  avatar:'wavatar',
-                  lang:'zh-cn'
-              })
-          </script>
-  </section> 
-          <!--  -->
-    
-
-
-
-    <div class="scroll" id="post-nav-button">
+    <div id="comments">
         
-            <a href="/2018/07/12/Nginx/" title="上一篇: Nginx快速开端口">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-        
-            <a href="/2018/07/12/初识Linux/" title="下一篇: 初识Linux">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/23/Java特性/">Java特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/Markdown教程/">Markdown教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/11/Vue路由传参三种基本方式/">Vue路由传参三种基本方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/16/Sql语句/">Sql语句</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/Python3基础/">Python3基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/27/ES5&字符串/">ES5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/19/ES6语法简介/">ES6语法简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/vue与echarts显示隐藏/">vue与echarts显示隐藏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/Vue-小程序表达式/">Vue 小程序表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/23/移动端拖拽/">移动端拖拽</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/17/Vue键盘弹起/">移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/13/从零开始小程序/">从零开始小程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Echarts属性设置/">Echarts属性设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/NodeJs/">NodeJs</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Ajax/">Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/初识PHP/">初识PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Nginx/">Nginx快速开端口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/简易Python/">简易Python</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/初识Linux/">初识Linux</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/11/DOM/">DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/Hexo使用/">Hexo使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/Git进阶/">Git进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/03/preface /">前言</a></li></ul>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+	
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
     <script>
-        $(".post-list").addClass("toc-article");
-        $(".post-list-item a").attr("target","_blank");
-        $("#post-nav-button > a:nth-child(2)").click(function() {
-            $(".fa-bars, .fa-times").toggle();
-            $(".post-list").toggle(300);
-            if ($(".toc").length > 0) {
-                $("#toc, #tocButton").toggle(200, function() {
-                    if ($(".switch-area").is(":visible")) {
-                        $("#tocButton").attr("value", valueHide);
-                        }
-                    })
-            }
-            else {
-            }
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'gd9N3iwmJMjWNJUuA71WlRj7-gzGzoHsz',
+            appKey: 'PlSGU0BVUIgyuS6bQ15rXq3i',
+            placeholder: 'Just go go(text or md)',
+            notify: false,
+            verify: false,
+            avatar: 'wavatar',
+            meta: 'nick,mail,link'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: ''.toLowerCase()
         })
     </script>
 
 
+    </div>
 
-    <script>
+
+                </main>
+                
+                    <!-- 文字内部结构 -->
+<aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">Table of Contents</h3>
         
-    </script>
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                &copy; 2019 Lee
-            </div>
-            <div class="footer-right">
-                由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
             </div>
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >访客:
-                            <span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>, </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量:
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
     </div>
+
+
 </footer>
 
-    </div>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<!--  -->
-<script src="/js/main.js"></script>
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+  <!-- <img src="backtop.jpg" alt=""> -->
 
-    <script>
-        $(document).ready(function() {
-            var backgroundnum = 24;
-            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
-        })
-    </script>
+</a>
 
+    <div class="times">
+    <div class="container">
+        <div class="row">
 
+            <div class="col-sm-12">
+              <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+              <script>
+              var now = new Date();
+              function createtime() {
+                  var grt= new Date("07/3/2018 8:00:00");//此处修改你的建站时间或者网站上线时间
+                  now.setTime(now.getTime()+250);
+                  days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+                  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+                  if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+                  mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+                  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                  snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+                  document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+                  document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+              }
+              setInterval("createtime()",250);
+              </script>
+            </div>
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+        很荣幸您成为本站的第
+        <strong id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+        位访客
+        &nbsp; | &nbsp;
+        本站总浏览次数:
 
-
-
-<div class="scroll" id="scroll">
-    <a href="#"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+        <strong id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+    
 </div>
-<script>
-    $(document).ready(function() {
-        if ($("#comments").length < 1) {
-            $("#scroll > a:nth-child(2)").hide();
-        };
-    })
-</script>
 
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-
-  <script language="javascript">
-    $(function() {
-        $("a[title]").each(function() {
-            var a = $(this);
-            var title = a.attr('title');
-            if (title == undefined || title == "") return;
-            a.data('title', title).removeAttr('title').hover(
-
-            function() {
-                var offset = a.offset();
-                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
-                    top: offset.top - a.outerHeight() - 15,
-                    left: offset.left + a.outerWidth()/2 + 1
-                }).fadeIn(function() {
-                    var pop = $(this);
-                    setTimeout(function() {
-                        pop.remove();
-                    }, pop.text().length * 800);
-                });
-            }, function() {
-                $("#anchortitlecontainer").remove();
-            });
-        });
-    });
-</script>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018-2019
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Made by <a href="//wpa.qq.com/msgrd?uin=2037343920" class="copyright-links" target="_blank" rel="nofollow">Lee</a> with ❤️ and Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-  </div>
+
+
+
+
+
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
 </body>
 </html>
