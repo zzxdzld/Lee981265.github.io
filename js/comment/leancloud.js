@@ -110,9 +110,6 @@
 			for(var i = 0; i < results.length; i++) {
 				var counter = results[i]
 				var title = counter.get('title')
-				// if(title==="message"){
-				// 	title = "留言版"
-				// }
 				var url = counter.get('url')
 				var time = counter.get('time')
 				hotPostsList.each(function () {

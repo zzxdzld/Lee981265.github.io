@@ -393,14 +393,14 @@ if ($('.article-excerpt').length >= 1) {
 			creator: owner
 		}
 	}).done(function(issues) {
-		// console.log(issues)
+		console.log(issues)
 		$excerpts.each(function () {
 			const that = $(this)
 			that.find('h1 > a > span').each(function () {
 				const title = $(this).text()
 				const tags = that.find('div.tag-article')
 				const issue = issues.filter(function (issue) {
-							return issue.title === title
+					return issue.title === title
 				})
 				const comments = issue.length > 0 ? issue[0].comments : 0
 				tags.each(function () {
