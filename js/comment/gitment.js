@@ -400,12 +400,7 @@ if ($('.article-excerpt').length >= 1) {
 				const title = $(this).text()
 				const tags = that.find('div.tag-article')
 				const issue = issues.filter(function (issue) {
-					if(issue.title === "message"){
-						return issue.title === "留言板"
-					}else{
 							return issue.title === title
-					}
-
 				})
 				const comments = issue.length > 0 ? issue[0].comments : 0
 				tags.each(function () {
