@@ -71,6 +71,24 @@
 </section>
     <!-- 欧尼酱功能, 谁用谁知道 -->
     
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="https://Lee981265.github.io" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
     <header class="navbar navbar-inverse" id="gal-header">
     <div class="container">
         <div class="navbar-header">
@@ -138,14 +156,44 @@
                             <a href="/categories/Backend/">Backend</a>
                         </li>
                         
+                        
                         <li>
-                            <a href="/categories/Nodejs/">Nodejs</a>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Javascript/">Javascript</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/Essay/Java/">Java</a>
+                            <a href="/tags/DOM/">DOM</a>
                         </li>
                         
+                        <li>
+                            <a href="/tags/Ajax/">Ajax</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
                         
                         
                     </ul>
@@ -234,7 +282,31 @@
     </div>
 </aside>
     
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
     <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    <aside id="sidebar-hot_posts">
+    <div class="panel panel-gal hot hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-fire"></i>
+            最热文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
     
     
     <aside id="sidebar-recent_posts">
@@ -331,25 +403,19 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/07/11/DOM/">DOM</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/27/ES5&字符串/">ES5</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2018/09/19/ES6语法简介/">ES6语法简介</a>
+                    <a href="/2018/07/05/Git进阶/">Git进阶</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2018/07/12/Echarts属性设置/">Echarts属性设置</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/07/12/Nginx/">Nginx快速开端口</a>
                 </span>
             </li>
             
@@ -367,19 +433,25 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/07/17/Vue键盘弹起/">移动端键盘弹起，底部按钮顶上去另类解决办法(Vue)</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2018/07/03/preface /">前言</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2018/07/23/移动端拖拽/">移动端拖拽</a>
+                    <a href="/2018/07/12/初识Linux/">初识Linux</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/08/22/vue与echarts显示隐藏/">vue与echarts显示隐藏</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2018/07/12/简易Python/">简易Python</a>
                 </span>
             </li>
             
@@ -412,59 +484,59 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Ajax/" style="font-size: 11.741872460011802px;" class="tag-cloud-link">Ajax</a>
+    <a href="/tags/Javascript/" style="font-size: 9.442964574889773px;" class="tag-cloud-link">Javascript</a>
     
-    <a href="/tags/Javascript/" style="font-size: 12.976563576678437px;" class="tag-cloud-link">Javascript</a>
+    <a href="/tags/DOM/" style="font-size: 16.153277552018775px;" class="tag-cloud-link">DOM</a>
     
-    <a href="/tags/DOM/" style="font-size: 11.065401954493488px;" class="tag-cloud-link">DOM</a>
+    <a href="/tags/Ajax/" style="font-size: 12.890706728090514px;" class="tag-cloud-link">Ajax</a>
     
-    <a href="/tags/ES5/" style="font-size: 11.29076798820693px;" class="tag-cloud-link">ES5</a>
+    <a href="/tags/ES6/" style="font-size: 18.352524471175276px;" class="tag-cloud-link">ES6</a>
     
-    <a href="/tags/ES6/" style="font-size: 14.594186612724588px;" class="tag-cloud-link">ES6</a>
+    <a href="/tags/ES5/" style="font-size: 14.244996993732606px;" class="tag-cloud-link">ES5</a>
     
-    <a href="/tags/Echarts/" style="font-size: 11.297469156429795px;" class="tag-cloud-link">Echarts</a>
+    <a href="/tags/Git/" style="font-size: 9.951661821335467px;" class="tag-cloud-link">Git</a>
     
-    <a href="/tags/Markdown/" style="font-size: 12.438916841643039px;" class="tag-cloud-link">Markdown</a>
+    <a href="/tags/Java/" style="font-size: 14.28673119027554px;" class="tag-cloud-link">Java</a>
     
-    <a href="/tags/Hexo/" style="font-size: 13.209811764026181px;" class="tag-cloud-link">Hexo</a>
+    <a href="/tags/Echarts/" style="font-size: 13.072470057613327px;" class="tag-cloud-link">Echarts</a>
     
-    <a href="/tags/Java/" style="font-size: 13.437908510770175px;" class="tag-cloud-link">Java</a>
+    <a href="/tags/Markdown/" style="font-size: 13.00613979007013px;" class="tag-cloud-link">Markdown</a>
     
-    <a href="/tags/Git/" style="font-size: 18.074606031020064px;" class="tag-cloud-link">Git</a>
+    <a href="/tags/Nginx/" style="font-size: 14.325361751901179px;" class="tag-cloud-link">Nginx</a>
     
-    <a href="/tags/Nginx/" style="font-size: 10.574129396323062px;" class="tag-cloud-link">Nginx</a>
+    <a href="/tags/Hexo/" style="font-size: 17.487195270596757px;" class="tag-cloud-link">Hexo</a>
     
-    <a href="/tags/NodeJs/" style="font-size: 14.356315990354023px;" class="tag-cloud-link">NodeJs</a>
+    <a href="/tags/NodeJs/" style="font-size: 14.690679995719574px;" class="tag-cloud-link">NodeJs</a>
     
-    <a href="/tags/Python/" style="font-size: 16.41027112948735px;" class="tag-cloud-link">Python</a>
+    <a href="/tags/Python/" style="font-size: 16.56411304330891px;" class="tag-cloud-link">Python</a>
     
-    <a href="/tags/Python3/" style="font-size: 9.887907504536589px;" class="tag-cloud-link">Python3</a>
+    <a href="/tags/Python3/" style="font-size: 11.010051923460829px;" class="tag-cloud-link">Python3</a>
     
-    <a href="/tags/Note/" style="font-size: 8.272928083107072px;" class="tag-cloud-link">Note</a>
+    <a href="/tags/Note/" style="font-size: 13.769281004113346px;" class="tag-cloud-link">Note</a>
     
-    <a href="/tags/Vue/" style="font-size: 10.787753064058943px;" class="tag-cloud-link">Vue</a>
+    <a href="/tags/Vue/" style="font-size: 15.02150770843194px;" class="tag-cloud-link">Vue</a>
     
-    <a href="/tags/Mini-apps/" style="font-size: 11.603857404669675px;" class="tag-cloud-link">Mini-apps</a>
+    <a href="/tags/Mini-apps/" style="font-size: 19.690653157734232px;" class="tag-cloud-link">Mini-apps</a>
     
-    <a href="/tags/Sql/" style="font-size: 13.38320978383403px;" class="tag-cloud-link">Sql</a>
+    <a href="/tags/vue-router/" style="font-size: 12.626238353628398px;" class="tag-cloud-link">vue-router</a>
     
-    <a href="/tags/vue-router/" style="font-size: 10.116445974246293px;" class="tag-cloud-link">vue-router</a>
+    <a href="/tags/Sql/" style="font-size: 10.363244635461974px;" class="tag-cloud-link">Sql</a>
     
-    <a href="/tags/Mobileterminal/" style="font-size: 12.647363816051293px;" class="tag-cloud-link">Mobileterminal</a>
+    <a href="/tags/ABC/" style="font-size: 16.926435873954873px;" class="tag-cloud-link">ABC</a>
     
-    <a href="/tags/resize/" style="font-size: 14.249465067230375px;" class="tag-cloud-link">resize</a>
+    <a href="/tags/CBA/" style="font-size: 17.735088717959957px;" class="tag-cloud-link">CBA</a>
     
-    <a href="/tags/absolute/" style="font-size: 15.683721778039017px;" class="tag-cloud-link">absolute</a>
+    <a href="/tags/Mobileterminal/" style="font-size: 15.07198023142382px;" class="tag-cloud-link">Mobileterminal</a>
     
-    <a href="/tags/ABC/" style="font-size: 17.435054419007187px;" class="tag-cloud-link">ABC</a>
+    <a href="/tags/resize/" style="font-size: 15.009490210890053px;" class="tag-cloud-link">resize</a>
     
-    <a href="/tags/CBA/" style="font-size: 16.965570261383526px;" class="tag-cloud-link">CBA</a>
+    <a href="/tags/absolute/" style="font-size: 11.938194241577346px;" class="tag-cloud-link">absolute</a>
     
-    <a href="/tags/Linux/" style="font-size: 17.148529548593093px;" class="tag-cloud-link">Linux</a>
+    <a href="/tags/Linux/" style="font-size: 13.954555846222505px;" class="tag-cloud-link">Linux</a>
     
-    <a href="/tags/PHP/" style="font-size: 10.443930417574244px;" class="tag-cloud-link">PHP</a>
+    <a href="/tags/PHP/" style="font-size: 18.3099884513877px;" class="tag-cloud-link">PHP</a>
     
-    <a href="/tags/Drag/" style="font-size: 16.10562027002205px;" class="tag-cloud-link">Drag</a>
+    <a href="/tags/Drag/" style="font-size: 11.352811468917938px;" class="tag-cloud-link">Drag</a>
     
 </div>
                 
@@ -497,7 +569,7 @@
     </li>
     
     <li>
-        <a href="//jq.qq.com/?_wv=1027&amp;k=5alnST" target="_blank">前端QQ交流群</a>
+        <a href="http://qm.qq.com/cgi-bin/qm/qr?k=XJxe3cw9kPNLcDjJQ4dnkDAeiv5Ag_RD" target="_blank">前端QQ交流群</a>
     </li>
     
     <li>
@@ -575,6 +647,8 @@
 <script src="/js/hs.js"></script>
 <script src="/js/blog.js"></script>
 
+<script src="/js/oni.js"></script>
+
 
 <script>
     window.hot_posts_count = '10'
@@ -582,5 +656,27 @@
 </script>
 <script src="/js/comment/leancloud.js"></script>
 
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = ''
+      window.commentConfig.owner = 'Lee981265'
+      window.commentConfig.repo = 'Free-Style'
+      window.commentConfig.client_id = '2cda964588a40b44781f'
+      window.commentConfig.client_secret = '6ae2cbf0a6f13ca1f27a18462ffd6dde8ab55183'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: '',
+        owner: 'Lee981265',
+        repo: 'Free-Style',
+        client_id: '2cda964588a40b44781f',
+        client_secret: '6ae2cbf0a6f13ca1f27a18462ffd6dde8ab55183',
+        redirect_uri: ''
+      }
+    }
+</script>
+<script src="/js/comment/gitment.js"></script>
 
 </html>
