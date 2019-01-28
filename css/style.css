@@ -11,8 +11,12 @@
 font-style: italic!important;
 font-family: Playfair Display,Georgia,Times New Roman,serif;
 */
+html{
+  font-size: 16px;
+}
 body{
   cursor: url(https://www.0dayhack.com/content/templates/FLY/css/default.cur),default;
+  font-size: 16px;
 }
 a, a:hover, a:link, a:visited {
     cursor: url(https://www.0dayhack.com/content/templates/FLY/css/link.cur),pointer;
@@ -510,7 +514,8 @@ img{
 }
 .post .post-content p.brief {
   overflow: hidden;
-  color: #666666;
+  /* color: #666666; */
+  color: #000;
 }
 .post .post-body {
   margin-top: 15px;
@@ -556,8 +561,9 @@ img{
   main post content
 ====================================================*/
 .post-content {
-  font: 400 16px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
-  color: #333;
+  font: 500 18px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #000;
+  font:500 18px/1.62 lucida grande,lucida sans unicode,lucida,helvetica,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
 }
 .post-content h1 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
@@ -1432,7 +1438,7 @@ pre,
   /* margin: 20px 0; */
   padding: 0;
   color: #c5c8c6;
-  font-size: 13px;
+  font-size: 15px;
   background: #1d1f21;
   line-height: 1.6;
 }
