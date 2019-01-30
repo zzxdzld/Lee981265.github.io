@@ -50,6 +50,8 @@
     
 
 
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
 
 <link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
 <link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
@@ -399,24 +401,19 @@
 
     <div id="comments">
         
-	<link rel="stylesheet" href="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.css">
-<script src="https://cdn.bootcss.com/gitalk/1.4.1/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-<script type="text/javascript">
-    var pathArr = location.pathname.split("/");
-    var pathId = pathArr[pathArr.length-1];
-    var gitalk = new Gitalk({
-        // Gitalk配置
-        clientID: "994222d4e3b8a39ca471",
-        clientSecret: "5c694c352717d76a3e3b9fec9480cfa952bef15c",
-        repo: "Lee981265.github.io",
-        owner: "Lee981265",
-        admin: "[Lee981265]",
-        id: "github.io" || pathId || location.pathname,
-        distractionFreeMode: true
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: window.location.pathname,
+        owner:"Lee981265",
+        repo:"Lee981265.github.io",
+        oauth: {
+          client_id:"994222d4e3b8a39ca471",
+          client_secret:"5c694c352717d76a3e3b9fec9480cfa952bef15c"
+        },
+        perPage:"10",
     });
-    gitalk.render('gitalk-container');
+    gitment.render('comments');
 </script>
 
 
