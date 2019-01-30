@@ -43,6 +43,7 @@
 	panelToggle.on('click', function () {
 		var that = $(this)
 		var panelGal = that.parents('.panel-gal')
+		console.log(panelGal)
 		if(that.hasClass('fa-chevron-circle-up')) {
 			that.removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down')
 			panelGal.addClass('toggled')
